@@ -1,0 +1,56 @@
+site_name: Excel VBA Primer
+site_url: https://vbaprimer.readthedocs.io/en/latest/
+site_description: A Primer for Excel VBA Programming
+site_author: Norm Jones
+repo_url: https://github.com/njones61/vbaprimer
+favicon: 'images/favicon.ico'
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
+  - js/mathjax-config.js
+markdown_extensions:
+    - attr_list
+    - sane_lists
+    - md_in_html
+    - admonition
+    - pymdownx.arithmatex:
+        generic: true
+theme: readthedocs
+extra_css:
+  - css/custom.css
+nav:
+  - Home: index.md
+  - Excel Fundamentals:
+    - Formulas: 01_excel/01_formulas/formulas.md
+    - VLOOKUP: 01_excel/02_vlookup/vlookup.md
+    - Validation: 01_excel/03_validation/validation.md
+    - Names: 01_excel/04_names/names.md
+    - Operators: 01_excel/05_operators/operators.md
+    - IF Function: 01_excel/06_iffunction/iffunction.md
+    - Goal Seek: 01_excel/07_goalseek/goalseek.md
+    - Charts: 01_excel/08_charts/charts.md
+    - Annotation: 01_excel/09_annotation/annotation.md
+    - Array Formulas: 01_excel/10_arrayformulas/arrayformulas.md
+  - Excel VBA:
+    - Getting Started: 02_vba/01_gettingstarted/gettingstarted.md
+    - Macros: 02_vba/02_macros/macros.md
+    - Ranges: 02_vba/03_ranges/ranges.md
+    - MsgBox: 02_vba/04_msgbox/msgbox.md
+    - Variables: 02_vba/05_variables/variables.md
+    - Objects: 02_vba/06_objects/objects.md
+    - If Statements: 02_vba/07_ifthen/ifthen.md
+    - Debugging: 02_vba/08_debug/debug.md
+    - Loops: 02_vba/09_loops/loops.md
+    - Arrays: 02_vba/10_arrays/arrays.md
+    - Strings: 02_vba/11_strings/strings.md
+    - User Forms: 02_vba/12_userforms/userforms.md
+    - Functions: 02_vba/13_functions/functions.md
+    - Excel Functions: 02_vba/14_excelfunctions/excelfunctions.md
+    - Subs: 02_vba/15_subs/subs.md
+    - Events: 02_vba/16_events/events.md
+    - Standards: 02_vba/17_standards/standards.md
+  - Advanced Topics:
+    - Graphics: 02_vba/18_graphics/graphics.md
+    - Email: 02_vba/19_email/email.md
+    - Files: 02_vba/20_files/files.md
+    - Sample Apps: 02_vba/21_apps/apps.md
+    - Google App Script: 02_vba/05_gas/gas.md
