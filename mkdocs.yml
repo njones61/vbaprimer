@@ -3,7 +3,6 @@ site_url: https://vbaprimer.readthedocs.io/en/latest/
 site_description: A Primer for Excel VBA Programming
 site_author: Norm Jones
 repo_url: https://github.com/njones61/vbaprimer
-favicon: 'images/favicon.ico'
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js
   - js/mathjax-config.js
@@ -14,7 +13,16 @@ markdown_extensions:
     - admonition
     - pymdownx.arithmatex:
         generic: true
-theme: readthedocs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - python
+    - yaml
+    - bash
+    - excel
+    - vbnet
+    - vba
 extra_css:
   - css/custom.css
 nav:
@@ -29,7 +37,7 @@ nav:
     - Goal Seek: 01_excel/07_goalseek/goalseek.md
     - Charts: 01_excel/08_charts/charts.md
     - Annotation: 01_excel/09_annotation/annotation.md
-    - Array Formulas: 01_excel/10_arrayformulas/arrayformulas.md
+    - Array Formulas: 01_excel/10_arrayform/arrayform.md
   - Excel VBA:
     - Getting Started: 02_vba/01_gettingstarted/gettingstarted.md
     - Macros: 02_vba/02_macros/macros.md
@@ -49,8 +57,8 @@ nav:
     - Events: 02_vba/16_events/events.md
     - Standards: 02_vba/17_standards/standards.md
   - Advanced Topics:
-    - Graphics: 02_vba/18_graphics/graphics.md
-    - Email: 02_vba/19_email/email.md
-    - Files: 02_vba/20_files/files.md
-    - Sample Apps: 02_vba/21_apps/apps.md
-    - Google App Script: 02_vba/05_gas/gas.md
+    - Graphics: 03_advanced/01_graphics/graphics.md
+    - Email: 03_advanced/02_email/email.md
+    - Files: 03_advanced/03_files/files.md
+    - Sample Apps: 03_advanced/04_apps/apps.md
+    - Google App Script: 03_advanced/05_gas/gas.md

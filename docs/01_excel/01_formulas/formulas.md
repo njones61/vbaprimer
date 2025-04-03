@@ -6,9 +6,11 @@ The most basic feature of Excel is the ability to enter data and then write form
 
 An Excel workbook contains a collection of sheets. Each sheet contains a collection of cells organized into rows and columns. The rows are indexed with numbers (1,2,3...) and the columns are indexed with letters (A,B,C...). Each cell can be uniquely identified by a cells address defined by the column-row combination.
 
->A5	<- Row 5, Column 1<br>
-D3	<- Row 3, Column 4<br>
-AJ234	<- Row 234, Column 36
+| Address | Description        |
+|---------|--------------------|
+| A5      | Row 1, Column 1    |
+| D3      | Row 3, Column 4    |
+| AJ234   | Row 234, Column 36 |
 
 Note that after column Z (26), the column numbers are indexed as AA,AB,AC... To reference a group of cells with single address we combine the upper left corner of the region with the lower right corner separated by a semicolon. For example, to reference the following range:
 
@@ -104,7 +106,7 @@ The reason for this error can be seen by revealing the formulas. This is accompl
 
 ![abs-rel-3.png](images/abs-rel-3.png)
 
-Note that when you copy a formula, the cell references are updated with each subsequent cell the formula is copied to. Note that "=B4*D7" is changed to "=B5*D8" in the next cell down. This happens because whenever you reference a cell in a formula, that reference is interpreted to be relative to the cell containing the formula. In other words, when we type "D7" in a formula in cell E7, what we are really referencing is "stay on the same row, but go one column to the left". Therefore, when the formula is copied, it correctly references the proper volume value one cell to the left. However, our error occurs because of a relative reference to the unit wt. value. A reference to B4 from cell E7 literally means "three rows up and three columns to the left". But in this case, we don't want a relative reference. When we copy the formula, we want to ALWAYS reference cell B4. We can accomplish this by changing the B4 reference to make it absolute as follows:
+Note that when you copy a formula, the cell references are updated with each subsequent cell the formula is copied to. Note that `=B4*D7` is changed to `=B5*D8` in the next cell down. This happens because whenever you reference a cell in a formula, that reference is interpreted to be relative to the cell containing the formula. In other words, when we type "D7" in a formula in cell E7, what we are really referencing is "stay on the same row, but go one column to the left". Therefore, when the formula is copied, it correctly references the proper volume value one cell to the left. However, our error occurs because of a relative reference to the unit wt. value. A reference to B4 from cell E7 literally means "three rows up and three columns to the left". But in this case, we don't want a relative reference. When we copy the formula, we want to ALWAYS reference cell B4. We can accomplish this by changing the B4 reference to make it absolute as follows:
 
 ![abs-rel-4.png](images/abs-rel-4.png)
 
