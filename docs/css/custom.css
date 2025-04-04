@@ -10,3 +10,29 @@
 .math {
   font-size: large;
 }
+
+
+/* Change the background color of the navigation bar */
+.navbar {
+    background-color: #1E90FF; /* Replace with your desired color */
+}
+
+/* Change the color of navigation links */
+.navbar a {
+    color: #0000CD; /* Replace with your desired color */
+}
+
+/* Change the background color of the sidebar */
+.sidebar {
+    background-color: #333333; /* Replace with your desired color */
+}
+
+/* Change the color of sidebar links */
+.sidebar a {
+    color: #FFFFFF; /* Replace with your desired color */
+}
+
+body {
+    background-color: #FFFFFF; /* Replace with your desired color */
+}
+

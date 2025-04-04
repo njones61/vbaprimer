@@ -14,7 +14,11 @@ markdown_extensions:
     - pymdownx.arithmatex:
         generic: true
 theme:
-  name: readthedocs
+  name: windmill
+  palette:
+    primary: blue        # primary color
+    accent: amber        # accent color
+    scheme: default      # or 'slate' for dark mode
   highlightjs: true
   hljs_languages:
     - python
