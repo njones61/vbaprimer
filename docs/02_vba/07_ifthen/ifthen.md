@@ -1,4 +1,4 @@
-# Decisions and Conditions - Writing If Statements
+# If Statements
 
 There are countless ocassions when writing code where we need to execute code only if certain conditions are met. This can be accomplished by writing If statements.
 

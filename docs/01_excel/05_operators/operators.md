@@ -1,4 +1,4 @@
-# Operators and Precedence - Writing Complex Formulas
+# Operators and Precedence
 
 When developing engineering applications with Excel, we often take complex equations and convert them to Excel formulas. In so doing, it is easy to compose the formula in such a way that leads to incorrect results. For example, consider the following spreadsheet:
 
