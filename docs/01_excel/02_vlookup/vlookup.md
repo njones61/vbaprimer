@@ -93,17 +93,16 @@ Note that we are using a range lookup on elevation so the last argument to VLOOK
 ## Sample Workbooks
 The workbooks used in the examples shown above can be downloaded here:
 
-[cylinders2.xlsx](files/cylinders2.xlsx)
-
+[cylinders2.xlsx](files/cylinders2.xlsx)<br>
 [tempvselev.xlsx](files/tempvselev.xlsx)
 
 ## Exercises
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-Description	Difficulty	Start	Solution
-Dog Years - Use VLOOKUP to match the number of human years to the appropriate dog years shown in the table.	Easy	dog_years.xlsx	dog_years_key.xlsx
-Construction Fencing- From a list of fencing materials, match the price using VLOOKUP and the table given. Then multiply by the amount of yards needed to obtain the total cost.	Easy	construction_fencing.xlsm	construction_fencing_key.xlsm
-Conversion Factor - Use VLOOKUP to multiply the user input by the appropriate conversion factor desired.	Medium	conversion_factor.xlsx	conversion_factor_key.xlsx
-Diet Monitor - From a list of foods and servings, use VLOOKUP to calculate the number of calories and carbs.	Hard	diet_monitor.xlsx	diet_monitor_key.xlsx
-Dog Years 2 - Use a two dimensional VLOOKUP to find the correct dog years using the number of human years and weight of the dog.	Hard	dog_years_2.xlsm	dog_years_2_key.xlsm
+| Exercise Name	| Description	                                                                                                                                                          | Difficulty	| Start File	| Solution File	|
+|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|--------------|----------------|
+| Dog Years | Use VLOOKUP to match the number <br>of human years to the appropriate dog <br>years shown in the table.	                                                              | Easy	| [dog_years.xlsx](files/dog_years.xlsx)	| [dog_years_key.xlsx](files/dog_years_key.xlsx)	|
+| Construction Fencing | From a list of fencing materials, <br> match the price using VLOOKUP and the <br> table given. Thenx multiply by the amount of <br>yards needed to obtain the total cost.	 | Easy	| [construction_fencing.xlsm](files/construction_fencing.xlsm)	| [construction_fencing_key.xlsm](files/construction_fencing_key.xlsm)	|
+| Conversion Factor | Use VLOOKUP to multiply the user input by<br> the appropriate conversion factor desired.	                                                                             | Medium	| [conversion_factor.xlsm](files/conversion_factor.xlsm)	| [conversion_factor_key.xlsm](files/conversion_factor_key.xlsm)	|
+| Diet Monitor | From a list of foods and servings, use <br>VLOOKUP to calculate the number of <br>calories and carbs.	                                                                    | Hard	| [diet_monitor.xlsx](files/diet_monitor.xlsx)	| [diet_monitor_key.xlsx](files/diet_monitor_key.xlsx)	|
