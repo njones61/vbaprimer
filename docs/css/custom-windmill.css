@@ -1,0 +1,100 @@
+.limited-width-table {
+    width: 50%;
+    overflow-x: auto;
+}
+
+.math {
+  font-size: large;
+}
+
+
+/* Change the background color of the navigation bar */
+.navbar {
+    background-color: #1E90FF; /* Replace with your desired color */
+}
+
+/* Change the color of navigation links */
+.navbar a {
+    color: #0000CD; /* Replace with your desired color */
+}
+
+/* Change the background color of the sidebar */
+.sidebar {
+    background-color: #333333; /* Replace with your desired color */
+}
+
+/* Change the color of sidebar links */
+.sidebar a {
+    color: #FFFFFF; /* Replace with your desired color */
+}
+
+body {
+    background-color: #FFFFFF; /* Replace with your desired color */
+}
+
+/* From my original excel vba website */
+
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+    width: 100%;
+}
+.special_link {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.small_names {
+	font-size: 8px;
+}
+.code {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: 400;
+}
+.code_keyword {
+	font-family: "Courier New", Courier, monospace;
+	color: #020091;
+}
+.code_comment {
+	font-family: "Courier New", Courier, monospace;
+	color: #32843F;
+}
+.red_bold {
+	color: #F00;
+	font-weight: bold;
+	font-size: 10pt;
+}
+.red_bold_big {
+	color: #F00;
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+/* This gets the main content positioned correctly. */
+
+.wm-article {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%; /* Adjust the width as needed */
+}
+
+.wm-content-pane {
+    padding-left: 300px;
+}
+
+.wm-page-content {
+    position: relative;
+    max-width: 1000px; /* Adjust the width as needed */
+}
+
+
+
+/* Make tables shrink to fit content */
+table {
+    width: auto !important;
+    table-layout: auto !important;
+}
+
+/* Optional: prevent cells from wrapping text */
+td, th {
+    white-space: nowrap; /* or use normal if wrapping is okay */
+}
