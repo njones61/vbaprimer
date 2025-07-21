@@ -6,8 +6,8 @@ Writing VBA code for Excel is easy and fun!! Once you learn a few basics, you wi
 
 The Developer Tab
 The first step in adding Visual Basic to your spreadsheet is to turn on the Developer tab. This is not a default part of the ribbon, so you may need to turn it on as follows:
-j
-Select the File|Options men command.
+
+Select the **File|Options** menu command.
 Click on the Customize Ribbon button on the left.
 Turn on the Developer option shown in the Main Tabs section on the right.
 
