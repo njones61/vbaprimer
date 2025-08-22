@@ -10,25 +10,25 @@ The workbook is designed to perform calculations associated with the sale of a s
 
 When dealing with array formulas, it is sometimes useful to use named ranges. This is not a requirement but it makes the formulas much easier to understand. For the purpose of this example, we will name the following set of ranges:
 
-| Range       | Column           |   Name    |
-|---------:|------------------|:---------:|
-| B6:B17     | Units            |   units   |
-| C6:C17     | Price-Wholesale  | pw    |
-| D6:D17     | Price-Retail     | pr    |
-| E6:E17     | Totals-Wholesale | tw    |
-| F6:F17     | Totals-Retail    | tr    |
+|   Range    |       Column       |  Name  |
+|:----------:|:------------------:|:------:|
+|   B6:B17   |       Units        | units  |
+|   C6:C17   |  Price-Wholesale   |   pw   |
+|   D6:D17   |    Price-Retail    |   pr   |
+|   E6:E17   |  Totals-Wholesale  |   tw   |
+|   F6:F17   |   Totals-Retail    |   tr   |
 
 These names will be used in each of the formula examples shown below.
 
 ## Simple Array Calculations
 
-To begin, we will use an array formula to calcute the wholesale total in column E. Normally, we will do  this by entering the following formula cell E6:
+To begin, we will use an array formula to calculate the wholesale total in column E. Normally, we will do  this by entering the following formula cell E6:
 
 ```excel
 =B6*C6
 ```
 
-and then copying the formula to the rest of the cells in column E. To do this with an array formula, we first select the the entire Total|Wholesale column (E6:E17) and then type the following in the formula bar:
+and then copying the formula to the rest of the cells in column E. To do this with an array formula, we first select the entire Total|Wholesale column (E6:E17) and then type the following in the formula bar:
 
 ```excel
 =units*pw
