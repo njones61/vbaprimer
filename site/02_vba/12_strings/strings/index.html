@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/12_strings/strings/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Strings - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Strings";
+        var mkdocs_page_input_path = "02_vba/12_strings/strings.md";
+        var mkdocs_page_url = "/en/latest/02_vba/12_strings/strings/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Strings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#concatenation">Concatenation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#string-functions">String Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-code">Sample Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Strings</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/12_strings/strings.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-string-functions">Using String Functions</h1>
+<p>A string is a sequence of one or more text characters. A string constant is a sequence of characters in code delimited by double quotes ("Hello world"). A string variable is a variable used to store text. String variables are dynamically allocated to accommodate the amount of text you store in each string. They can hold up to two billion characters!</p>
+<h2 id="concatenation">Concatenation</h2>
+<p>Recall that we can combine (concatenate) two or more strings using the <strong>&amp;</strong> operator. For example, the code:</p>
+<pre><code class="language-vb">Dim str1 As String, str2 As String
+str1 = &quot;Enter to learn&quot;
+str2 = &quot;go forth to serve&quot;
+MsgBox str1 &amp; &quot;, &quot; &amp; str2
+</code></pre>
+<p>Would produce:</p>
+<p><img alt="msgbox-motto.png" src="../images/msgbox-motto.png" /></p>
+<p>Note that this example involves both string variables (str1, str2) and string constants (", ").</p>
+<h2 id="string-functions">String Functions</h2>
+<p>In many cases, we need to manipulate string constants and variables. VB provides a rich suite of functions for manipulating strings. Some of the more widely used string functions are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Left(str, numchar)</strong></td>
+<td>Extracts the specified number of characters from the left side of the string <strong>str</strong>.</td>
+<td>mystr = Left("Hello World", 5)</td>
+<td>"Hello"</td>
+</tr>
+<tr>
+<td><strong>Right(str, numchar)</strong></td>
+<td>Extracts the specified number of characters from the right side of the string <strong>str</strong>.</td>
+<td>mystr = Right("Hello World", 5)</td>
+<td>"World"</td>
+</tr>
+<tr>
+<td><strong>Mid(str, startchar, [numchar])</strong></td>
+<td>Extracts a string of length <strong>numchar</strong> from the middle of <strong>str</strong>, starting at <strong>startchar</strong>. If numchar is omitted, the entire right-hand portion of the string, beginning at startchar, is extracted.</td>
+<td>mystr = Mid("Hello World", 7, 1)<br>mystr = Mid("Hello World", 7)</td>
+<td>"W"<br>"World"</td>
+</tr>
+<tr>
+<td><strong>Len(str)</strong></td>
+<td>Returns the length of <strong>str</strong>.</td>
+<td>n = Len("Hello World")</td>
+<td>11</td>
+</tr>
+<tr>
+<td><strong>UCase(str)</strong></td>
+<td>Converts the string to all uppercase characters.</td>
+<td>mystr = UCase("Hello World")</td>
+<td>"HELLO WORLD"</td>
+</tr>
+<tr>
+<td><strong>LCase(str)</strong></td>
+<td>Converts the string to all lowercase characters.</td>
+<td>mystr = LCase("Hello World")</td>
+<td>"hello world"</td>
+</tr>
+<tr>
+<td><strong>LTrim(str)</strong></td>
+<td>Returns a copy of the string without leading spaces</td>
+<td>mystr = LTrim("  Hello  ")</td>
+<td>"Hello  "</td>
+</tr>
+<tr>
+<td><strong>RTrim(str)</strong></td>
+<td>Returns a copy of the string without trailing spaces</td>
+<td>mystr = RTrim("  Hello  ")</td>
+<td>"  Hello"</td>
+</tr>
+<tr>
+<td><strong>Trim(str)</strong></td>
+<td>Returns a copy of the string without leading or trailing spaces</td>
+<td>mystr = Trim("  Hello  ")</td>
+<td>"Hello"</td>
+</tr>
+<tr>
+<td><strong>StrReverse(str)</strong></td>
+<td>Returns a copy of the string in reverse order</td>
+<td>mystr = StrReverse("Hello World")</td>
+<td>"dlroW olleH"</td>
+</tr>
+<tr>
+<td><strong>Replace(expression, find, replace, [start], [count], [compare])</strong></td>
+<td>Replaces each instance of "<strong>find</strong>" with "<strong>replace</strong>" in "<strong>expression</strong>".</td>
+<td>mystr = Replace("Hello World", "Hello", "Goodbye")<br>mystr = Replace("Hello World", "l", "")<br>mystr = Replace("Hello World", "o", "", 1, 1)<br>mystr = Replace("Hello World", "o", "", 1)<br>mystr = Replace("Hello World", "l", "", 6)</td>
+<td>"Goodbye World"<br>"Heo Word"<br>"Hell World"<br>"Hell Wrld"<br>"Hello Word"</td>
+</tr>
+<tr>
+<td><strong>InStr([start], string1, string2, [compare])</strong></td>
+<td>Returns an integer representing the position of <strong>string2</strong> inside <strong>string1</strong>. <strong>Start</strong> is an optional starting location (if omitted, search starts at position 1). If string2 is not found in string1, the function returns zero.</td>
+<td>n = InStr(1, "Hello World", "W")<br>n = InStr(1, "Hello World", "N")</td>
+<td>7<br>0</td>
+</tr>
+<tr>
+<td><strong>StrConv(string, conversion, [LCID])</strong></td>
+<td>Returns a copy of <strong>string</strong> after modifying the string based on the conversion argument. The <strong>conversion</strong> argument should be a vb constant with options including vbUpperCase, vbLowerCase, vbProperCase.</td>
+<td>mystr = StrConv("Hello World", vbUpperCase)<br>mystr = StrConv("Hello World", vbLowerCase)<br>mystr = StrConv("hello world", vbProperCase)</td>
+<td>HELLO WORLD<br>hello world<br>Hello World</td>
+</tr>
+</tbody>
+</table>
+<p>These functions can be combined in creative ways to achieve a variety of results. For example, consider the following table:</p>
+<p><img alt="name_table1.png" src="../images/name_table1.png" /></p>
+<p>Suppose we wanted to populate the third column with full names. We could do that with the following code:</p>
+<pre><code class="language-vb">Dim first As String
+Dim last As String
+Dim full As String
+For myrow = 2 To 5
+    first = Cells(myrow, 2)
+    last = Cells(myrow, 1)
+    full = first &amp; &quot; &quot; &amp; last
+    Cells(myrow, 3) = full
+Next myrow
+</code></pre>
+<p>Resulting in:</p>
+<p><img alt="name_table2.png" src="../images/name_table2.png" /></p>
+<p>If we wanted the full name to be "last, first" format, we could restructure our code as follows:</p>
+<pre><code class="language-vb">For myrow = 2 To 5
+    first = Cells(myrow, 2)
+    last = Cells(myrow, 1)
+    full = last &amp; &quot;, &quot; &amp; first
+    Cells(myrow, 3) = full
+Next myrow
+</code></pre>
+<p>Resulting in:</p>
+<p><img alt="name_table3.png" src="../images/name_table3.png" /></p>
+<p>Now suppose we wanted the full name to be in all caps and we want to ensure that all leading and trailing spaces (if any) are removed. We could add references to string functions as follows:</p>
+<pre><code class="language-vb">For myrow = 2 To 5
+    first = Cells(myrow, 2)
+    last = Cells(myrow, 1)
+    full = UCase(Trim(last) &amp; &quot;, &quot; &amp; Trim(first))
+    Cells(myrow, 3) = full
+Next myrow
+</code></pre>
+<p>Resulting in:</p>
+<p><img alt="name_table4.png" src="../images/name_table4.png" /></p>
+<h2 id="sample-code">Sample Code</h2>
+<p>The workbook associated with the examples on this page can be downloaded here:</p>
+<p><a href="../files/sample%20code.xlsm">sample code.xlsm</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Citation -</strong> From a range of values, create a citation as a string and display the result as a message box.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/citation.xlsm">citation.xlsm</a></div>
+<div class="exercise-cell"><a href="files/citation_key.xlsm">citation_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Concatenation -</strong> By using concatenation, create a madlib generator.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/concatenation.xlsm">concatenation.xlsm</a></div>
+<div class="exercise-cell"><a href="files/concatenation_key.xlsm">concatenation_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Secret Code -</strong> Use string functions to create a secret code that only you will know how to decipher.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/secret_code.xlsm">secret_code.xlsm</a></div>
+<div class="exercise-cell"><a href="files/secret_code_key.xlsm">secret_code_key.xlsm</a></div>
+<div class="exercise-cell"><strong>URL Deconstruct -</strong> Use a variety of string functions to deconstruct website URL addresses into their respective parts.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/url_deconstruct.xlsm">url_deconstruct.xlsm</a></div>
+<div class="exercise-cell"><a href="files/url_deconstruct_key.xlsm">url_deconstruct_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../11_arrays/arrays/" class="btn btn-neutral float-left" title="Arrays"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../13_userforms/userforms/" class="btn btn-neutral float-right" title="User Forms">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../11_arrays/arrays/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../13_userforms/userforms/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

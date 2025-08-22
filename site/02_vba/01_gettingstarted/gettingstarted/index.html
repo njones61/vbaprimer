@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/01_gettingstarted/gettingstarted/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Getting Started - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Getting Started";
+        var mkdocs_page_input_path = "02_vba/01_gettingstarted/gettingstarted.md";
+        var mkdocs_page_url = "/en/latest/02_vba/01_gettingstarted/gettingstarted/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Getting Started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-developer-tab">The Developer Tab</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-code-group">The Code Group</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-visual-basic-editor">The Visual Basic Editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-controls-group">The Controls Group</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#security-settings">Security Settings</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Getting Started</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/01_gettingstarted/gettingstarted.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started-using-the-developer-interface-and-the-vb-editor">Getting Started - Using the Developer Interface and the VB Editor</h1>
+<p>Visual Basic (VB) is a great programming language for beginning programmers. It has a simple structure and it provides a number of safeguards that prevent common programming errors. Another great feature of VB is that it can be used as a powerful scripting language for writing macros and extensions to Microsoft Office applications including Excel and Access. It can also be used to write scripts for use in AutoCAD. There is a special version of VB used in these applications called Visual Basic for Applications (VBA).</p>
+<p>Writing VBA code for Excel is easy and fun!! Once you learn a few basics, you will be creating highly professional spreadsheets. VBA allows you to design a spreadsheet that will do things that are impossible with the basic spreadsheet options. It also allows you to make your spreadsheets more user-friendly.</p>
+<h2 id="the-developer-tab">The Developer Tab</h2>
+<p>The first step in adding Visual Basic to your spreadsheet is to turn on the Developer tab. This is not a default part of the ribbon, so you may need to turn it on as follows:</p>
+<p>Select the <strong>File|Options</strong> menu command.
+Click on the Customize Ribbon button on the left.
+Turn on the Developer option shown in the Main Tabs section on the right.</p>
+<p>Click OK to exit.
+You should now see the Developer tab. This is where we interact with our VB code.</p>
+<h2 id="the-code-group">The Code Group</h2>
+<p>The Code group is used to record macros and to open the VB editor. The Visual Basic button opens the Visual Basic Editor window and the other tools are used to record and control macros.</p>
+<h2 id="the-visual-basic-editor">The Visual Basic Editor</h2>
+<p>The VB Editor is where you edit the Visual Basic code.  It is very similar to the regular Visual Basic compiler.  The code is shown in a set of windows on the right.  The Project window on the left lists the components of the project.  The VBAProject folder lists each of the sheets in your spreadsheet and the workbook.  The Modules folder lists the code associated with Macros. The Forms folder lists the custom user forms associated with the project. To edit the code associated with a sheet, module, or user form, you simply double-click on the object in the Project Explorer Window.</p>
+<h2 id="the-controls-group">The Controls Group</h2>
+<p>The Controls group is used to add controls to a worksheet and to create/edit the VB code associated with the controls.</p>
+<p>The View Code button brings up the Visual Basic Editor window shown above.</p>
+<h2 id="security-settings">Security Settings</h2>
+<p>Since VBA is such a flexible and powerful scripting environment, it also happens to be a popular method for writing viruses. For example, it is possible to write scripts that are automatically executed whenever a spreadsheet is opened. The script could theoretically attempt to do some damage to your computer (delete files, etc.) once it executes. To minimize the chance that a malicious script could cause damage, Microsoft turns on some default layers of security over VBA scripts. Before we can start writing VBA code, we need to adjust those settings.</p>
+<p>Go to the Developer tab.
+Click on Macro Security
+You will then be presented with the following options:</p>
+<p>Select the settings shown in the figure above and click OK.</p>
+<p>You should only need to do this once. These settings are associated with your installation of Excel and will be applied each time you open a spreadsheet from here on out.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../../01_excel/10_arrayform/arrayform/" class="btn btn-neutral float-left" title="Array Formulas"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../02_macros/macros/" class="btn btn-neutral float-right" title="Macros">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../../01_excel/10_arrayform/arrayform/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../02_macros/macros/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

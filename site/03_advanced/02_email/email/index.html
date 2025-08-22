@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/03_advanced/02_email/email/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Email - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Email";
+        var mkdocs_page_input_path = "03_advanced/02_email/email.md";
+        var mkdocs_page_url = "/en/latest/03_advanced/02_email/email/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Email</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#adding-the-email-utilities-module">Adding the Email Utilities Module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sending-text-messages">Sending Text Messages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-vba-code">Example VBA Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#text-message-example">Text Message Example</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-email-features">Advanced Email Features</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sending-with-attachments">Sending with Attachments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sending-to-multiple-recipients">Sending to Multiple Recipients</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#html-email">HTML Email</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#error-handling">Error Handling</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-resources">Other Resources</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Advanced Topics</li>
+      <li class="breadcrumb-item active">Email</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/03_advanced/02_email/email.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sending-e-mail-using-vba-in-excel">Sending E-Mail Using VBA in Excel</h1>
+<p>It is often useful to send e-mail using VB code. You can also send text messages using this technique. This page includes sample code and instructions.</p>
+<h2 id="adding-the-email-utilities-module">Adding the Email Utilities Module</h2>
+<p>First of all, you need to add some code to your project. Do the following:</p>
+<ol>
+<li>Download the <a href="../files/email_utilities.bas">email_utilities.bas</a> file containing VB code for sending e-mail.</li>
+<li>Go to your VB Editor window and right-click in the Project Explorer window on the left and select <strong>Import File</strong>.</li>
+<li>Navigate to the <strong>email_utilities.bas</strong> file and open it. It will then be added as a new module.</li>
+<li>Open the module and look at the functions and subs. You can now call these from anywhere in your code.</li>
+</ol>
+<p>So to use the <strong>send_mail</strong> sub, you just need to call it and pass the arguments. Like this:</p>
+<pre><code class="language-vb">send_mail &quot;myaddress@gmail.com&quot;, &quot;TEST&quot;, &quot;Hello world.&quot;
+</code></pre>
+<p>This will create a new message and launch your default e-mail client (Outlook, Thunderbird, etc). If you are working in the CAEDM network, there may not be an e-mail client set up on your account so the first time you run this you will probably need to go through a setup process. If you want to be able to send mail without having to hit the Send button on each message, you will need to use the Outlook version of the send_mail function.</p>
+<h2 id="sending-text-messages">Sending Text Messages</h2>
+<p>Next you need to decide if you want to send e-mail or text messages. To send a text message you use the same code, but you use the phone number and carrier to formulate an e-mail address for the text message. First you have to determine the correct e-mail suffix from the following list:</p>
+<table>
+<thead>
+<tr>
+<th>Company</th>
+<th>E-mail tag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sprint</td>
+<td>messaging.sprintpcs.com</td>
+</tr>
+<tr>
+<td>AT&amp;T</td>
+<td>mmode.com</td>
+</tr>
+<tr>
+<td>Cingular</td>
+<td>mobile.mycingular.com</td>
+</tr>
+<tr>
+<td>Nextel</td>
+<td>messaging.nextel.com</td>
+</tr>
+<tr>
+<td>T-Mobile</td>
+<td>tmomail.net</td>
+</tr>
+<tr>
+<td>Verizon</td>
+<td>vtext.com</td>
+</tr>
+</tbody>
+</table>
+<p>You can look up more complete lists on the internet. Then you take the phone number ("111-222-3333") and remove the dashes so that it is nothing but numbers ("1112223333") using the <strong>Replace</strong> string function. This creates the prefix. Then you combine the prefix and the suffix to generate the e-mail addresses as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Mobile #</th>
+<th>Carrier</th>
+<th>E-mail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>801-111-1111</td>
+<td>Sprint</td>
+<td>8011111111@messaging.nextel.com</td>
+</tr>
+<tr>
+<td>801-222-2222</td>
+<td>Nextel</td>
+<td>8012222222@messaging.nextel.com</td>
+</tr>
+<tr>
+<td>801-333-3333</td>
+<td>Cingular</td>
+<td>8013333333@mobile.mycingular.com</td>
+</tr>
+<tr>
+<td>801-444-4444</td>
+<td>Nextel</td>
+<td>8014444444@messaging.nextel.com</td>
+</tr>
+<tr>
+<td>801-555-5555</td>
+<td>Nextel</td>
+<td>8015555555@messaging.nextel.com</td>
+</tr>
+<tr>
+<td>801-666-6666</td>
+<td>AT&amp;T</td>
+<td>8016666666@mmode.com</td>
+</tr>
+<tr>
+<td>801-777-7777</td>
+<td>Verizon</td>
+<td>8017777777@vtext.com</td>
+</tr>
+<tr>
+<td>801-888-8888</td>
+<td>AT&amp;T</td>
+<td>8018888888@mmode.com</td>
+</tr>
+<tr>
+<td>801-310-9291</td>
+<td>T-Mobile</td>
+<td>8013109291@tmomail.net</td>
+</tr>
+<tr>
+<td>801-209-5114</td>
+<td>AT&amp;T</td>
+<td>8012095114@mmode.com</td>
+</tr>
+</tbody>
+</table>
+<p>Sometimes it is easiest to formulate the addresses just using Excel formulas. You can use a VLOOKUP to get the proper suffix from the carrier. Then you use your VB code to loop through the table and send your e-mail messages.</p>
+<h2 id="example-vba-code">Example VBA Code</h2>
+<p>Here's an example of how to send emails to multiple recipients using a loop:</p>
+<pre><code class="language-vb">Sub SendBulkEmails()
+    Dim i As Integer
+    Dim emailAddress As String
+    Dim subject As String
+    Dim message As String
+
+    ' Set the subject and message
+    subject = &quot;Monthly Report&quot;
+    message = &quot;Please find attached the monthly report for this month.&quot;
+
+    ' Loop through a range of email addresses (assuming they're in column A starting at row 2)
+    For i = 2 To Range(&quot;A&quot; &amp; Rows.Count).End(xlUp).Row
+        emailAddress = Range(&quot;A&quot; &amp; i).Value
+
+        ' Only send if there's an email address
+        If emailAddress &lt;&gt; &quot;&quot; Then
+            ' Send the email
+            send_mail emailAddress, subject, message
+        End If
+    Next i
+
+    MsgBox &quot;Bulk email process completed!&quot;
+End Sub
+</code></pre>
+<h2 id="text-message-example">Text Message Example</h2>
+<p>Here's how to send text messages using the carrier email addresses:</p>
+<pre><code class="language-vb">Sub SendTextMessage()
+    Dim phoneNumber As String
+    Dim carrier As String
+    Dim emailAddress As String
+    Dim message As String
+
+    ' Get phone number and carrier from user
+    phoneNumber = InputBox(&quot;Enter phone number (e.g., 801-555-1234):&quot;, &quot;Phone Number&quot;)
+    carrier = InputBox(&quot;Enter carrier (Sprint, AT&amp;T, Verizon, etc.):&quot;, &quot;Carrier&quot;)
+    message = InputBox(&quot;Enter your message:&quot;, &quot;Message&quot;)
+
+    ' Remove dashes from phone number
+    phoneNumber = Replace(phoneNumber, &quot;-&quot;, &quot;&quot;)
+
+    ' Create email address based on carrier
+    Select Case LCase(carrier)
+        Case &quot;sprint&quot;
+            emailAddress = phoneNumber &amp; &quot;@messaging.sprintpcs.com&quot;
+        Case &quot;at&amp;t&quot;, &quot;att&quot;
+            emailAddress = phoneNumber &amp; &quot;@mmode.com&quot;
+        Case &quot;verizon&quot;
+            emailAddress = phoneNumber &amp; &quot;@vtext.com&quot;
+        Case &quot;t-mobile&quot;, &quot;tmobile&quot;
+            emailAddress = phoneNumber &amp; &quot;@tmomail.net&quot;
+        Case Else
+            MsgBox &quot;Carrier not recognized. Please check the spelling.&quot;
+            Exit Sub
+    End Select
+
+    ' Send the text message
+    send_mail emailAddress, &quot;&quot;, message
+
+    MsgBox &quot;Text message sent to &quot; &amp; emailAddress
+End Sub
+</code></pre>
+<h2 id="advanced-email-features">Advanced Email Features</h2>
+<p>The email utilities module provides several functions for different email scenarios:</p>
+<h3 id="sending-with-attachments">Sending with Attachments</h3>
+<pre><code class="language-vb">' Send email with attachment
+send_mail_with_attachment &quot;recipient@example.com&quot;, &quot;Subject&quot;, &quot;Message&quot;, &quot;C:\path\to\file.xlsx&quot;
+</code></pre>
+<h3 id="sending-to-multiple-recipients">Sending to Multiple Recipients</h3>
+<pre><code class="language-vb">' Send to multiple recipients (comma-separated)
+send_mail &quot;user1@example.com,user2@example.com,user3@example.com&quot;, &quot;Subject&quot;, &quot;Message&quot;
+</code></pre>
+<h3 id="html-email">HTML Email</h3>
+<pre><code class="language-vb">' Send HTML formatted email
+send_html_mail &quot;recipient@example.com&quot;, &quot;Subject&quot;, &quot;&lt;h1&gt;Hello&lt;/h1&gt;&lt;p&gt;This is &lt;b&gt;HTML&lt;/b&gt; formatted.&lt;/p&gt;&quot;
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<p>It's important to add error handling when sending emails:</p>
+<pre><code class="language-vb">Sub SendEmailWithErrorHandling()
+    On Error GoTo ErrorHandler
+
+    Dim emailAddress As String
+    emailAddress = &quot;test@example.com&quot;
+
+    ' Attempt to send email
+    send_mail emailAddress, &quot;Test&quot;, &quot;This is a test email&quot;
+
+    MsgBox &quot;Email sent successfully!&quot;
+    Exit Sub
+
+ErrorHandler:
+    MsgBox &quot;Error sending email: &quot; &amp; Err.Description
+    Resume Next
+End Sub
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Always test with your own email first</strong> - Make sure the system works before sending to others</li>
+<li><strong>Use meaningful subject lines</strong> - Helps recipients identify your emails</li>
+<li><strong>Keep messages concise</strong> - Text messages have character limits</li>
+<li><strong>Handle errors gracefully</strong> - Add error handling to prevent crashes</li>
+<li><strong>Respect rate limits</strong> - Don't send too many emails too quickly</li>
+<li><strong>Verify email addresses</strong> - Check that addresses are valid before sending</li>
+</ol>
+<h2 id="other-resources">Other Resources</h2>
+<p>For more information on sending email using VBA, see the following:</p>
+<ul>
+<li><a href="http://www.rondebruin.nl/sendmail.htm">Ron de Bruin's Send Mail Page</a> (great resource here - extensive set of sample code)</li>
+<li><a href="http://msdn.microsoft.com/en-us/library/office/ff458119%28v=office.11%29.aspx">MSDN Outlook Sample Code</a> (Outlook sample code)</li>
+<li><a href="http://msdn.microsoft.com/en-us/library/office/ff519602%28v=office.11%29.aspx">MSDN Part 2</a> (Part 2 from previous link)</li>
+<li><a href="http://www.makeuseof.com/tag/send-emails-excel-vba/">MakeUseOf CDO Method</a> (The CDO method - I haven't tried this, but it looks pretty slick)</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Common issues and solutions:</p>
+<ol>
+<li><strong>Email client not configured</strong> - Make sure you have a default email client set up</li>
+<li><strong>Security warnings</strong> - Some email clients may block automated emails</li>
+<li><strong>Network restrictions</strong> - Corporate networks may block certain email functionality</li>
+<li><strong>Character encoding</strong> - Special characters may not display correctly in some email clients</li>
+</ol>
+<p>The email utilities module provides a simple and effective way to integrate email functionality into your Excel VBA applications, making it easy to automate communication tasks and send notifications automatically.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../01_graphics/graphics/" class="btn btn-neutral float-left" title="Graphics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../03_files/files/" class="btn btn-neutral float-right" title="Files">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../01_graphics/graphics/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../03_files/files/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

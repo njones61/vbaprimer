@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/02_macros/macros/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Macros - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Macros";
+        var mkdocs_page_input_path = "02_vba/02_macros/macros.md";
+        var mkdocs_page_url = "/en/latest/02_vba/02_macros/macros/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Macros</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#recording-a-macro">Recording a Macro</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#saving-a-macro-enabled-workbook">Saving a Macro-Enabled Workbook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#running-a-macro">Running a Macro</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewing-the-macro-code">Viewing the Macro Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#applications-and-use-cases">Applications and Use Cases</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Macros</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/02_macros/macros.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="recording-macros">Recording Macros</h1>
+<p>A <strong>VB Macro</strong> is essentially a VB subroutine that executes a series of VB statements. To generate a macro, you must first turn on the <a href="../../01_gettingstarted/gettingstarted/#the-developer-tab">Developer tab</a>. Macros are then created and managed using the tools in the Code Group on the left side of the tab:</p>
+<p><img alt="controlsgroup.png" src="../../01_gettingstarted/images/controlsgroup.png" /></p>
+<p>You can automate a series of steps in Excel by recording a macro. As you record a macro, Excel converts each of your steps into lines of VB code that are part of a script that can be replayed at a latter point in time to automatically replicate the steps recorded into the script.</p>
+<p>The options are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="recordmacro.png" src="../images/recordmacro.png" /></td>
+<td>Click on this button to start recording your macro. You will then be prompted for the name of the macro. Once you start recording the macro, the button will change to Stop Recording.</td>
+</tr>
+<tr>
+<td><img alt="stoprecording.png" src="../images/stoprecording.png" /></td>
+<td>Click here when you are finished with the steps you wish to include in the macro.</td>
+</tr>
+<tr>
+<td><img alt="userelbutton.png" src="../images/userelbutton.png" /></td>
+<td>This is a toggle button. When it is turned on, the steps in the macro are recorded in a relative fashion. I.e., the cells affected by the macro will be based on the position of the cell(s) selected when the macro is executed. This can be used to make a macro that can be applied to any section of the spreadsheet. When using this option, be sure to select an appropriate part of the sheet prior to recording the macro.</td>
+</tr>
+<tr>
+<td><img alt="security.png" src="../images/security.png" /></td>
+<td>This option is used to establish the security settings for the VB code. VB macros can be used to write computer viruses. The security settings are used to minimize danger from such viruses.</td>
+</tr>
+<tr>
+<td><img alt="macrosbutton.png" src="../images/macrosbutton.png" /></td>
+<td>This button brings up a window listing all of the macros associated with a project. You can select a macro and click on the <strong>Run</strong> button to execute the macro. You can also delete macros.</td>
+</tr>
+<tr>
+<td><img alt="vbebutton.png" src="../images/vbebutton.png" /></td>
+<td>This tool displays the <a href="../../01_gettingstarted/gettingstarted/#the-visual-basic-editor">Visual Basic Editor</a>. This is where you write the Visual Basic code. It also allows you to look at the code associated with your macros. The macros are stored in the <strong>Modules</strong> section of the Project Explorer.</td>
+</tr>
+</tbody>
+</table>
+<p>Macros are extremely useful when you are first learning how to write VBA code in Excel. If you want to do something in code such as change the background color of a cell, but you don't know to do it, simply run a macro, change the color manually, and then look at the macro. You can learn how to do just about anything simply by running macros.</p>
+<h2 id="recording-a-macro">Recording a Macro</h2>
+<p>To illustrate the macro recording process, open up a blank workbook, click on the Developer tab, and click on the Record Macro button. You will then be prompted for the name of the macro. Enter "my_macro". Note that you should not use spaces in your macro names.</p>
+<p><img alt="recordmacrodialog.png" src="../images/recordmacrodialog.png" /></p>
+<p>Select any cell other than cell B3. Then, do the following:</p>
+<ol>
+<li>Select cell <strong>B3</strong>.</li>
+<li>Enter a value of <strong>23.4</strong> in cell <strong>B3</strong>.</li>
+<li>Enter a value of <strong>873.2</strong> in cell <strong>B4</strong>.</li>
+<li>Enter a formula in cell <strong>B5</strong> to compute the sum of the previous two values ("=Sum(B3:B4)").</li>
+<li>Click on the <strong>Home</strong> tab and select the range <strong>B3:B4</strong> and click on the center align button in the <strong>Alignment</strong> section.</li>
+<li>Use to borders tool in the <strong>Font</strong> section to apply a solid border to the cells.</li>
+</ol>
+<p>At this point, you workbook should look like this:</p>
+<p><img alt="macroresults.png" src="../images/macroresults.png" /></p>
+<p>Go back to the <strong>Developer</strong> tab and click on the <strong>Stop Recording</strong> button. This completes the recording of the macro.</p>
+<h2 id="saving-a-macro-enabled-workbook">Saving a Macro-Enabled Workbook</h2>
+<p>Before looking at the source code recorded by our macro, we need to save the changes that we have made into the workbook thus far. Click on the File|Save As... command and pick a location to save your workbook. Note that the filename and filter will look something like this by default:</p>
+<p><img alt="file-filters-default.png" src="../images/file-filters-default.png" /></p>
+<p>Note that the default extension is "*.xlsx". If you click the Save button, you will get the following error message:</p>
+<p><img alt="file-warning.png" src="../images/file-warning.png" /></p>
+<p>If we save the file in this format, our macro code will be lost and it will not function the next time we open it. To save a workbook containing VB code, you must change the extension as follows:</p>
+<p><img alt="file-filters-macro.png" src="../images/file-filters-macro.png" /></p>
+<h2 id="running-a-macro">Running a Macro</h2>
+<p>Next we will test the macro that we just recorded. Before running the macro, we need to delete our changes to the sheet, including the formatting. The easiest way to do this is to select the entire column <strong>B</strong> and then select the <strong>Delete Sheet Columns</strong> command in the <strong>Cells</strong> section on the right side of the ribbon in the <strong>Home</strong> tab. After the deletion, there should be nothing on the sheet. Select any cell on the sheet.</p>
+<p>To run the macro, go to the <strong>Developer</strong> tab and click on the <strong>Macros</strong> button. This will bring up a list of the macros (we only have one at this point). Sure our macro is highlighted and then click on the <strong>Run</strong> button. This should execute our macro and reproduce all of the edits and changes we made to the worksheet when we were recording the macro.</p>
+<h2 id="viewing-the-macro-code">Viewing the Macro Code</h2>
+<p>Next, we will examine the code associated with our macro. When you record a macro in Excel, everything you do is recorded as a set of Visual Basic code. To view the code, click on <strong>Visual Basic</strong> button in the <strong>Developer</strong> tab. This will launch the Visual Basic Editor window. On the left side of the window in the VBA Project Explorer you will see a folder called "Modules". Click on the plus sign ("+") to the left of this folder to expand its contents and you will an item called <strong>Module1</strong>. When a macro is recorded, the code associated with the macro is always inserted into a module. If you already have one or more modules, a new module will be created.</p>
+<p><img alt="module.png" src="../images/module.png" /></p>
+<p>If you double click on the item labeled <strong>Module1</strong>, a window will open and the code associated with the macro you just recorded will appear. The code should look something like this:</p>
+<pre><code class="language-vb">Sub my_macro()
+'
+' my_macro Macro
+'
+
+'
+    Range(&quot;B3&quot;).Select
+    ActiveCell.FormulaR1C1 = &quot;23.4&quot;
+    Range(&quot;B4&quot;).Select
+    ActiveCell.FormulaR1C1 = &quot;873.2&quot;
+    Range(&quot;B5&quot;).Select
+    ActiveCell.FormulaR1C1 = &quot;=SUM(R[-2]C:R[-1]C)&quot;
+    Range(&quot;B3:B5&quot;).Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .AddIndent = False
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideVertical)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+    With Selection.Borders(xlInsideHorizontal)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlThin
+    End With
+End Sub
+</code></pre>
+<p>The first few lines of code are associated with entering the two values and the formula. The next section centers the selection and the last six blocks of code apply the border style to the selection. You can modify the code here if you wish and re-run the macro.</p>
+<h2 id="applications-and-use-cases">Applications and Use Cases</h2>
+<p>Macros have a number of useful applications. For example, you can record a macro associated with some set of steps that you find yourself doing frequently. The macro then automates those steps. You can also use a macro to figure out how to write VB code to perform some action. For example, suppose I want to embed an execution of the <a href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a> feature as part of my code, but I am not sure how to call Goal Seek from VB. I can simply record a macro that involves running the Goal Seek tool and then examine the code.</p>
+<p>In may applications, the VB code associated with our macro may not be as useful as we like because it only applies to a very specific case at a very specific location on our workbook. In these cases, we can often modify the macro code to make it more general purpose. For example, we can generalize the code and then put it in a loop to solve some kind of problem in an iterative fashion. In this sense, macros can be a very powerful way to quickly generate code.</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Parabolic Zero -</strong> Record a macro performing a goal seek to find the zero(s) of a parabolic equation.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/parabolic_zero.xlsm">parabolic_zero.xlsm</a></div>
+<div class="exercise-cell"><a href="files/parabolic_zero_key.xlsm">parabolic_zero_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Table Format -</strong> Record a relative macro that formats the appropriate range of cells found within any given table of the same size.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/table_format.xlsm">table_format.xlsm</a></div>
+<div class="exercise-cell"><a href="files/table_format_key.xlsm">table_format_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Microstrain -</strong> Record a macro that conducts an analysis on microstrain data that quickly identifies the maximum values of the selected column.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/microstrain.xlsm">microstrain.xlsm</a></div>
+<div class="exercise-cell"><a href="files/microstrain_key.xlsm">microstrain_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../01_gettingstarted/gettingstarted/" class="btn btn-neutral float-left" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../03_controls/controls/" class="btn btn-neutral float-right" title="Controls">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../01_gettingstarted/gettingstarted/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../03_controls/controls/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

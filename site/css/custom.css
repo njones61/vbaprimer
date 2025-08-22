@@ -1,0 +1,87 @@
+.limited-width-table {
+    width: 50%;
+    overflow-x: auto;
+}
+
+.math {
+  font-size: large;
+}
+
+.wy-nav-content {
+    max-width: 1200px !important;
+}
+
+/* Exercise grid layout for controlled column widths */
+.exercise-grid {
+    display: grid !important;
+    gap: 0 !important;
+    border: 1px solid #cccccc !important;
+    margin: 1em 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+/* 4-column layout (all sections) */
+.exercise-grid[data-columns="4"] {
+    grid-template-columns: 45% 15% 20% 20% !important;
+}
+
+/* All exercise tables now use 4-column layout */
+
+.exercise-header {
+    background-color: #f5f5f5 !important;
+    font-weight: bold !important;
+    padding: 8px !important;
+    border-right: 1px solid #cccccc !important;
+    border-bottom: 2px solid #cccccc !important;
+}
+
+/* Header alignment */
+/* Description header (1st header) - left-aligned */
+.exercise-grid[data-columns="4"] .exercise-header:nth-child(1) {
+    text-align: left !important;
+}
+
+/* Difficulty, Start, Solution headers (2nd, 3rd, 4th headers) - center-aligned */
+.exercise-grid[data-columns="4"] .exercise-header:nth-child(2),
+.exercise-grid[data-columns="4"] .exercise-header:nth-child(3),
+.exercise-grid[data-columns="4"] .exercise-header:nth-child(4) {
+    text-align: center !important;
+}
+
+.exercise-header:last-child {
+    border-right: none !important;
+}
+
+.exercise-cell {
+    padding: 8px !important;
+    border-right: 1px solid #cccccc !important;
+    border-bottom: 1px solid #cccccc !important;
+    vertical-align: top !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Text alignment for different columns */
+/* Description column (1st column) - left-aligned */
+.exercise-grid[data-columns="4"] .exercise-cell:nth-child(4n+1) {
+    text-align: left !important;
+}
+
+/* Difficulty, Start, Solution columns (2nd, 3rd, 4th columns) - center-aligned */
+.exercise-grid[data-columns="4"] .exercise-cell:nth-child(4n+2),
+.exercise-grid[data-columns="4"] .exercise-cell:nth-child(4n+3),
+.exercise-grid[data-columns="4"] .exercise-cell:nth-child(4n+4) {
+    text-align: center !important;
+}
+
+/* 4-column layout borders */
+.exercise-grid[data-columns="4"] .exercise-cell:nth-child(4n) {
+    border-right: none !important;
+}
+
+.exercise-grid[data-columns="4"] .exercise-cell:nth-last-child(-n+4) {
+    border-bottom: none !important;
+}
+
+

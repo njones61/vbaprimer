@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/11_arrays/arrays/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Arrays - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Arrays";
+        var mkdocs_page_input_path = "02_vba/11_arrays/arrays.md";
+        var mkdocs_page_url = "/en/latest/02_vba/11_arrays/arrays/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Arrays</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#one-dimensional-arrays">One-Dimensional Arrays</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#multi-dimensional-arrays">Multi-Dimensional Arrays</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dynamic-arrays-the-redim-statement">Dynamic Arrays - The ReDim Statement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#arrays-vs-ranges">Arrays vs. Ranges</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Arrays</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/11_arrays/arrays.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-arrays-to-store-sets-of-data">Using Arrays to Store Sets of Data</h1>
+<p>In many applications (especially in engineering), it is necessary to work with variables containing a set of related data. For example, one may have a list (vector) or matrix of numbers that need to be stored and used as part of some type of linear algebra calculations. Suppose you have a vector called "x" with ten double values. One solution would be to declare your variables like this:</p>
+<pre><code class="language-vb">Dim x1 As Double
+Dim x2 As Double
+Dim x3 As Double
+Dim x4 As Double
+Dim x5 As Double
+Dim x6 As Double
+Dim x7 As Double
+Dim x8 As Double
+Dim x9 As Double
+Dim x10 As Double
+</code></pre>
+<p>Then in your code, you would reference the variables independently:</p>
+<pre><code class="language-vb">x1 = Cells(4,1)
+x2 = Cells(4,2)
+...
+x8 = x7 * Sin(x6) + 2
+</code></pre>
+<p>This works, but it is not an efficient approach, especially for cases where you have hundreds or thousands of items in the vector.</p>
+<h2 id="one-dimensional-arrays">One-Dimensional Arrays</h2>
+<p>A more efficient way to handle the problem described above is to declare a one-dimensional array variable as follows:</p>
+<pre><code class="language-vb">Dim x(1 To 10) As Double
+</code></pre>
+<p>Then the elements of the array can be referenced like this:</p>
+<pre><code class="language-vb">x(1) = Cells(4,1)
+x(2) = Cells(4,2)
+...
+x(8) = x(7) * Sin(x(6)) + 2
+</code></pre>
+<p>One of the benefits of using arrays is that they can be easily traversed using the <strong>For i = ...</strong> style of loop. For example, the following code declares an array of 1000 doubles and initializes the value of each item in the array to = 1.5.</p>
+<pre><code class="language-vb">Dim v(1 To 1000) As Double
+Dim i As Integer
+
+For i = 1 To 1000
+    v(i) = 1.5
+Next i
+</code></pre>
+<p>When declaring arrays, we can define the lower and upper bounds of the array indices. For example:</p>
+<pre><code class="language-vb">Dim p(5 To 15) As Integer
+p(5) = 1
+p(6) = 2
+...
+p(14) = 12
+p(15) = p(14) * p(12)
+</code></pre>
+<p>It is also possible to omit the first part of the array bounds:</p>
+<pre><code class="language-vb">Dim x(100) As Double
+</code></pre>
+<p>But if you do so, this declares an array of 101 items! The array bounds are from 0 to 100.</p>
+<h2 id="multi-dimensional-arrays">Multi-Dimensional Arrays</h2>
+<p>In some cases, it is useful to declare multi-dimensional arrays. For example, if we want to declare a variable to store a matrix with 20 rows and 15 columns, we could do the following:</p>
+<pre><code class="language-vb">Dim m(1 To 20, 1 To 15) As Double
+</code></pre>
+<p>And the individual elements of the arrays are referenced like this:</p>
+<pre><code class="language-vb">m(1, 1) = 0.5
+m(13, 5) = m(2, 12) * 2
+</code></pre>
+<p>To traverse the elements of the array, we can use a nested set of <strong>For i = ...</strong> loops.</p>
+<pre><code class="language-vb">Dim i As Integer, j As Integer
+
+For i = 1 To 20
+    For j = 1 To 15
+        m(i, j) = 1 / m(i, j)
+    Next j
+Next i
+</code></pre>
+<p>Arrays are not limited to two dimensions. You can use three, four, or more dimensions if you like.</p>
+<pre><code class="language-vb">Dim q(1 To 2, 1 To 100, 1 To 50) As Double
+q(1, 40, 25) = 4.5
+</code></pre>
+<p>The maximum number of dimensions you can use is 32.</p>
+<h2 id="dynamic-arrays-the-redim-statement">Dynamic Arrays - The ReDim Statement</h2>
+<p>When you declare an array using the Dim statement, the dimension bounds must be constants. However, there are cases when it is necessary to declare the bounds (especially the upper bound) using a variable. In other words, you may not know until you run your code how big the array needs to be. In this case, you should use the ReDim statement:</p>
+<pre><code class="language-vb">Dim n As Integer
+
+n = ...  '&lt;--- Do something to determine how big the array needs to be
+
+ReDim x(1 To n) As Double
+For i = 1 To n
+    x(i) = ...
+Next i
+</code></pre>
+<p>A classic example involving spreadsheets is when we want to read a column of values into an array, but there may be any number of items in the column. We can either just guess what the maximum size could possibly be and declare a really big array, or we could write a short loop to count the number of items in the array and then declare an array just big enough to read the values. For example, consider the following range of cells in a worksheet:</p>
+<p><img alt="screenshot.jpg" src="../images/screenshot.jpg" /></p>
+<p>Suppose we wanted to read these two columns of numbers into two arrays, <strong>x</strong> and <strong>f</strong>, in order to perform some numerical calculations. We could declare the arrays to be 24 items long using the Dim statement and just allow for some empty space. Or we could loop through the cells first in order to find out exactly how many items are in the list and then declare two arrays to the exact size needed and then load the values from the cells into the array as shown here:</p>
+<pre><code class="language-vb">Dim n As Integer
+Dim myrow As Integer
+
+'Find out how many items are in the column
+myrow = 6
+Do While Cells(myrow, 2) &lt;&gt; &quot;&quot;
+    myrow = myrow + 1
+Loop
+n = myrow - 5
+
+ReDim x(1 To n) As Double
+ReDim f(1 To n) As Double
+
+'Copy the values into the arrays
+Dim i As Integer
+For i = 1 To n
+    x(i) = Cells(i + 5, 2)
+    f(i) = Cells(i + 5, 3)
+Next i
+</code></pre>
+<p>At this point, the two arrays could be used directly in formulas and could be indexed from 1 to n.</p>
+<p>Another case where the ReDim statement can be used is when you need to resize an array (make it larger or smaller) during run-time. For example:</p>
+<pre><code class="language-vb">n = 1000
+ReDim x(1 To n) As Double
+...
+n = n + 100
+
+ReDim x(1 To n) As Double
+</code></pre>
+<p>After the last line, the array would contain 1100 items. If your array contains information that you do not want to lose, you should use the Preserve keyword.</p>
+<pre><code class="language-vb">n = 1000
+ReDim x(1 To n) As Double
+...
+n = n + 100 
+ReDim Preserve x(1 To n) As Double
+</code></pre>
+<p>This ensures that the items stored in the array are not lost when the array is resized.</p>
+<h2 id="arrays-vs-ranges">Arrays vs. Ranges</h2>
+<p>You may have noticed that a 2D array is very similar to a range: both have rows and columns. In fact, when we use the Cells object to reference a set of cells using row and column indices like this:</p>
+<pre><code class="language-vb">Cells(4, 5) = &quot;Hello&quot;
+</code></pre>
+<p>or</p>
+<pre><code class="language-vb">For myrow = 6 To 20
+    Cells(myrow, 2) = &quot;&quot;
+Next myrow
+</code></pre>
+<p>We are essentially using the Cells object as a 2D array.</p>
+<p>So the question arises, if you already have your data in a range of cells, why not just reference them directly using the Cells object as opposed to loading the values into a 1D or 2D array? In some cases, it is just a matter of personal preference. In other cases, the code can be much cleaner and easier to follow when you first load the values into arrays. For example, consider the Numeric Integration example in the previous section above. After loading the two columns into the x and f arrays, the calculations performed to numerically integrate the function defined by the numbers mimics the corresponding mathematical formula because the arrays are indexed from 1 to n. If one were to do the same calculations using the Cells object, it would be necessary to offset the row and column indices to match the location where the cells are stored on the worksheet. This makes the code much more difficult to write and debug.</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Point Identifier -</strong> Use an array to select the correct point from the list of coordinates.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/point_identifier.xlsm">point_identifier.xlsm</a></div>
+<div class="exercise-cell"><a href="files/point_identifier_key.xlsm">point_identifier_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Dot Product -</strong> Store the columns of a matrix into vector arrays and compute the dot product.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/dot_product.xlsm">dot_product.xlsm</a></div>
+<div class="exercise-cell"><a href="files/dot_product_key.xlsm">dot_product_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Transposition -</strong> Store the values of a matrix into an array and pass the arrayed values into a loop to return the transpose of the initial matrix.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/transposition.xlsm">transposition.xlsm</a></div>
+<div class="exercise-cell"><a href="files/transposition_key.xlsm">transposition_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../10_loops/loops/" class="btn btn-neutral float-left" title="Loops"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../12_strings/strings/" class="btn btn-neutral float-right" title="Strings">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../10_loops/loops/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../12_strings/strings/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

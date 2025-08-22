@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/01_excel/01_formulas/formulas/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Formulas - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Formulas";
+        var mkdocs_page_input_path = "01_excel/01_formulas/formulas.md";
+        var mkdocs_page_url = "/en/latest/01_excel/01_formulas/formulas/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Formulas</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cell-addresses">Cell Addresses</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cell-inputs">Cell Inputs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#entering-a-formula">Entering a Formula</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#editing-a-formula">Editing a Formula</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#copying-formulas">Copying Formulas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#relative-vs-absolute-references">Relative vs. Absolute References</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-workbook">Sample Workbook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel Fundamentals</li>
+      <li class="breadcrumb-item active">Formulas</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/01_excel/01_formulas/formulas.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="cells-and-formulas">Cells and Formulas</h1>
+<p>The most basic feature of Excel is the ability to enter data and then write formulas based on the data. As the data are edited, the formulas are automatically updated. In this chapter we review some of the procedure for entering and using formulas.</p>
+<h2 id="cell-addresses">Cell Addresses</h2>
+<p>An Excel workbook contains a collection of sheets. Each sheet contains a collection of cells organized into rows and columns. The rows are indexed with numbers (1,2,3...) and the columns are indexed with letters (A,B,C...). Each cell can be uniquely identified by a cells address defined by the column-row combination.</p>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A5</td>
+<td>Row 1, Column 1</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>Row 3, Column 4</td>
+</tr>
+<tr>
+<td>AJ234</td>
+<td>Row 234, Column 36</td>
+</tr>
+</tbody>
+</table>
+<p>Note that after column Z (26), the column numbers are indexed as AA,AB,AC... To reference a group of cells with single address we combine the upper left corner of the region with the lower right corner separated by a semicolon. For example, to reference the following range:</p>
+<p><img alt="range.png" src="../images/range.png" /></p>
+<p>we would use the address <strong>B3:F10</strong>.</p>
+<h2 id="cell-inputs">Cell Inputs</h2>
+<p>There are four primary types of information that can be entered in cells:</p>
+<ol>
+<li>Text ("Hello world", etc.)</li>
+<li>Numbers (4, 2382.23, 1e-14, etc.)</li>
+<li>Dates (Jun-5, 2014, 12/29/2015, etc.)</li>
+<li>Formulas ("=A4+C5", "=Sum(D4:D14)", etc.)</li>
+</ol>
+<p>For the first three types (text, numbers, dates), Excel determines the type of data based on the content as you enter it, and formats it appropriately. You can also customize the formatting if you wish. Entering a formula is described in the next section.</p>
+<p>Sometimes it is useful to enter a sequence of data in a cell. Excel provides a simple trick for doing this. For example, suppose you want to create a list of numbers 1, 2, 3, ... to fill in a column in a table. Rather than typing the entire list, you can enter the first three numbers and then select the three numbers. Once you do so, a green rectangle will appear at the lower right corner of the selection as follows:</p>
+<p><img alt="autofill-1.png" src="../images/autofill-1.png" /></p>
+<p>You can then click on the rectangle handle and drag it all the way down to the bottom of the list, or you can simply double-click on the handle. In either case, the list will automatically be extended as follows:</p>
+<p><img alt="autofill-2.png" src="../images/autofill-2.png" /></p>
+<p>This process works for other types of data also. For example, you can enter "Mon", "Tues", "Wed" or "Jan", "Feb", "Mar" and when you extend the list, the sequences will be automatically extended.</p>
+<h2 id="entering-a-formula">Entering a Formula</h2>
+<p>An Excel formula typically references cells in your worksheet and performs some type of calculation. To enter a formula, you start by typing an equal sign ("=") and then you reference cells using their addresses ("A4", "C27", "D4:E15", etc.). The values of the cells references are then used in the formula and a value is returned and displayed in the cell. As you change the values of the input cells, all of the dependent formulas are automatically updated. Formulas can reference other cells that contain formulas.</p>
+<p>When composing a formula, you can also reference a cell by clicking on the cell rather than typing out the cell address. This is particularly useful for multicell ranges ("D4:G23" for example).</p>
+<h2 id="editing-a-formula">Editing a Formula</h2>
+<p>Once you have entered a formula and you want to edit it, there are two options: You can select the cell containing the formula and then click in the Formula Bar at the top of the worksheet as follows:</p>
+<p><img alt="formula-edit-1.png" src="../images/formula-edit-1.png" /></p>
+<p>or you can double click on the cell containing the formula and edit it directly in the cell:</p>
+<p><img alt="formula-edit-2.png" src="../images/formula-edit-2.png" /></p>
+<h2 id="functions">Functions</h2>
+<p>One of the most powerful features of Excel is built-in functions. A function typically takes one or more arguments as input and returns a value. Functions are extremenly useful in formulas. For example, you can use trig functions:</p>
+<blockquote>
+<p>sin(a) cos(a) tan(a) etc.</p>
+</blockquote>
+<p>where a = an angle in radians. There are also many functions that operate on a range as input:</p>
+<blockquote>
+<p>Sum(r) Average(r) Min(r) Max(r) etc.</p>
+</blockquote>
+<p>where r = a range of cells. For example, this formula computes the sum of a list of values:</p>
+<p><img alt="sum.png" src="../images/sum.png" /></p>
+<p>A complete set of the available functions can be found in the Excel Help.</p>
+<h2 id="copying-formulas">Copying Formulas</h2>
+<p>After entering a formula, it is often necessary to copy that formula to other cells. For example, the following spreadsheet is designed to compute the volume and weight of a set of cylinders defined by a radius and a height. The volume can be computed from the radius and height using the following formula:</p>
+<p><img alt="copy-formula-1.png" src="../images/copy-formula-1.png" /></p>
+<p>After entering the formula in cell D7, we wish to copy the formula to cells D8:D22. This can be accomplished by selecting cell D7 after the formula has been entered and copying (Ctrl-C) and pasting (Ctrl-V) the formula to D8:D22 using the clipboard. Another method is to select the cell as follows:</p>
+<p><img alt="copy-formula-2.png" src="../images/copy-formula-2.png" /></p>
+<p>and then drag the green square in the lower right corner of the cell down to the end of the list, or simply double-click on the green square. After doing so, the formula is automatically copied to the end of the list:</p>
+<p><img alt="copy-formula-3.png" src="../images/copy-formula-3.png" /></p>
+<h2 id="relative-vs-absolute-references">Relative vs. Absolute References</h2>
+<p>When copying formulas, we need to be careful how were reference other cells in our formulas. For example, to calculate the weight of our cylinders, we take the volume of the cylinder and multiply by the unit wt of the cylinder material as follows:</p>
+<p><img alt="abs-rel-1.png" src="../images/abs-rel-1.png" /></p>
+<p>After copying the formula to the bottom of the table in column E, we notice that the weights are not properly computed:</p>
+<p><img alt="abs-rel-2.png" src="../images/abs-rel-2.png" /></p>
+<p>The reason for this error can be seen by revealing the formulas. This is accomplished by pressing Ctrl-~ on the keyboard (the "~" symbol is called the "tilde" and is on the upper left corner of your keyboard).</p>
+<p><img alt="abs-rel-3.png" src="../images/abs-rel-3.png" /></p>
+<p>Note that when you copy a formula, the cell references are updated with each subsequent cell the formula is copied to. Note that <code>=B4*D7</code> is changed to <code>=B5*D8</code> in the next cell down. This happens because whenever you reference a cell in a formula, that reference is interpreted to be relative to the cell containing the formula. In other words, when we type "D7" in a formula in cell E7, what we are really referencing is "stay on the same row, but go one column to the left". Therefore, when the formula is copied, it correctly references the proper volume value one cell to the left. However, our error occurs because of a relative reference to the unit wt. value. A reference to B4 from cell E7 literally means "three rows up and three columns to the left". But in this case, we don't want a relative reference. When we copy the formula, we want to ALWAYS reference cell B4. We can accomplish this by changing the B4 reference to make it absolute as follows:</p>
+<p><img alt="abs-rel-4.png" src="../images/abs-rel-4.png" /></p>
+<p>Note the "$" symbols. You make an absolute reference by directly typing the values or by typing B4 and then pressing the F4 key (Command-T on a Mac). Now after copying the formula down, we get correct answers:</p>
+<p><img alt="abs-rel-5.png" src="../images/abs-rel-5.png" /></p>
+<p>And the formulas look like this:</p>
+<p><img alt="abs-rel-6.png" src="../images/abs-rel-6.png" /></p>
+<p>Sometimes it is useful to use a mixed reference. Here is a summary of the ways in which you can reference another cell.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D4</td>
+<td>Row and column are both relative</td>
+</tr>
+<tr>
+<td>$D4</td>
+<td>Row is relative and column is absolute</td>
+</tr>
+<tr>
+<td>D$4</td>
+<td>Row is absolute and column is relative</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(D\)</span>4</td>
+<td>Row and column are both absolute</td>
+</tr>
+</tbody>
+</table>
+<p>For the example shown above, we could have gotten away with a mixed reference ("B$4") because we copied the formulas within a single column, but it works fine with a complete absolute reference ("$B$4"). To do a mixed reference, you can either directly type the "$" symbols or you can repeatedly press the F4 key to get the combination you are seeking.</p>
+<h2 id="sample-workbook">Sample Workbook</h2>
+<p>The workbook used in the examples shown above can be downloaded here:</p>
+<p><a href="../files/cylinders.xlsx">cylinders.xlsx</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Run through some basic ways to input formulas into cells.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/the_basics.xlsm">the_basics.xlsm</a></div>
+<div class="exercise-cell"><a href="files/the_basics_key.xlsm">the_basics_key.xlsm</a></div>
+<div class="exercise-cell">Calculate the buoyant force on different sized objects using formulas and cell references.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/buoyancy.xlsm">buoyancy.xlsm</a></div>
+<div class="exercise-cell"><a href="files/buoyancy_key.xlsm">buoyancy_key.xlsm</a></div>
+<div class="exercise-cell">Use a formula to count the number of names found inside a table range.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/name_counter.xlsx">name_counter.xlsx</a></div>
+<div class="exercise-cell"><a href="files/name_counter_key.xlsx">name_counter_key.xlsx</a></div>
+<div class="exercise-cell">Use trigonometric functions inside of formulas to find the missing angles and/or sides of a few triangles.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/trigonometry.xlsm">trigonometry.xlsm</a></div>
+<div class="exercise-cell"><a href="files/trigonometry_key.xlsm">trigonometry_key.xlsm</a></div>
+<div class="exercise-cell">Use formulas to conduct statistics on an employee database.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/employee_database.xlsm">employee_database.xlsm</a></div>
+<div class="exercise-cell"><a href="files/employee_database_key.xlsm">employee_database_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../02_vlookup/vlookup/" class="btn btn-neutral float-right" title="VLOOKUP">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../02_vlookup/vlookup/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

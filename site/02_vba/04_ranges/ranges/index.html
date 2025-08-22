@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/04_ranges/ranges/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Ranges - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ranges";
+        var mkdocs_page_input_path = "02_vba/04_ranges/ranges.md";
+        var mkdocs_page_url = "/en/latest/02_vba/04_ranges/ranges/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Ranges</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-range-object">The Range Object</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-cells-object">The Cells Object</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#working-with-multiple-cells">Working with Multiple Cells</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#looping-through-cells">Looping Through Cells</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#r1c1-notation">R1C1 Notation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Ranges</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/04_ranges/ranges.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="working-with-cells-and-ranges">Working with Cells and Ranges</h1>
+<p>When writing VB code, you can use variables, for loops, and all other VB types and statements. However, most of your code will be dealing with values stored in cells and ranges.</p>
+<h2 id="the-range-object">The Range Object</h2>
+<p>A <strong>range</strong> is set of cells. It can be one cell or multiple cells. A range is an object within a worksheet object. For example, the following statement sets the value of cell C23 to a formula referencing a set of named cells:</p>
+<pre><code class="language-vb">Worksheets(&quot;trapchan&quot;).Range(&quot;C23&quot;).Value = &quot;=(u/n)*A*Rh^(2/3)*S^(1/2)&quot;
+</code></pre>
+<p>If the "trapchan" worksheet is the active sheet, the first part can be left off as follows:</p>
+<pre><code class="language-vb">Range(&quot;C23&quot;).Value = &quot;=(u/n)*A*Rh^(2/3)*S^(1/2)&quot;
+</code></pre>
+<p>The <strong>.Value</strong> part is optional. You can also write:</p>
+<pre><code class="language-vb">Range(&quot;C23&quot;) = &quot;=(u/n)*A*Rh^(2/3)*S^(1/2)&quot;
+</code></pre>
+<p>You have to remember to put the double quotes around the cell address. If the cell C23 has been named "Q" in the spreadsheet, you can reference the range as follows:</p>
+<pre><code class="language-vb">Range(&quot;Q&quot;).Value = &quot;=(u/n)*A*Rh^(2/3)*S^(1/2)&quot;
+</code></pre>
+<p>To get something from a cell and put it in a variable, you just do things in reverse:</p>
+<pre><code class="language-vb">x = Range(&quot;B14&quot;).Value
+</code></pre>
+<h2 id="the-cells-object">The Cells Object</h2>
+<p>Another way to interact with a cell is to use the <strong>Cells(rowindex, columnindex)</strong> function. For example:</p>
+<pre><code class="language-vb">Cells(2, 5).Value = &quot;=(u/n)*A*Rh^(2/3)*S^(1/2)&quot;
+</code></pre>
+<p>or</p>
+<pre><code class="language-vb">x = val(Cells(2, 14).Value)
+</code></pre>
+<p>Once again, the value part is optional since it is the default property of both the cell and range object.</p>
+<h2 id="working-with-multiple-cells">Working with Multiple Cells</h2>
+<p>A range can also encompass a set of cells. The following code selects a block of cells:</p>
+<pre><code class="language-vb">Range(&quot;A1:C5&quot;).Select
+</code></pre>
+<p>or</p>
+<pre><code class="language-vb">Range(&quot;A1&quot;, &quot;C5&quot;).Select
+</code></pre>
+<p>In some cases, it is useful to reference a range of cells using integers representing the row and column of the cell. This can be accomplished with the <strong>Cells</strong> object. For example:</p>
+<pre><code class="language-vb">Range(Cells(1,1), Cells(3,5)).Select
+</code></pre>
+<p>The problem with referring to specific cells in your code is that if you change the location of data on your spreadsheet, you need to go through your code and make sure all of the addresses are updated. In some cases it is useful to define the ranges you are dealing with using global constants at the top of your VB code. Then when you reference a range, you can use the constants. If the range ever changes, you only need to update your code in one location. For example:</p>
+<pre><code class="language-vb">Const TableRange As String = &quot;A4:D50&quot;
+Const NameRange As String = &quot;A4:D50&quot;
+Const ScoreRange As String = &quot;D4:D50&quot;
+
+.
+.
+Range(TableRange).ClearContents
+.
+.
+</code></pre>
+<p>An even better approach is to get into the habit of naming cells and ranges on your spreadsheet. Then your VB code can always refer to ranges by names. Then, if you change the location or domain of a named range, you generally don't need to update your VB code. For example:</p>
+<pre><code class="language-vb">Range(&quot;TableRange&quot;).ClearContents
+Range(&quot;NameRange&quot;).ClearContents
+Range(&quot;ScoreRange&quot;).ClearContents
+</code></pre>
+<h2 id="looping-through-cells">Looping Through Cells</h2>
+<p>One of the most common things we do with VB code is to traverse or loop through a set of cells. There are several ways this can be accomplished. One way is to use the <strong>Cells</strong> object. The following code loops through a table of cells located in the range B4:F20:</p>
+<pre><code class="language-vb">Dim row As Integer
+Dim col As Integer
+
+For row = 4 To 20
+   For col = 2 To 6
+      If Cells(row, col) = &quot;&quot; Then
+         Cells(row, col).Interior.Color = vbRed
+      End If
+   Next col
+Next row
+</code></pre>
+<p>In most cases, it doesn't matter what order the cells are traversed, as long as each cell is visited. In such cases the <strong>For Each ... Next</strong> looping style may be used. The following code does the same thing as the nested loop shown above:</p>
+<pre><code class="language-vb">Dim cell As Variant
+
+For Each cell In Range(&quot;B4:F20&quot;)
+   If cell = &quot;&quot; Then
+      cell.Interior.Color = vbRed
+   End If
+Next cell
+</code></pre>
+<p>Another option is to create your own range objects. A range object is essentially a range type variable. The following code defines three ranges:</p>
+<pre><code class="language-vb">Dim coordrange As Range
+Dim xrange As Range
+Dim yrange As Range
+
+Set xrange = Range(Cells(3, 1), Cells(100, 1))
+Set yrange = Range(Cells(3, 2), Cells(100, 2))
+Set coordrange = Range(Cells(3, 1), Cells(100, 2))
+</code></pre>
+<p>Once a set of range objects has been defined, you can easily manipulate the cells in the range object. For example, the following code clears the contents of all the cells in the coordrange object:</p>
+<pre><code class="language-vb">coordrange.Clear
+</code></pre>
+<p>Once again, these ranges can be traversed using the <strong>For Each ... Next</strong> syntax.</p>
+<pre><code class="language-vb">Dim cell As Variant
+
+For Each cell In xrange
+    cell.Value = &quot;0.0&quot;
+Next cell
+</code></pre>
+<p>One of the most useful things you can do with VBA in Excel is to allow the user to enter a list of numbers where the size of the list can vary. The following code searches through a list and copies the numbers in the list into an array. It stops copying the numbers when it reaches a blank cell.</p>
+<pre><code class="language-vb">'Get the x values
+i = 0
+For Each cell In Range(&quot;B4:B23&quot;)
+    If cell.Value = &quot;&quot; Then
+        numpts = i
+        Exit For
+    Else
+        i = i + 1
+        x(i) = cell.Value
+    End If
+Next cell
+</code></pre>
+<h2 id="r1c1-notation">R1C1 Notation</h2>
+<p>Another case where we deal with ranges in VB code is when we record macros and then modify the macros to make custom subs. If we create a formula while recording the macro, the formula will often be recorded using what is called "R1C1 notation". For example, here is a snippet of code from a recorded macro:</p>
+<pre><code class="language-vb">Range(&quot;F11&quot;).Select
+ActiveCell.FormulaR1C1 = &quot;=SUM(R[-4]C:R[-2]C)&quot;
+</code></pre>
+<p>This is the same as:</p>
+<pre><code class="language-vb">Range(&quot;F11&quot;).Select
+ActiveCell.Formula = &quot;=SUM(F7:F9)&quot;
+</code></pre>
+<p>So what is the advantage of the R1C1 notation? If you need to modify the formula using variables or some other run-time conditions, the R1C1 notation can be easier to manipulate. The R1C1 notation makes it possible to refer to both rows and columns using integers rather than letters and it makes it very easy to indicate relative vs. absolute references. The following table illustrates how the R1C1 notation works:</p>
+<table>
+<thead>
+<tr>
+<th>R1C1 Expression</th>
+<th>Equivalent Expression*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>R[-4]C:R[-2]C</code></td>
+<td>F7:F9</td>
+</tr>
+<tr>
+<td><code>R[+2]C:R[+4]C</code></td>
+<td>F13:F15</td>
+</tr>
+<tr>
+<td><code>R4C2:RC[-1]</code></td>
+<td><span class="arithmatex">\(B\)</span>4:E11</td>
+</tr>
+<tr>
+<td><code>RC:R15C10</code></td>
+<td>F11:<span class="arithmatex">\(J\)</span>15</td>
+</tr>
+</tbody>
+</table>
+<p>*Assumes reference cell = F11</p>
+<p>In other words, R10 means "an absolute reference to row 10" whereas R[-2] means "a relative reference to two rows above the cell in question" and R (without a number) means "on the same row as the cell in question".</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Range Basics -</strong> Run through 5 quick exercises that use ranges.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/range_basics.xlsm">range_basics.xlsm</a></div>
+<div class="exercise-cell"><a href="files/range_basics_key.xlsm">range_basics_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Calculator -</strong> Calculate the given equations from three variables.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/calculator.xlsm">calculator.xlsm</a></div>
+<div class="exercise-cell"><a href="files/calculator_key.xlsm">calculator_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Sum -</strong> Use ranges to calculate a sum and an adjusted sum of the tabulated data.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/sum.xlsm">sum.xlsm</a></div>
+<div class="exercise-cell"><a href="files/sum_key.xlsm">sum_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Empty Cells -</strong> Calculate the number of empty cells from the range of data. Also change the range object properties to display a red cell for an empty cell.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/empty_cells.xlsm">empty_cells.xlsm</a></div>
+<div class="exercise-cell"><a href="files/empty_cells_key.xlsm">empty_cells_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../03_controls/controls/" class="btn btn-neutral float-left" title="Controls"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../05_msgbox/msgbox/" class="btn btn-neutral float-right" title="MsgBox">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../03_controls/controls/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../05_msgbox/msgbox/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

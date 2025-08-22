@@ -152,15 +152,27 @@ When working with shapes that are filled, sometimes one objects can obscure anot
 
 The workbook used in the examples shown above can be downloaded here:
 
-[simplebeam.xlsx](files/simplebeam.xlsx)<-- Without annotation. Start here if you want to try creating the drawings and equations<br>
-[simplebeam-key.xlsx](files/simplebeam-key.xlsx)	<-- With completed annotation.
+[simplebeam.xlsx](files/simplebeam.xlsx)<-- Without annotation. Start here if you want to try creating the drawings and equations [simplebeam-key.xlsx](files/simplebeam-key.xlsx)	<-- With completed annotation.
 
 ## Exercises
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise | Description                                                                                                                                          | Difficulty | Start | Solution |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------|-------|----------|
-| Drag Equation | Create an annotated figure of drag force <br>on a baseball and compute the drag force that <br>the ball experiences.                                 | Easy | [drag_equation.xlsx](files/drag_equation.xlsx) | [drag_equation_key.xlsx](files/drag_equation_key.xlsx) |
-| Unit Weight | Create an annotated soil profile and<br> write an equation to compute the unit weight<br> of the two soil layers.                                    | Medium | [unit_weight.xlsx](files/unit_weight.xlsx) | [unit_weight_key.xlsx](files/unit_weight_key.xlsx) |
-| Headloss | Annotate a figure of a pipe with the<br> necessary equations to calculate headloss.<br> Then calculate the headloss with <br>the given values and equations. | Hard | [headloss.xlsx](files/headloss.xlsx) | [headloss_key.xlsx](files/headloss_key.xlsx) |
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Create an annotated figure of drag force on a baseball and compute the drag force that the ball experiences.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/drag_equation.xlsx">drag_equation.xlsx</a></div>
+<div class="exercise-cell"><a href="files/drag_equation_key.xlsx">drag_equation_key.xlsx</a></div>
+<div class="exercise-cell">Create an annotated soil profile and write an equation to compute the unit weight of the two soil layers.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/unit_weight.xlsx">unit_weight.xlsx</a></div>
+<div class="exercise-cell"><a href="files/unit_weight_key.xlsx">unit_weight_key.xlsx</a></div>
+<div class="exercise-cell">Annotate a figure of a pipe with the necessary equations to calculate headloss. Then calculate the headloss with the given values and equations.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/headloss.xlsx">headloss.xlsx</a></div>
+<div class="exercise-cell"><a href="files/headloss_key.xlsx">headloss_key.xlsx</a></div>
+</div>

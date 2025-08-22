@@ -6,14 +6,14 @@ One of the most fundamental features of Excel is the Charts tool. Charts are use
 
 The first step in creating a chart is selecting the type of chart to use. This will depend primarily on the type of data that you wish to graph with the chart. The following table lists the more commonly-used charts and the suggested applications:
 
-| Type | Name | Description                                                                                                          |
+| Type | Name | Description |
 |------|------|----------------------------------------------------------------------------------------------------------------------|
-| ![type-column.png](images/type-column.png)  |Column | Use this chart to visually compare values across a few categories.                                                   |
-|  ![type-bar.png](images/type-bar.png) |Bar | Use this chart to visually compare values across a few categories when the <br>chart shows duration or the category text is long. |
-| ![type-line.png](images/type-line.png)  |Line | Use this chart to show trends over time (years, months, and days) or categories.                                     |
-| ![type-area.png](images/type-area.png)  |Area | Use this chart to show trends over time (years, months, and days) or categories. <br>Use it to hightlight the magnitude of change over time. |
-| ![type-pie.png](images/type-pie.png)  |Pie | Use this chart to show proportions of a whole. <br>Use it when the total of your numbers is 100%.                        |
-| ![type-scatter.png](images/type-scatter.png)  |Scatter (X,Y) | Use this chart type to show the relationship between sets of values.                                                 |
+| ![type-column.png](images/type-column.png) |Column | Use this chart to visually compare values across a few categories. |
+| ![type-bar.png](images/type-bar.png) |Bar | Use this chart to visually compare values across a few categories when the chart shows duration or the category text is long. |
+| ![type-line.png](images/type-line.png) |Line | Use this chart to show trends over time (years, months, and days) or categories. |
+| ![type-area.png](images/type-area.png) |Area | Use this chart to show trends over time (years, months, and days) or categories. Use it to hightlight the magnitude of change over time. |
+| ![type-pie.png](images/type-pie.png) |Pie | Use this chart to show proportions of a whole. Use it when the total of your numbers is 100%. |
+| ![type-scatter.png](images/type-scatter.png) |Scatter (X,Y) | Use this chart type to show the relationship between sets of values. |
 
 For scientific and engineering applications, the most common type of chart is the **Scatter (X,Y)** chart, which is sometimes called an XY Scatter chart. As the "XY" part of the name implies, this chart is used to represent one set of data (Y) which is dependent upon, or related to another set of data (X), both of which are numeric values. In other words:
 
@@ -102,9 +102,21 @@ The workbook used in the examples shown above can be downloaded here:
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise | Description                                                                                                        | Difficulty | Start | Solution |
-|----------|--------------------------------------------------------------------------------------------------------------------|------------|-------|---------|
-| Excess Pore Pressure | Create a chart of the excess pore pressure<br> vs distance from given test data.                                   | Easy | [excess_pore_pressure.xlsx](files/excess_pore_pressure.xlsx) | [excess_pore_pressure_key.xlsx](files/excess_pore_pressure_key.xlsx) |
-| Material Price Trends | Create a chart of the prices for different<br> engineering materials over a specified date <br>range and identify a trend. | Medium | [material_price_trends.xlsx](files/material_price_trends.xlsx) | [material_price_trends_key.xlsx](files/material_price_trends_key.xlsx) |
-| Crater Settlement | Plot the settlement vs distance of different<br> points due to underground blasting. <br>Analyze the crater formed.        | Hard | [crater_settlement.xlsx](files/crater_settlement.xlsx) | [crater_settlement_key.xlsx](files/crater_settlement_key.xlsx) |
-
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Create a chart of the excess pore pressure vs distance from given test data.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/excess_pore_pressure.xlsx">excess_pore_pressure.xlsx</a></div>
+<div class="exercise-cell"><a href="files/excess_pore_pressure_key.xlsx">excess_pore_pressure_key.xlsx</a></div>
+<div class="exercise-cell">Create a chart of the prices for different engineering materials over a specified date range and identify a trend.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/material_price_trends.xlsx">material_price_trends.xlsx</a></div>
+<div class="exercise-cell"><a href="files/material_price_trends_key.xlsx">material_price_trends_key.xlsx</a></div>
+<div class="exercise-cell">Plot the settlement vs distance of different points due to underground blasting. Analyze the crater formed.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/crater_settlement.xlsx">crater_settlement.xlsx</a></div>
+<div class="exercise-cell"><a href="files/crater_settlement_key.xlsx">crater_settlement_key.xlsx</a></div>
+</div>

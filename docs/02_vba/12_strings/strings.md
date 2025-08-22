@@ -1,0 +1,125 @@
+# Using String Functions
+
+A string is a sequence of one or more text characters. A string constant is a sequence of characters in code delimited by double quotes ("Hello world"). A string variable is a variable used to store text. String variables are dynamically allocated to accommodate the amount of text you store in each string. They can hold up to two billion characters!
+
+## Concatenation
+
+Recall that we can combine (concatenate) two or more strings using the **&** operator. For example, the code:
+
+```vb
+Dim str1 As String, str2 As String
+str1 = "Enter to learn"
+str2 = "go forth to serve"
+MsgBox str1 & ", " & str2
+```
+
+Would produce:
+
+![msgbox-motto.png](images/msgbox-motto.png)
+
+Note that this example involves both string variables (str1, str2) and string constants (", ").
+
+## String Functions
+
+In many cases, we need to manipulate string constants and variables. VB provides a rich suite of functions for manipulating strings. Some of the more widely used string functions are as follows:
+
+| Function | Description | Example | Result |
+|----------|-------------|---------|--------|
+| **Left(str, numchar)** | Extracts the specified number of characters from the left side of the string **str**. | mystr = Left("Hello World", 5) | "Hello" |
+| **Right(str, numchar)** | Extracts the specified number of characters from the right side of the string **str**. | mystr = Right("Hello World", 5) | "World" |
+| **Mid(str, startchar, [numchar])** | Extracts a string of length **numchar** from the middle of **str**, starting at **startchar**. If numchar is omitted, the entire right-hand portion of the string, beginning at startchar, is extracted. | mystr = Mid("Hello World", 7, 1)<br>mystr = Mid("Hello World", 7) | "W"<br>"World" |
+| **Len(str)** | Returns the length of **str**. | n = Len("Hello World") | 11 |
+| **UCase(str)** | Converts the string to all uppercase characters. | mystr = UCase("Hello World") | "HELLO WORLD" |
+| **LCase(str)** | Converts the string to all lowercase characters. | mystr = LCase("Hello World") | "hello world" |
+| **LTrim(str)** | Returns a copy of the string without leading spaces | mystr = LTrim("  Hello  ") | "Hello  " |
+| **RTrim(str)** | Returns a copy of the string without trailing spaces | mystr = RTrim("  Hello  ") | "  Hello" |
+| **Trim(str)** | Returns a copy of the string without leading or trailing spaces | mystr = Trim("  Hello  ") | "Hello" |
+| **StrReverse(str)** | Returns a copy of the string in reverse order | mystr = StrReverse("Hello World") | "dlroW olleH" |
+| **Replace(expression, find, replace, [start], [count], [compare])** | Replaces each instance of "**find**" with "**replace**" in "**expression**". | mystr = Replace("Hello World", "Hello", "Goodbye")<br>mystr = Replace("Hello World", "l", "")<br>mystr = Replace("Hello World", "o", "", 1, 1)<br>mystr = Replace("Hello World", "o", "", 1)<br>mystr = Replace("Hello World", "l", "", 6) | "Goodbye World"<br>"Heo Word"<br>"Hell World"<br>"Hell Wrld"<br>"Hello Word" |
+| **InStr([start], string1, string2, [compare])** | Returns an integer representing the position of **string2** inside **string1**. **Start** is an optional starting location (if omitted, search starts at position 1). If string2 is not found in string1, the function returns zero. | n = InStr(1, "Hello World", "W")<br>n = InStr(1, "Hello World", "N") | 7<br>0 |
+| **StrConv(string, conversion, [LCID])** | Returns a copy of **string** after modifying the string based on the conversion argument. The **conversion** argument should be a vb constant with options including vbUpperCase, vbLowerCase, vbProperCase. | mystr = StrConv("Hello World", vbUpperCase)<br>mystr = StrConv("Hello World", vbLowerCase)<br>mystr = StrConv("hello world", vbProperCase) | HELLO WORLD<br>hello world<br>Hello World |
+
+These functions can be combined in creative ways to achieve a variety of results. For example, consider the following table:
+
+![name_table1.png](images/name_table1.png)
+
+Suppose we wanted to populate the third column with full names. We could do that with the following code:
+
+```vb
+Dim first As String
+Dim last As String
+Dim full As String
+For myrow = 2 To 5
+    first = Cells(myrow, 2)
+    last = Cells(myrow, 1)
+    full = first & " " & last
+    Cells(myrow, 3) = full
+Next myrow
+```
+
+Resulting in:
+
+![name_table2.png](images/name_table2.png)
+
+If we wanted the full name to be "last, first" format, we could restructure our code as follows:
+
+```vb
+For myrow = 2 To 5
+    first = Cells(myrow, 2)
+    last = Cells(myrow, 1)
+    full = last & ", " & first
+    Cells(myrow, 3) = full
+Next myrow
+```
+
+Resulting in:
+
+![name_table3.png](images/name_table3.png)
+
+Now suppose we wanted the full name to be in all caps and we want to ensure that all leading and trailing spaces (if any) are removed. We could add references to string functions as follows:
+
+```vb
+For myrow = 2 To 5
+    first = Cells(myrow, 2)
+    last = Cells(myrow, 1)
+    full = UCase(Trim(last) & ", " & Trim(first))
+    Cells(myrow, 3) = full
+Next myrow
+```
+
+Resulting in:
+
+![name_table4.png](images/name_table4.png)
+
+## Sample Code
+
+The workbook associated with the examples on this page can be downloaded here:
+
+[sample code.xlsm](files/sample code.xlsm)
+
+## Exercises
+
+You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
+
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Citation -</strong> From a range of values, create a citation as a string and display the result as a message box.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/citation.xlsm">citation.xlsm</a></div>
+<div class="exercise-cell"><a href="files/citation_key.xlsm">citation_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Concatenation -</strong> By using concatenation, create a madlib generator.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/concatenation.xlsm">concatenation.xlsm</a></div>
+<div class="exercise-cell"><a href="files/concatenation_key.xlsm">concatenation_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Secret Code -</strong> Use string functions to create a secret code that only you will know how to decipher.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/secret_code.xlsm">secret_code.xlsm</a></div>
+<div class="exercise-cell"><a href="files/secret_code_key.xlsm">secret_code_key.xlsm</a></div>
+<div class="exercise-cell"><strong>URL Deconstruct -</strong> Use a variety of string functions to deconstruct website URL addresses into their respective parts.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/url_deconstruct.xlsm">url_deconstruct.xlsm</a></div>
+<div class="exercise-cell"><a href="files/url_deconstruct_key.xlsm">url_deconstruct_key.xlsm</a></div>
+</div>

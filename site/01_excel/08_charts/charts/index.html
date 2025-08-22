@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/01_excel/08_charts/charts/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Charts - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Charts";
+        var mkdocs_page_input_path = "01_excel/08_charts/charts.md";
+        var mkdocs_page_url = "/en/latest/01_excel/08_charts/charts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Charts</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#chart-types">Chart Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-chart">Creating a Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#formatting-a-chart">Formatting a Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changing-the-data-source">Changing the Data Source</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-workbook">Sample Workbook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel Fundamentals</li>
+      <li class="breadcrumb-item active">Charts</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/01_excel/08_charts/charts.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-charts">Creating Charts</h1>
+<p>One of the most fundamental features of Excel is the Charts tool. Charts are used to generate a graphical representation of a set of data. Charts can be incredibly powerful in illustrating trends and characteristics of a data set. In this chapter, we will cover a brief overview of the chart tools with a special emphasis on the types of charts most commonly used in engineering and scientific applications. It is not intended to be an comprehensive overiew of all of the chart options. Such an overview would be beyond the scope of this Primer.</p>
+<h2 id="chart-types">Chart Types</h2>
+<p>The first step in creating a chart is selecting the type of chart to use. This will depend primarily on the type of data that you wish to graph with the chart. The following table lists the more commonly-used charts and the suggested applications:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="type-column.png" src="../images/type-column.png" /></td>
+<td>Column</td>
+<td>Use this chart to visually compare values across a few categories.</td>
+</tr>
+<tr>
+<td><img alt="type-bar.png" src="../images/type-bar.png" /></td>
+<td>Bar</td>
+<td>Use this chart to visually compare values across a few categories when the chart shows duration or the category text is long.</td>
+</tr>
+<tr>
+<td><img alt="type-line.png" src="../images/type-line.png" /></td>
+<td>Line</td>
+<td>Use this chart to show trends over time (years, months, and days) or categories.</td>
+</tr>
+<tr>
+<td><img alt="type-area.png" src="../images/type-area.png" /></td>
+<td>Area</td>
+<td>Use this chart to show trends over time (years, months, and days) or categories. Use it to hightlight the magnitude of change over time.</td>
+</tr>
+<tr>
+<td><img alt="type-pie.png" src="../images/type-pie.png" /></td>
+<td>Pie</td>
+<td>Use this chart to show proportions of a whole. Use it when the total of your numbers is 100%.</td>
+</tr>
+<tr>
+<td><img alt="type-scatter.png" src="../images/type-scatter.png" /></td>
+<td>Scatter (X,Y)</td>
+<td>Use this chart type to show the relationship between sets of values.</td>
+</tr>
+</tbody>
+</table>
+<p>For scientific and engineering applications, the most common type of chart is the <strong>Scatter (X,Y)</strong> chart, which is sometimes called an XY Scatter chart. As the "XY" part of the name implies, this chart is used to represent one set of data (Y) which is dependent upon, or related to another set of data (X), both of which are numeric values. In other words:</p>
+<p><span class="arithmatex">\(y = f(x)\)</span></p>
+<p>or y is some function of x. This can be an explicit numerical function (<span class="arithmatex">\(y = x^2-3x+1\)</span>) or it could be an implicit relationship, such as measured strength of some specimens as a function of applied load.</p>
+<h2 id="creating-a-chart">Creating a Chart</h2>
+<p>The steps to creating a new chart are as follows:</p>
+<ol>
+<li>Select the data in the sheet that will be associated with the chart.</li>
+<li>Select the <strong>Insert</strong> tab.</li>
+<li>In the <strong>Charts</strong> section, click on one of the chart type icons and then select the specific type of chart you wish to create.</li>
+</ol>
+<p>To illustrate the process, consider the following example worksheet. This is a variation of the parabola worksheet described in the Goal Seek and Solver chapter.</p>
+<p><img alt="parabola-start.png" src="../images/parabola-start.png" /></p>
+<p>Our objective is to create an XY Scatter chart of the XY values shown in the tables. These values represent a solution of the equation:</p>
+<p><span class="arithmatex">\(y = x^2 - 3x + 1\)</span></p>
+<p>for a the range of x values varying from -1 to 4. To create the chart, we select the cells in the range <strong>B12:B22</strong> and follow the steps outlined above as follows:</p>
+<p><img alt="insert-chart.png" src="../images/insert-chart.png" /></p>
+<p>Note that the chart type selected was <strong>Scatter with Smoth Lines</strong>. The "Smooth Lines" part means that a smooth curve is fit the to XY points that interpolates the points and provides a natural curvature between the points using some type of spline function. This is typically the best option to select. By contrast, this is what the "Straight Lines" option looks like:</p>
+<p><img alt="straight-lines.png" src="../images/straight-lines.png" /></p>
+<p>Markers can also be combined with the smooth or straight lines. A marker is a dot at the location of each XY coordinate pair. Here is the <strong>Markers with Smooth Lines</strong> option:</p>
+<p><img alt="markers-lines.png" src="../images/markers-lines.png" /></p>
+<p>And the <strong>Markers Only</strong> option:</p>
+<p><img alt="markers-only.png" src="../images/markers-only.png" /></p>
+<p>As a matter of style, markers should only be used when there is a some kind of significance to each of the XY pairs. For example, perhaps the XY pairs represent data collected in the field or lab and each point corresponds to a sample or measurement. In many cases, however, the XY values represent some underlying fuction (such as the case shown above) and the points are arbitrarily selected. In this case, markers should not be used as they simply detract from the display of the function.</p>
+<h2 id="formatting-a-chart">Formatting a Chart</h2>
+<p>Once the chart is created, we can edit the chart options to modify the formatting. If you click on a chart, a set of three buttons will appear just to the right of the chart. The "+" button can be used to add or remove chart elements such as axis labels, the chart title, and a legend.</p>
+<p><img alt="chart-elements.png" src="../images/chart-elements.png" /></p>
+<p>After editing the chart title and axis labels, the chart looks like this:</p>
+<p><img alt="chart-before-axis-edit.png" src="../images/chart-before-axis-edit.png" /></p>
+<p>Note that the range on the x- and y-axes are automatically determined. Suppose for this case that we wish to limit the range of the x-axis to vary from -1 to 4. To do this we double-click on the x-axis or right-click on the axis and select Format Axis. This brings up the Format Axis options on the right side:</p>
+<p><img alt="format-axis-1.png" src="../images/format-axis-1.png" /></p>
+<p>To remove the "Auto" option for the max and min bounds, we simply type in new values and hit the Enter key. After doing so, the <strong>Axis Options</strong> display as follows:</p>
+<p><img alt="format-axis-2.png" src="../images/format-axis-2.png" /></p>
+<p>Clicking the <strong>Reset</strong> button would revert back to the automatic setting. After manually editing the x-axis bounds, the chart looks like this:</p>
+<p><img alt="chart-after-axis-edit.png" src="../images/chart-after-axis-edit.png" /></p>
+<h2 id="changing-the-data-source">Changing the Data Source</h2>
+<p>In some cases, after creating the chart we wish to change the set of cells associated with the chart (i.e., the "data source"). For example, perhaps we have deleted some of our XY pairs or we have extended the table to add additional pairs. When we do so, the chart is not automatically updated to reflect the change; we must manually make the correction. To change the data source, you can do the following:</p>
+<p>Click on the curve in the chart to select it. This will display the range of cells associated with the chart. Using the handles at the corners of the highlighted ranges, drag the corners to resize the selection to the desired range.</p>
+<p><img alt="data-source-1.png" src="../images/data-source-1.png" /></p>
+<p>Another option for changing the source is:</p>
+<ol>
+<li>Right-click on the curve and select the <strong>Select Data</strong> option. This brings up the <strong>Select Data Source</strong> dialog.</li>
+<li>Edit the <strong>Chart data range</strong> field to correspond to the desired range.</li>
+</ol>
+<p><img alt="data-source-2.png" src="../images/data-source-2.png" /></p>
+<h2 id="sample-workbook">Sample Workbook</h2>
+<p>The workbook used in the examples shown above can be downloaded here:</p>
+<p><a href="../files/parabola2.xlsx">parabola2.xlsx</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Create a chart of the excess pore pressure vs distance from given test data.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/excess_pore_pressure.xlsx">excess_pore_pressure.xlsx</a></div>
+<div class="exercise-cell"><a href="files/excess_pore_pressure_key.xlsx">excess_pore_pressure_key.xlsx</a></div>
+<div class="exercise-cell">Create a chart of the prices for different engineering materials over a specified date range and identify a trend.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/material_price_trends.xlsx">material_price_trends.xlsx</a></div>
+<div class="exercise-cell"><a href="files/material_price_trends_key.xlsx">material_price_trends_key.xlsx</a></div>
+<div class="exercise-cell">Plot the settlement vs distance of different points due to underground blasting. Analyze the crater formed.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/crater_settlement.xlsx">crater_settlement.xlsx</a></div>
+<div class="exercise-cell"><a href="files/crater_settlement_key.xlsx">crater_settlement_key.xlsx</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../07_goalseek/goalseek/" class="btn btn-neutral float-left" title="Goal Seek"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../09_annotation/annotation/" class="btn btn-neutral float-right" title="Annotation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../07_goalseek/goalseek/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../09_annotation/annotation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

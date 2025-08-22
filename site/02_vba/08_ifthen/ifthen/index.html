@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/08_ifthen/ifthen/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>If Statements - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "If Statements";
+        var mkdocs_page_input_path = "02_vba/08_ifthen/ifthen.md";
+        var mkdocs_page_url = "/en/latest/02_vba/08_ifthen/ifthen/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">If Statements</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conditional-expressions">Conditional Expressions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#evaluating-number-ranges">Evaluating Number Ranges</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#if-statements-and-controls">If Statements and Controls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">If Statements</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/08_ifthen/ifthen.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="decisions-and-conditions-writing-if-statements">Decisions and Conditions - Writing If Statements</h1>
+<p>There are countless occasions when writing code where we need to execute code only if certain conditions are met. This can be accomplished by writing <strong>If</strong> statements.</p>
+<h2 id="syntax">Syntax</h2>
+<p>The general syntax of an If statement is as follows:</p>
+<pre><code class="language-vb">If condition_1 Then
+    statement(s)
+ElseIf condition_2 Then 
+    statement(s)
+
+...
+
+ElseIf condition_n Then
+    statement(s)
+Else
+    statement(s)
+End If
+</code></pre>
+<p>The <strong>If ... Then</strong> and the <strong>End If</strong> parts are required. All of the other parts are optional and are only used when needed. For example, in some cases you don't need any of the Else options:</p>
+<pre><code class="language-vb">If Range(&quot;B5&quot;) = &quot;&quot; Then
+    MsgBox &quot;Error: Cell B5 cannot be empty&quot;
+    Exit Sub
+End If
+</code></pre>
+<p>Note that you can put as many statements as you want between the <strong>If</strong> and <strong>End If</strong> lines. Each of the statements is executed if the condition is true. You do not have to indent, but it is <strong>STRONGLY</strong> recommended as it makes your code much easier to follow.</p>
+<p>In some cases you may wish to include an <strong>Else</strong> clause that is executed when the condition is false.</p>
+<pre><code class="language-vb">If x = 0 Then
+    MsgBox &quot;Error: Cannot divide by zero&quot;
+Else
+    y = 1 / x
+End If
+</code></pre>
+<p>In other cases, you may need to check several conditions, each of which is mutually exclusive.</p>
+<pre><code class="language-vb">If yourteam = &quot;BYU&quot; Then
+    MsgBox &quot;You are cool&quot;
+ElseIf yourteam = &quot;Utah&quot; Then
+    MsgBox &quot;You are NOT cool&quot;
+ElseIf yourteam = &quot;Utah State&quot; Then
+    MsgBox &quot;What is an aggie?&quot;
+Else
+    MsgBox &quot;I do not care&quot;
+End If
+</code></pre>
+<p>Each of the conditions is checked in sequence starting at the top. Once a condition is found that evaluates to True, none of the remaining conditions are tested and the flow of control exits the IF statement and jumps to the code immediately following the End If statement.</p>
+<p>For the cases with no <strong>ElseIf</strong> clauses and simple one-line results, you can put your entire statement on a single line:</p>
+<pre><code class="language-vb">If yourteam = &quot;BYU&quot; Then MsgBox &quot;You are cool&quot;
+</code></pre>
+<p>or</p>
+<pre><code class="language-vb">If x = 0 Then y = 0 Else y = 1 / x
+</code></pre>
+<h2 id="conditional-expressions">Conditional Expressions</h2>
+<p>Every If statement requires at least one conditional expression. A conditional expression is an expression that returns either True or False when evaluated. Conditional expressions are generally formulated using a binary conditional operator. A binary operator takes two arguments, one on each side of the operator. Here is a list of the commonly used operators:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Equal</td>
+<td>=</td>
+<td>a = b</td>
+</tr>
+<tr>
+<td>Not equal</td>
+<td>&lt;&gt;</td>
+<td>a &lt;&gt; b</td>
+</tr>
+<tr>
+<td>Less than</td>
+<td>&lt;</td>
+<td>x &lt; y</td>
+</tr>
+<tr>
+<td>Greater than</td>
+<td>&gt;</td>
+<td>p &gt; q</td>
+</tr>
+<tr>
+<td>Less than Or equal to</td>
+<td>&lt;=</td>
+<td>x &lt;= 5.5</td>
+</tr>
+<tr>
+<td>Greater than or equal to</td>
+<td>&gt;=</td>
+<td>y &gt;= p</td>
+</tr>
+</tbody>
+</table>
+<p>Multiple conditional expressions can be combined with the <strong>And</strong> and <strong>Or</strong> operators. With the And operator, the combined expression is true if both conditions are true. With the Or operator, the combined expression is true if either of the two conditions is true. For example,</p>
+<pre><code class="language-vb">If myteam = &quot;BYU&quot; And yourteam = &quot;BYU&quot; Then
+    MsgBox &quot;High five!&quot;
+ElseIf yourteam = &quot;Utah&quot; Or yourteam = &quot;USU&quot; Then
+    MsgBox &quot;Boo!&quot;
+Else
+    MsgBox &quot;Nice to meet you&quot;
+End If
+</code></pre>
+<p>You may wish to combine more than two conditional expressions. In this case, it helps to use parentheses.</p>
+<pre><code class="language-vb">If (myteam = &quot;BYU&quot;) And (yourteam = &quot;Utah&quot; Or yourteam = &quot;USU&quot;) Then
+    MsgBox &quot;We are going to have a problem.&quot;
+Else
+    MsgBox &quot;Nice to meet you&quot;
+End If
+</code></pre>
+<p>You can also use the <strong>Not</strong> operator to negate a statement. It is a unary operator and it negates the conditional expression that follows it. For example,</p>
+<pre><code class="language-vb">If (myteam = &quot;BYU&quot;) And Not (yourteam = &quot;Utah&quot; Or yourteam = &quot;USU&quot;) Then
+    MsgBox &quot;We are going to get along OK.&quot;
+End If
+</code></pre>
+<p>Notice that Not True → False and Not False → True.</p>
+<h2 id="evaluating-number-ranges">Evaluating Number Ranges</h2>
+<p>When doing computations, it is common to need to determine if a number is inside a range. For example, in mathematics it is common two write a statement like this:</p>
+<blockquote>
+<p>0 ≤ x ≤ 5</p>
+</blockquote>
+<p>When writing this as a compound conditional expression, it is tempting to write it as follows:</p>
+<pre><code class="language-vb">If 0 &lt;= x &lt;= 5 Then
+</code></pre>
+<p>However, this is <strong>NOT</strong> logically equivalent to the statement shown above. For example, suppose that <strong>x = -10</strong>, which is outside the range and should make the expression evaluate to False. The expression is evaluated in two parts from left to right, so the first part evaluated is <strong>0 &lt;= x</strong>, which returns a value of False. The value of False is then substituted for the first part of the expression and the remaining expression is then evaluated as <strong>False &lt;= 5</strong>. Whenever a boolean value (True/False) is compared to numerical value, <strong>True = 1</strong> and <strong>False = 0</strong>. Therefore, this expression is evaluated as <strong>0 &lt;= 5</strong>, which is True, leading to an incorrect result.</p>
+<p>The proper way to write this expression in VB is:</p>
+<pre><code class="language-vb">If 0 &lt;= x And x &lt;= 5 Then
+</code></pre>
+<p>In this case, the two sides are evaluated independently and then combined with the <strong>And</strong> operator, resulting in the correct answer.</p>
+<h2 id="if-statements-and-controls">If Statements and Controls</h2>
+<p>If statements are commonly used to determine the state of controls. Suppose you have a checkbox called <strong>chkResizeImage</strong>. You could check the state of the <strong>Value</strong> property as follows:</p>
+<pre><code class="language-vb">If chkResizeImage.Value = True Then
+</code></pre>
+<p>Note that for a checkbox and option control, the Value property is a Boolean variable that equals True if the control is selected, and False otherwise. Since the Value property is the default property for each of these objects, you can simplify this statement by omitting the <strong>.Value</strong> part as follows:</p>
+<pre><code class="language-vb">If chkResizeImage = True Then
+</code></pre>
+<p>Furthermore, this statement can be further simplified as follows:</p>
+<pre><code class="language-vb">If chkResizeImage Then
+</code></pre>
+<p>In other words, the <strong>= True</strong> part is redundant because <strong>chkResizeImage = True</strong> is logically equivalent to the value of chkResizeImage (the expression is true when chkResizeImage is true).</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+
+<div class="exercise-cell"><strong>Score Keeper -</strong> Use an IF THEN expression to provide feedback on a calculated score.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/score_keeper.xlsm">score_keeper.xlsm</a></div>
+<div class="exercise-cell"><a href="files/score_keeper_key.xlsm">score_keeper_key.xlsm</a></div>
+
+<div class="exercise-cell"><strong>Density -</strong> Use an IF THEN expression with a check box and a conditional expression to display the correct density with the values given.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/density.xlsm">density.xlsm</a></div>
+<div class="exercise-cell"><a href="files/density_key.xlsm">density_key.xlsm</a></div>
+
+<div class="exercise-cell"><strong>Receipt -</strong> Create an IF THEN expression that takes a few conditions into consideration when generating a receipt for a customer.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/receipt.xlsm">receipt.xlsm</a></div>
+<div class="exercise-cell"><a href="files/receipt_key.xlsm">receipt_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../07_objects/objects/" class="btn btn-neutral float-left" title="Objects"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../09_debug/debug/" class="btn btn-neutral float-right" title="Debugging">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../07_objects/objects/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../09_debug/debug/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

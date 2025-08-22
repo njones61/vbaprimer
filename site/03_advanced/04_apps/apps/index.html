@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/03_advanced/04_apps/apps/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Sample Apps - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Sample Apps";
+        var mkdocs_page_input_path = "03_advanced/04_apps/apps.md";
+        var mkdocs_page_url = "/en/latest/03_advanced/04_apps/apps/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Sample Apps</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#application-categories">Application Categories</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#office-integration">Office Integration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-system-operations">File System Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text-processing">Text Processing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#automation-scripts">Automation Scripts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-use-these-samples">How to Use These Samples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#for-excel-vba-developers">For Excel VBA Developers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-word-vba-developers">For Word VBA Developers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#for-outlook-vba-developers">For Outlook VBA Developers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-examples">Code Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#directory-selection-from-get_dirbas">Directory Selection (from get_dir.bas)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-selection-from-get_filebas">File Selection (from get_file.bas)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#email-generation-from-mailapptsbas">Email Generation (from MailAppts.bas)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices-demonstrated">Best Practices Demonstrated</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#extending-these-applications">Extending These Applications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Advanced Topics</li>
+      <li class="breadcrumb-item active">Sample Apps</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/03_advanced/04_apps/apps.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sample-vba-applications">Sample VBA Applications</h1>
+<p>The following spreadsheets, documents, and VB modules represent examples of how VBA can be used in advanced applications within Excel and by other programs in addition to Excel. Right click on each link to download. I typically discuss these samples at the end of the semester.</p>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weekly Appt. Message Generator</strong></td>
+<td><a href="../files/MailAppts.bas">MailAppts.bas</a></td>
+<td>This is a VBA module for Outlook that will search through appointments in the default calendar and find all appointments of a specified type within a given window (one week for example) of the current date. These appointments are then listed in a new html formatted e-mail message.</td>
+</tr>
+<tr>
+<td><strong>MS Word Calendar Generator</strong></td>
+<td><a href="../files/calendar.dot">calendar.dot</a></td>
+<td>This is a macro for MS Word that I found on the internet. It is attached to a document template. Simply open up the template in Word and it should prompt you with a user form. If that doesn't work, go to the Macros command in the Tools menu and manually start the macro. This macro will search through your default calendar in Outlook and generate a beautifully formatted calendar in Word that you can print or save.</td>
+</tr>
+<tr>
+<td><strong>MS Word Remove Line Breaks Macro</strong></td>
+<td><a href="../files/RemoveBreaks.doc">RemoveBreaks.doc</a></td>
+<td>This is a little macro I recorded in Word that is useful for taking text from an e-mail message and removing the extra line breaks. To use it, open up this document and cut and paste the text from your e-mail message to the document. Then run the macro from the Tools menu. The macro searches through the text in the document and gets rid of the extra line breaks in the middle of paragraphs. It assumes that all paragraphs are delineated with double line returns.</td>
+</tr>
+<tr>
+<td><strong>Auto Mail Script</strong></td>
+<td><a href="../files/ReminderEmail.vbs">ReminderEmail.vbs</a></td>
+<td>This is a VB script that can be run simply by clicking on the file or you can launch it on a repeating basis using Windows scheduling. It generates an e-mail message to a list of recipients. To use this, you will need to add it to your Outlook VB code and then modify a few lines of code (which are all clearly marked).</td>
+</tr>
+<tr>
+<td><strong>AutoCAD Polygon Area Plotter</strong></td>
+<td><a href="../files/polyarea.bas">polyarea.bas</a></td>
+<td>This was sent to me by a former student. I have not tried it personally. It generates a text tag on a set of polygons indicating the area of each polygon.</td>
+</tr>
+<tr>
+<td><strong>Get Directory</strong></td>
+<td><a href="../files/get_dir.bas">get_dir.bas</a></td>
+<td>This is a VB module with functions for prompting the user with the standard Windows dialog for selecting a directory. Can be used in any VBA application.</td>
+</tr>
+<tr>
+<td><strong>Get File</strong></td>
+<td><a href="../files/get_file.bas">get_file.bas</a></td>
+<td>This is a VB module with functions for prompting the user with the standard Windows dialog for selecting a file. Both the import and export version of the file selector dialog are supported. Can be used with any VBA application.</td>
+</tr>
+<tr>
+<td><strong>New Letter</strong></td>
+<td><a href="../files/NewLetter.bas">NewLetter.bas</a></td>
+<td>This is an Outlook macro. If you first select a contact and then run this macro, it will generate a formatted business letter in Word to the contact.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="application-categories">Application Categories</h2>
+<p>These sample applications demonstrate several key areas where VBA can be applied:</p>
+<h3 id="office-integration">Office Integration</h3>
+<ul>
+<li><strong>MailAppts.bas</strong> - Outlook calendar integration</li>
+<li><strong>NewLetter.bas</strong> - Outlook and Word integration</li>
+<li><strong>calendar.dot</strong> - Word template with VBA macros</li>
+</ul>
+<h3 id="file-system-operations">File System Operations</h3>
+<ul>
+<li><strong>get_dir.bas</strong> - Directory selection dialogs</li>
+<li><strong>get_file.bas</strong> - File selection dialogs</li>
+</ul>
+<h3 id="text-processing">Text Processing</h3>
+<ul>
+<li><strong>RemoveBreaks.doc</strong> - Text formatting automation</li>
+</ul>
+<h3 id="automation-scripts">Automation Scripts</h3>
+<ul>
+<li><strong>ReminderEmail.vbs</strong> - Automated email generation</li>
+<li><strong>polyarea.bas</strong> - AutoCAD automation</li>
+</ul>
+<h2 id="how-to-use-these-samples">How to Use These Samples</h2>
+<h3 id="for-excel-vba-developers">For Excel VBA Developers</h3>
+<ol>
+<li><strong>Download the .bas files</strong> - These contain VBA code that can be imported into Excel</li>
+<li><strong>Import into your project</strong> - Use the Import File command in the VBE</li>
+<li><strong>Modify for your needs</strong> - Adapt the code to your specific requirements</li>
+<li><strong>Test thoroughly</strong> - Make sure the code works in your environment</li>
+</ol>
+<h3 id="for-word-vba-developers">For Word VBA Developers</h3>
+<ol>
+<li><strong>Download the .dot and .doc files</strong> - These contain Word macros</li>
+<li><strong>Open in Word</strong> - The macros should be available automatically</li>
+<li><strong>Run from Tools menu</strong> - Use the Macros command to execute</li>
+</ol>
+<h3 id="for-outlook-vba-developers">For Outlook VBA Developers</h3>
+<ol>
+<li><strong>Download the .bas files</strong> - These contain Outlook VBA code</li>
+<li><strong>Import into Outlook VBE</strong> - Use the Visual Basic Editor in Outlook</li>
+<li><strong>Modify as needed</strong> - Customize for your specific use case</li>
+</ol>
+<h2 id="code-examples">Code Examples</h2>
+<p>Here are some key code snippets from these applications:</p>
+<h3 id="directory-selection-from-get_dirbas">Directory Selection (from get_dir.bas)</h3>
+<pre><code class="language-vb">Function GetDirectory(Optional Title As String = &quot;Select Directory&quot;) As String
+    Dim FSO As Object
+    Dim Folder As Object
+
+    Set FSO = CreateObject(&quot;Scripting.FileSystemObject&quot;)
+    Set Folder = Application.FileDialog(msoFileDialogFolderPicker)
+
+    With Folder
+        .Title = Title
+        .ButtonName = &quot;Select&quot;
+        If .Show = -1 Then
+            GetDirectory = .SelectedItems(1)
+        Else
+            GetDirectory = &quot;&quot;
+        End If
+    End With
+
+    Set FSO = Nothing
+    Set Folder = Nothing
+End Function
+</code></pre>
+<h3 id="file-selection-from-get_filebas">File Selection (from get_file.bas)</h3>
+<pre><code class="language-vb">Function GetFile(Optional Title As String = &quot;Select File&quot;, _
+                Optional Filter As String = &quot;All Files (*.*)|*.*&quot;) As String
+    Dim FileDialog As Object
+
+    Set FileDialog = Application.FileDialog(msoFileDialogFilePicker)
+
+    With FileDialog
+        .Title = Title
+        .Filters.Clear
+        .Filters.Add &quot;All Files&quot;, &quot;*.*&quot;
+        .AllowMultiSelect = False
+
+        If .Show = -1 Then
+            GetFile = .SelectedItems(1)
+        Else
+            GetFile = &quot;&quot;
+        End If
+    End With
+
+    Set FileDialog = Nothing
+End Function
+</code></pre>
+<h3 id="email-generation-from-mailapptsbas">Email Generation (from MailAppts.bas)</h3>
+<pre><code class="language-vb">Sub GenerateAppointmentEmail()
+    Dim OutlookApp As Object
+    Dim MailItem As Object
+    Dim Calendar As Object
+    Dim Appointment As Object
+    Dim EmailBody As String
+
+    ' Create Outlook application object
+    Set OutlookApp = CreateObject(&quot;Outlook.Application&quot;)
+
+    ' Create new mail item
+    Set MailItem = OutlookApp.CreateItem(0)
+
+    ' Set email properties
+    With MailItem
+        .Subject = &quot;Weekly Appointments&quot;
+        .To = &quot;recipient@example.com&quot;
+        .HTMLBody = GenerateAppointmentHTML()
+        .Display
+    End With
+
+    Set MailItem = Nothing
+    Set OutlookApp = Nothing
+End Sub
+</code></pre>
+<h2 id="best-practices-demonstrated">Best Practices Demonstrated</h2>
+<p>These sample applications showcase several VBA best practices:</p>
+<ol>
+<li><strong>Error Handling</strong> - Many include proper error handling</li>
+<li><strong>Object Cleanup</strong> - Proper disposal of COM objects</li>
+<li><strong>User Interface</strong> - Standard Windows dialogs for file/directory selection</li>
+<li><strong>Modularity</strong> - Functions that can be reused across applications</li>
+<li><strong>Documentation</strong> - Clear comments explaining functionality</li>
+</ol>
+<h2 id="extending-these-applications">Extending These Applications</h2>
+<p>You can extend these applications by:</p>
+<ul>
+<li><strong>Adding more features</strong> - Enhance functionality based on your needs</li>
+<li><strong>Improving error handling</strong> - Add more robust error checking</li>
+<li><strong>Creating user forms</strong> - Add custom interfaces for better user experience</li>
+<li><strong>Integrating with databases</strong> - Connect to external data sources</li>
+<li><strong>Adding logging</strong> - Track operations for debugging and auditing</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Common issues when using these samples:</p>
+<ol>
+<li><strong>Security settings</strong> - Ensure macros are enabled</li>
+<li><strong>References</strong> - Check that required libraries are referenced</li>
+<li><strong>Permissions</strong> - Some operations require elevated permissions</li>
+<li><strong>Version compatibility</strong> - Test with your specific Office version</li>
+</ol>
+<p>These sample applications provide a solid foundation for understanding how VBA can be used across different Office applications and can serve as starting points for your own automation projects.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../03_files/files/" class="btn btn-neutral float-left" title="Files"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../05_gas/gas/" class="btn btn-neutral float-right" title="Google App Script">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../03_files/files/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../05_gas/gas/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

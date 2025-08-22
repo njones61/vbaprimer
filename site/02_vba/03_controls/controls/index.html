@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/03_controls/controls/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Controls - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Controls";
+        var mkdocs_page_input_path = "02_vba/03_controls/controls.md";
+        var mkdocs_page_url = "/en/latest/02_vba/03_controls/controls/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Controls</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-controls-group">The Controls Group</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-controls">Creating Controls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#design-mode">Design Mode</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#types-of-controls">Types of Controls</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#buttons">Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#combo-boxes">Combo Boxes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#check-boxes">Check Boxes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#list-boxes">List Boxes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#text-boxes">Text Boxes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scroll-bars">Scroll Bars</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#spin-buttons">Spin Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#option-buttons">Option Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#labels">Labels</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#images">Images</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#toggle-buttons">Toggle Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-controls">More Controls</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#control-names">Control Names</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Controls</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/03_controls/controls.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="adding-controls-to-a-spreadsheet">Adding Controls to a Spreadsheet</h1>
+<p>Controls are buttons, combo boxes, option buttons, etc. that can be added to a worksheet. You can associate VB code with controls that is executed each time the user clicks on the control.</p>
+<h2 id="the-controls-group">The Controls Group</h2>
+<p>To add a control to a spreadsheet, you should first turn on the <a href="../../01_gettingstarted/gettingstarted/#the-developer-tab">Developer tab</a>. You then create new controls and edit the code associated with controls using the Control group.</p>
+<p><img alt="controlsgroup.png" src="../../01_gettingstarted/images/controlsgroup.png" /></p>
+<p>The options in the group are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="insert.gif" src="../images/insert.gif" /></td>
+<td>This tool is used to insert new controls (see below).</td>
+</tr>
+<tr>
+<td><img alt="designmode.gif" src="../images/designmode.gif" /></td>
+<td>This toggle button is used to switch in and out of design mode (see below)</td>
+</tr>
+<tr>
+<td><img alt="properties.gif" src="../images/properties.gif" /></td>
+<td>This button brings up the Properties window that is used to edit the properties associated with a selected control.</td>
+</tr>
+<tr>
+<td><img alt="viewcode.gif" src="../images/viewcode.gif" /></td>
+<td>This tool displays the <a href="../../01_gettingstarted/gettingstarted/#the-visual-basic-editor">Visual Basic Editor</a>. This is where you write the Visual Basic code.</td>
+</tr>
+<tr>
+<td><img alt="rundialog.gif" src="../images/rundialog.gif" /></td>
+<td>This is used to run any custom user forms you may have associated with the project.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="creating-controls">Creating Controls</h2>
+<p>To add a new control, click on the Insert button and then select one of the control types in the <strong>ActiveX Controls</strong> portion of the tool palette:</p>
+<p><img alt="toolpalette.gif" src="../images/toolpalette.gif" /></p>
+<p>Then drag a box on your worksheet where you want to place the control. While the control is still selected, you can use the <strong>Properties</strong> window to edit the properties associated with the control (the control name, the caption, etc.).</p>
+<p>To edit the code associated with a control, simply double click on the control. This switches you over the VB Editor and puts the cursor in the subprocedure associated with the <strong>Click</strong> event for the control. Any code you enter here is automatically executed when the control is clicked.</p>
+<h2 id="design-mode">Design Mode</h2>
+<p>When you are writing VB code and adding controls to a spreadsheet, there are two basic modes: <strong>Design mode</strong> and <strong>Run mode</strong>. In design mode, when you click on a button or a control, you can edit the properties of the control in the <a href="../../01_gettingstarted/gettingstarted/#the-visual-basic-editor">VB Editor</a>. If you double click on a control, you can edit the code associated with the control. If you are in Run mode, when you click on the control, the code associated with the control is executed. When developing your spreadsheet, you will be moving in and out of Design mode.</p>
+<h2 id="types-of-controls">Types of Controls</h2>
+<p>In this section we will describe each of the controls in the ActiveX Controls menu.</p>
+<h3 id="buttons">Buttons <img alt="control_button.png" src="../images/control_button.png" /></h3>
+<p>Buttons are also called <strong>Command Buttons</strong>. They are typically used as a simple mechanism to execute some VBA code, such as a macro you my have recorded.</p>
+<p><img alt="buttons_sample.png" src="../images/buttons_sample.png" /></p>
+<p>After creating the button, you double-click the button in design mode and then write the code that is executed when the button is clicked. If your button brings up a custom user form, you should also put a set of elipses after the button caption (...).</p>
+<h3 id="combo-boxes">Combo Boxes <img alt="control_combobox.png" src="../images/control_combobox.png" /></h3>
+<p>Combo boxes are sometimes called "pop-up menus". They allow you to select a choice from a set of options.</p>
+<p><img alt="combobox_sample.png" src="../images/combobox_sample.png" /></p>
+<p>The choices presented to the user come from a range of cells somewhere on your spreadsheet. You assign the set of choices to the combobox by setting the <strong>ListFillRange</strong> property of the combo box. The range is referenced like you would in a spreadsheet (J2:J5, Sheet2!G4:G6, etc.). The <strong>LinkedCell</strong> property allows the user to output a value from their selection to a specific cell. LinkedCell outputs this value from a column in the ListFillRange and this column is denoted by the <strong>BoundColumn</strong> property.</p>
+<p>The "combo" part of a combo box comes from the fact that rather than selecting an item from the list, you can type something in the box. If you want to restrict the user to only select something from the list (typical usage), you need to set the <strong>MatchRequired</strong> property to True.</p>
+<h3 id="check-boxes">Check Boxes <img alt="control_checkbox.png" src="../images/control_checkbox.png" /></h3>
+<p>Checkboxes are used when you have an option or set of options that are true/false or yes/no and the options are independent. For example,</p>
+<p><img alt="checkbox_sample.png" src="../images/checkbox_sample.png" /></p>
+<p>The text displayed corresponds to the <strong>Caption</strong> property. The <strong>Value</strong> property is a boolean (true/false) indicating the status of the control. This control is typically utilized with some kind of <strong>If</strong> statement. You typically don't do anything when the user selects the control, but when the user selects a button or something, you check the status of the control. For example,</p>
+<pre><code class="language-vb">If chkCoseSlaw Then
+    price = price + 2.6
+End If
+</code></pre>
+<p>If your options are dependent (you can only select one from the group), you should use either the list box, combo box, or option control instead.</p>
+<h3 id="list-boxes">List Boxes <img alt="control_listbox.png" src="../images/control_listbox.png" /></h3>
+<p>A list box is used when you have a large number of options and you need the user to select one option from the list. Example:</p>
+<p><img alt="listbox_sample.png" src="../images/listbox_sample.png" /></p>
+<p>The contents of the list come from a range of cells somewhere on your spreadsheet. The range is indicated by the <strong>ListFillRange</strong> property. To determine what item is selected, you can check the <strong>Value</strong> property. For the example shown above, the Value property would = "Brigham Young". In many cases, what you really want to know is what item is selected by order in the list. You can do this using the <strong>ListIndex</strong> property. The index numbering starts at 0, so for the case shown above, the ListIndex property = <strong>2</strong>.</p>
+<p>Note that if the list box is not big enough to show the entire list, a scroll bar is automatically added to the list to allow the user to scroll through the entire list.</p>
+<h3 id="text-boxes">Text Boxes <img alt="control_textbox.png" src="../images/control_textbox.png" /></h3>
+<p>A text box is used to allow the user to enter a text string as some type of input. For example,</p>
+<p><img alt="textbox_sample.png" src="../images/textbox_sample.png" /></p>
+<p>The text in the control is stored in the <strong>Value</strong> property. Text boxes are rarely used in Excel because it is usually simpler and more efficient to have the user enter the text into one of the spreadsheet cells.</p>
+<h3 id="scroll-bars">Scroll Bars <img alt="control_scroll.png" src="../images/control_scroll.png" /></h3>
+<p>A scroll bar allows the user to select a value from a predefined range of values.</p>
+<p><img alt="scrollbar_sample.png" src="../images/scrollbar_sample.png" /></p>
+<p>The rectangle in the middle is called the "thumb". As the user moves the thumb, the value of the scroll bar changes and the value is stored in the <strong>Value</strong> property. You can link a scroll bar to a cell using the <strong>LinkedCell</strong> property. Then the current value of the scroll is echoed to a cell as shown above. You set the range of values on the scroll bar using the <strong>Min</strong> and <strong>Max</strong> properties. Scroll bars are fun, but are rarely used on spreadsheets.</p>
+<h3 id="spin-buttons">Spin Buttons <img alt="control_spin.png" src="../images/control_spin.png" /></h3>
+<p>A spin button allows the user to increment an integer value up or down by clicking on the button arrows. A spin button should always be linked to a cell using the <strong>LinkedCell</strong> property.</p>
+<p><img alt="spin_sample.png" src="../images/spin_sample.png" /></p>
+<p>You can set a limit on the values by changing the <strong>Min</strong> and <strong>Max</strong> properties. You can also use the <strong>SmallChange</strong> property to increment by 2, 5, 10, etc (default = 1).</p>
+<h3 id="option-buttons">Option Buttons <img alt="control_option.png" src="../images/control_option.png" /></h3>
+<p>Option buttons are used when you want the user to make a single selection from a set of options. These are sometimes called "radio" controls, because the mimic the buttons on your car radio for selecting a pre-set station.</p>
+<p><img alt="option_sample.png" src="../images/option_sample.png" /></p>
+<p>Each control has a <strong>Value</strong> property which is a boolean representing the state of the control (true/false). The text displayed is from the <strong>Caption</strong> property.</p>
+<h3 id="labels">Labels <img alt="control_label.png" src="../images/control_label.png" /></h3>
+<p>A label is simply a text string where you can change the value of the text string using VB code. These are sometimes useful in custom user forms, but are rarely used in spreadsheets because you can simply put a label in a cell and change the value of the cell.</p>
+<h3 id="images">Images <img alt="control_image.png" src="../images/control_image.png" /></h3>
+<p>An image control allows you to associate an image from a file with a control. The control is shown as a gray rectangle until you attach an image to the control using the <strong>Picture</strong> property. You select a file and the image in the file is then copied to the image control. You can use the <strong>Visible</strong> property to turn the image on or off and you can use the <strong>Top</strong> and <strong>Left</strong> properties to control the location of the image on your spreadsheet. You should only use this control on a spreadsheet if you intend to turn the image on or off or move it. Otherwise, just use the <strong>Insert|Pictures</strong> command in Excel.</p>
+<p>See the <a href="https://ce170.groups.et.byu.net/syllabus/homework/hw11/index.htm">Road Kill homework assignment</a> for an example of how to use image controls.</p>
+<h3 id="toggle-buttons">Toggle Buttons <img alt="control_togglebutton.png" src="../images/control_togglebutton.png" /></h3>
+<p>A toggle button is similar to a checkbox, but it uses a button that is in a normal or depressed state:</p>
+<p><img alt="togglebutton_sample.png" src="../images/togglebutton_sample.png" /></p>
+<p>The button status is stored in the <strong>Value</strong> property as a boolean (true/false). The text on the button is from the <strong>Caption</strong> property.</p>
+<h3 id="more-controls">More Controls <img alt="control_more.png" src="../images/control_more.png" /></h3>
+<p>Clicking on the more controls button brings up a list of advanced controls. The contents of the list will depend on what is installed on your computer.</p>
+<p><img alt="morecontrols.png" src="../images/morecontrols.png" /></p>
+<h2 id="control-names">Control Names</h2>
+<p>When working with controls, you will need to reference your controls in your code using the control names which are defined by the Name property when you create the controls. When dealing with large numbers of controls, it is very important to assign meaningful names that describe the function of the control. Furthermore, to distinguish between different types of controls, you should use a three character prefix on the control names to indicate the type. For example, if I had a set of checkboxes for BBQ sides as shown above, I would name them:</p>
+<ul>
+<li>chkColeSlaw</li>
+<li>chkPotatoSalad</li>
+<li>chkBakeBeans</li>
+<li>chkMacNCheese</li>
+</ul>
+<p>And for my option controls I would name them:</p>
+<ul>
+<li>optRed</li>
+<li>optGreen</li>
+<li>optBlue</li>
+</ul>
+<p>Here is a complete list of suggested three character prefixes for each control type.</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Icon</th>
+<th>Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command Button</td>
+<td><img alt="control_button.png" src="../images/control_button.png" /></td>
+<td>cmd</td>
+</tr>
+<tr>
+<td>Combo Box</td>
+<td><img alt="control_combobox.png" src="../images/control_combobox.png" /></td>
+<td>cbo</td>
+</tr>
+<tr>
+<td>Check Box</td>
+<td><img alt="control_checkbox.png" src="../images/control_checkbox.png" /></td>
+<td>chk</td>
+</tr>
+<tr>
+<td>List Box</td>
+<td><img alt="control_listbox.png" src="../images/control_listbox.png" /></td>
+<td>lst</td>
+</tr>
+<tr>
+<td>Text Box</td>
+<td><img alt="control_textbox.png" src="../images/control_textbox.png" /></td>
+<td>txt</td>
+</tr>
+<tr>
+<td>Scroll Bar</td>
+<td><img alt="control_scroll.png" src="../images/control_scroll.png" /></td>
+<td>scr</td>
+</tr>
+<tr>
+<td>Spin Button</td>
+<td><img alt="control_spin.png" src="../images/control_spin.png" /></td>
+<td>spn</td>
+</tr>
+<tr>
+<td>Option Button</td>
+<td><img alt="control_option.png" src="../images/control_option.png" /></td>
+<td>opt</td>
+</tr>
+<tr>
+<td>Label</td>
+<td><img alt="control_label.png" src="../images/control_label.png" /></td>
+<td>lbl</td>
+</tr>
+<tr>
+<td>Image</td>
+<td><img alt="control_image.png" src="../images/control_image.png" /></td>
+<td>img</td>
+</tr>
+<tr>
+<td>Toggle Button</td>
+<td><img alt="control_togglebutton.png" src="../images/control_togglebutton.png" /></td>
+<td>tog</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Christmas Tree -</strong> Use shapes, controls, and macros in this fun visually basic controlled workbook to decorate a Christmas Tree.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/christmas_tree.xlsm">christmas_tree.xlsm</a></div>
+<div class="exercise-cell"><a href="files/christmas_tree_key.xlsm">christmas_tree_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Control Exercises -</strong> Learn how to use all of the basic Excel controls with these short and simple exercises.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/control_exercises.xlsm">control_exercises.xlsm</a></div>
+<div class="exercise-cell"><a href="files/control_exercises_key.xlsm">control_exercises_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Madlib Controls -</strong> Use controls to create a madlib generator for you and your friends.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/madlib_controls.xlsm">madlib_controls.xlsm</a></div>
+<div class="exercise-cell"><a href="files/madlib_controls_key.xlsm">madlib_controls_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../02_macros/macros/" class="btn btn-neutral float-left" title="Macros"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../04_ranges/ranges/" class="btn btn-neutral float-right" title="Ranges">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../02_macros/macros/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../04_ranges/ranges/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

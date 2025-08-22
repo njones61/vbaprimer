@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/16_subs/subs/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Subs - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Subs";
+        var mkdocs_page_input_path = "02_vba/16_subs/subs.md";
+        var mkdocs_page_url = "/en/latest/02_vba/16_subs/subs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Subs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#code-organization">Code Organization</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-input-arguments">Using Input Arguments</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scope">Scope</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modifying-recorded-macros">Modifying Recorded Macros</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#calling-subs">Calling Subs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-code">Sample Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Subs</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/16_subs/subs.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="writing-custom-subs">Writing Custom Subs</h1>
+<p>When writing VBA code associated with Excel, much of the code we use is generated by recording a macro, is associated with the click event for a control, or is related to a custom function. It is also possible to write custom subs. A sub is simply a block of code that runs as a unit.</p>
+<h2 id="code-organization">Code Organization</h2>
+<p>To illustrate how subs can be used to organize your code, let's suppose that we have a spreadsheet with a button that launches the following code:</p>
+<pre><code class="language-vb">Private Sub cmdGenerateTable_Click()
+
+'Format the table
+Range(&quot;B6:D9&quot;).Select
+Selection.Borders(xlEdgeLeft).LineStyle = xlContinuous
+Selection.Borders(xlEdgeTop).LineStyle = xlContinuous
+Selection.Borders(xlEdgeBottom).LineStyle = xlContinuous
+Selection.Borders(xlEdgeRight).LineStyle = xlContinuous
+Selection.Borders(xlInsideVertical).LineStyle = xlContinuous
+Selection.Borders(xlInsideHorizontal).LineStyle = xlContinuous
+Selection.HorizontalAlignment = xlCenter
+
+'Populate the table
+Range(&quot;B6&quot;).FormulaR1C1 = &quot;len&quot;
+Range(&quot;C6&quot;).FormulaR1C1 = &quot;wid&quot;
+Range(&quot;D6&quot;).FormulaR1C1 = &quot;area&quot;
+Range(&quot;B7&quot;).FormulaR1C1 = &quot;5&quot;
+Range(&quot;C7&quot;).FormulaR1C1 = &quot;12&quot;
+Range(&quot;B8&quot;).FormulaR1C1 = &quot;34&quot;
+Range(&quot;C8&quot;).FormulaR1C1 = &quot;15&quot;
+Range(&quot;B9&quot;).FormulaR1C1 = &quot;6.5&quot;
+Range(&quot;C9&quot;).FormulaR1C1 = &quot;22&quot;
+Range(&quot;D7:D9&quot;).FormulaR1C1 = &quot;=RC[-2]*RC[-1]&quot;
+
+End Sub
+</code></pre>
+<p>The first part of the code formats a table, and the second part of the code fills in the table with numbers and formulas. After running the range in question ("B6:D9") looks like this:</p>
+<p><img alt="completed_table.png" src="../images/completed_table.png" /></p>
+<p>Another way to organize the code is to break the two parts of the code into two different subs as follows:</p>
+<pre><code class="language-vb">Private Sub cmdGenerateTable_Click()
+
+format_table
+populate_table
+
+End Sub
+
+Sub format_table()
+
+Range(&quot;B6:D9&quot;).Select
+Selection.Borders(xlEdgeLeft).LineStyle = xlContinuous
+Selection.Borders(xlEdgeTop).LineStyle = xlContinuous
+Selection.Borders(xlEdgeBottom).LineStyle = xlContinuous
+Selection.Borders(xlEdgeRight).LineStyle = xlContinuous
+Selection.Borders(xlInsideVertical).LineStyle = xlContinuous
+Selection.Borders(xlInsideHorizontal).LineStyle = xlContinuous
+Selection.HorizontalAlignment = xlCenter
+
+End Sub
+
+Sub populate_table()
+
+Range(&quot;B6&quot;).FormulaR1C1 = &quot;len&quot;
+Range(&quot;C6&quot;).FormulaR1C1 = &quot;wid&quot;
+Range(&quot;D6&quot;).FormulaR1C1 = &quot;area&quot;
+Range(&quot;B7&quot;).FormulaR1C1 = &quot;5&quot;
+Range(&quot;C7&quot;).FormulaR1C1 = &quot;12&quot;
+Range(&quot;B8&quot;).FormulaR1C1 = &quot;34&quot;
+Range(&quot;C8&quot;).FormulaR1C1 = &quot;15&quot;
+Range(&quot;B9&quot;).FormulaR1C1 = &quot;6.5&quot;
+Range(&quot;C9&quot;).FormulaR1C1 = &quot;22&quot;
+Range(&quot;D7:D9&quot;).FormulaR1C1 = &quot;=RC[-2]*RC[-1]&quot;
+
+End Sub
+</code></pre>
+<p>Note that the code in the original sub is now only two lines. To call a sub, you simply type the name of the sub on a line of code. While this is a rather simple project, this process of organizing code into logical chunks and then calling those chunks as subs in the main part of your code will not only make your code simpler to understand, it makes your code easier to write because you can use a divide-and-conquer approach to building up your code logic. Furthermore, in many cases you may want to repeat a section of code many times. Rather than cutting and pasting an identical set of code, it makes much more sense to put the code into a sub and then just call that sub.</p>
+<h2 id="using-input-arguments">Using Input Arguments</h2>
+<p>While the code up above is nicely organized, the custom subs would be even more useful if they were generalized to work on any range rather than always applying to B6:D9. We can make our code more general by adding input arguments. Input arguments are passed to a sub the same way they are passed to custom functions, via the parentheses following the sub name. In the following code, the subs have been changed to operate on a range specified by an input argument. You can then call the subs multiple times with a different range in each case.</p>
+<pre><code class="language-vb">Private Sub cmdGenerateTable_Click()
+
+format_table Range(&quot;B6:D9&quot;)
+populate_table Range(&quot;B6:D9&quot;)
+
+format_table Range(&quot;B11:D14&quot;)
+populate_table Range(&quot;B11:D14&quot;)
+
+format_table Range(&quot;B16:D19&quot;)
+populate_table Range(&quot;B16:D19&quot;)
+
+End Sub
+
+Sub format_table(myrange As Range)
+
+myrange.Select
+Selection.Borders(xlEdgeLeft).LineStyle = xlContinuous
+Selection.Borders(xlEdgeTop).LineStyle = xlContinuous
+Selection.Borders(xlEdgeBottom).LineStyle = xlContinuous
+Selection.Borders(xlEdgeRight).LineStyle = xlContinuous
+Selection.Borders(xlInsideVertical).LineStyle = xlContinuous
+Selection.Borders(xlInsideHorizontal).LineStyle = xlContinuous
+Selection.HorizontalAlignment = xlCenter
+
+End Sub
+
+Sub populate_table(myrange As Range)
+
+myrange.Cells(1, 1).FormulaR1C1 = &quot;len&quot;
+myrange.Cells(1, 2).FormulaR1C1 = &quot;wid&quot;
+myrange.Cells(1, 3).FormulaR1C1 = &quot;area&quot;
+myrange.Cells(2, 1).FormulaR1C1 = &quot;5&quot;
+myrange.Cells(2, 2).FormulaR1C1 = &quot;12&quot;
+myrange.Cells(3, 1).FormulaR1C1 = &quot;34&quot;
+myrange.Cells(3, 2).FormulaR1C1 = &quot;15&quot;
+myrange.Cells(4, 1).FormulaR1C1 = &quot;6.5&quot;
+myrange.Cells(4, 2).FormulaR1C1 = &quot;22&quot;
+Range(myrange.Cells(2, 3), myrange.Cells(4, 3)).FormulaR1C1 = &quot;=RC[-2]*RC[-1]&quot;
+
+End Sub
+</code></pre>
+<p>Note how the subs are called in the click event sub. To call a sub with arguments, you simply list the arguments after the sub name, and the arguments are separated by commas (there is only one argument in this case). For subs, you should not enclose the argument(s) in parentheses when you call the sub like you do with functions. After running the code above, the sheet looks like this:</p>
+<p><img alt="completed_table2.png" src="../images/completed_table2.png" /></p>
+<p>Again, the power of using custom subs is that you can repeatedly use code without rewriting it, and you can make it general purpose so that it applies to a number of situations depending on the values of the input arguments.</p>
+<h2 id="scope">Scope</h2>
+<p>The code shown above is all associated with a sheet and can only be used with the associated sheet. If you want to make your code even more general, you should put it in a module and make sure it is public, not private (if you don't explicitly put "Public" or "Private" in front of the sub name, it is public by default). This will allow you to call the code from anywhere in your project, including any of the sheets, forms, or modules.</p>
+<h2 id="modifying-recorded-macros">Modifying Recorded Macros</h2>
+<p>A great way to make custom subs is to record a macro and then modify the macro to be more general purpose by adding an input argument to the sub and modifying the code based on the input argument. For example, the following macro copies a standard table from a sheet called "Extra" to another sheet.</p>
+<pre><code class="language-vb">Sub copy_table()
+'
+' copy_table Macro
+'
+    Sheets(&quot;Extra&quot;).Select
+    Range(&quot;A1:L8&quot;).Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets(&quot;Sheet1&quot;).Select
+    Range(&quot;F6&quot;).Select
+    ActiveSheet.Paste
+End Sub
+</code></pre>
+<p>To make the code more useful, we can modify the code as follows so that we can designate where the table is to be copied. Compare to original code.</p>
+<pre><code class="language-vb">Sub copy_table(mysheet As String, myrange As String)
+'
+' copy_table Macro - MODIFIED
+'
+    Sheets(&quot;Extra&quot;).Select
+    Range(&quot;A1:L8&quot;).Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets(mysheet).Select
+    Range(myrange).Select
+    ActiveSheet.Paste
+End Sub
+</code></pre>
+<p>We can now write code to copy the table to multiple locations.</p>
+<pre><code class="language-vb">copy_table &quot;Sheet1&quot;, &quot;F6&quot;
+copy_table &quot;Sheet1&quot;, &quot;F15&quot;
+copy_table &quot;Sheet2&quot;, &quot;B2&quot;
+copy_table &quot;Sheet2&quot;, &quot;B11&quot;
+</code></pre>
+<h2 id="calling-subs">Calling Subs</h2>
+<p>As shown above, you can call a sub simply by typing the name of the sub followed by the arguments separated by commas. For example, the code to call the <strong>copy_table</strong> sub is as follows:</p>
+<pre><code class="language-vb">copy_table &quot;Sheet1&quot;, &quot;F6&quot;
+copy_table &quot;Sheet1&quot;, &quot;F15&quot;
+copy_table &quot;Sheet2&quot;, &quot;B2&quot;
+copy_table &quot;Sheet2&quot;, &quot;B11&quot;
+</code></pre>
+<p>An alternate way to call the subs is to use the <strong>Call</strong> method. If you use this approach, you must put the arguments in parentheses. For example:</p>
+<pre><code class="language-vb">Call copy_table(&quot;Sheet1&quot;, &quot;F6&quot;)
+Call copy_table(&quot;Sheet1&quot;, &quot;F15&quot;)
+Call copy_table(&quot;Sheet2&quot;, &quot;B2&quot;)
+Call copy_table(&quot;Sheet2&quot;, &quot;B11&quot;)
+</code></pre>
+<p>Both approaches work the same way, so it is a matter of style.</p>
+<h2 id="sample-code">Sample Code</h2>
+<p>The worksheet associated with this chapter can be downloaded here.</p>
+<p><a href="../files/sample%20code.xlsm">sample code.xlsm</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Table Generator -</strong> Record three macros that generate 3 different kinds of tables.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/table_generator.xlsm">table_generator.xlsm</a></div>
+<div class="exercise-cell"><a href="files/table_generator_key.xlsm">table_generator_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Column Format -</strong> Modify a macro that formats a specific column of the given table.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/column_format.xlsm">column_format.xlsm</a></div>
+<div class="exercise-cell"><a href="files/column_format_key.xlsm">column_format_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Template Generator -</strong> Record and modify a macro that generates various types of homework templates for math, engineering and general homework.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/template_generator.xlsm">template_generator.xlsm</a></div>
+<div class="exercise-cell"><a href="files/template_generator_key.xlsm">template_generator_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../15_excelfunctions/excelfunctions/" class="btn btn-neutral float-left" title="Excel Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../17_events/events/" class="btn btn-neutral float-right" title="Events">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../15_excelfunctions/excelfunctions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../17_events/events/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

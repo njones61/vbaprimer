@@ -45,21 +45,22 @@ nav:
   - Excel VBA:
     - Getting Started: 02_vba/01_gettingstarted/gettingstarted.md
     - Macros: 02_vba/02_macros/macros.md
-    - Ranges: 02_vba/03_ranges/ranges.md
-    - MsgBox: 02_vba/04_msgbox/msgbox.md
-    - Variables: 02_vba/05_variables/variables.md
-    - Objects: 02_vba/06_objects/objects.md
-    - If Statements: 02_vba/07_ifthen/ifthen.md
-    - Debugging: 02_vba/08_debug/debug.md
-    - Loops: 02_vba/09_loops/loops.md
-    - Arrays: 02_vba/10_arrays/arrays.md
-    - Strings: 02_vba/11_strings/strings.md
-    - User Forms: 02_vba/12_userforms/userforms.md
-    - Functions: 02_vba/13_functions/functions.md
-    - Excel Functions: 02_vba/14_excelfunctions/excelfunctions.md
-    - Subs: 02_vba/15_subs/subs.md
-    - Events: 02_vba/16_events/events.md
-    - Standards: 02_vba/17_standards/standards.md
+    - Controls: 02_vba/03_controls/controls.md
+    - Ranges: 02_vba/04_ranges/ranges.md
+    - MsgBox: 02_vba/05_msgbox/msgbox.md
+    - Variables: 02_vba/06_variables/variables.md
+    - Objects: 02_vba/07_objects/objects.md
+    - If Statements: 02_vba/08_ifthen/ifthen.md
+    - Debugging: 02_vba/09_debug/debug.md
+    - Loops: 02_vba/10_loops/loops.md
+    - Arrays: 02_vba/11_arrays/arrays.md
+    - Strings: 02_vba/12_strings/strings.md
+    - User Forms: 02_vba/13_userforms/userforms.md
+    - Functions: 02_vba/14_functions/functions.md
+    - Excel Functions: 02_vba/15_excelfunctions/excelfunctions.md
+    - Subs: 02_vba/16_subs/subs.md
+    - Events: 02_vba/17_events/events.md
+    - Standards: 02_vba/18_standards/standards.md
   - Advanced Topics:
     - Graphics: 03_advanced/01_graphics/graphics.md
     - Email: 03_advanced/02_email/email.md

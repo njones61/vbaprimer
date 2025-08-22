@@ -54,9 +54,9 @@ The correct answer is (d). But how do we know this? One can always very explicit
 
 | Order | Operator | Description |
 |:-----:|:--------:|-------------|
-| 1     | ^        | Power (exponent) |
-| 2     | * /      | Multiplication and division |
-| 3     | + -      | Addition and subtraction |
+| 1 | ^ | Power (exponent) |
+| 2 | * / | Multiplication and division |
+| 3 | + - | Addition and subtraction |
 
 - Within levels 2 and 3, operations are carried out from left to right. So, let's reexamine our formula from above:
 
@@ -108,12 +108,24 @@ The worksheet associated with the exercises shown above can be downloaded here:
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise | Description                                                                                               | Difficulty | Start | Solution |
-|:--------:|-----------------------------------------------------------------------------------------------------------|:---------:|:-----:|:-------:|
-| Headloss | Use the order of operations to <br>calculate the fluid headloss in a pipe.                                | Easy | [headloss.xlsm](files/headloss.xlsm) | [headloss_key.xlsm](files/headloss_key.xlsm) |
-| Operators | Calculate the equations using <br>formulas and taking into consideration<br> the appropriate order of operations. | Medium | [operators.xlsm](files/operators.xlsm)| [operators_key.xlsm](files/operators_key.xlsm) |
-| Friction Factor | Use the correct order of operations<br> to calculate the friction factor.                                     | Hard | [friction_factor.xlsm](files/friction_factor.xlsm) | [friction_factor_key.xlsm](files/friction_factor_key.xlsm) |
-
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Use the order of operations to calculate the fluid headloss in a pipe.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/headloss.xlsm">headloss.xlsm</a></div>
+<div class="exercise-cell"><a href="files/headloss_key.xlsm">headloss_key.xlsm</a></div>
+<div class="exercise-cell">Calculate the equations using formulas and taking into consideration the appropriate order of operations.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/operators.xlsm">operators.xlsm</a></div>
+<div class="exercise-cell"><a href="files/operators_key.xlsm">operators_key.xlsm</a></div>
+<div class="exercise-cell">Use the correct order of operations to calculate the friction factor.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/friction_factor.xlsm">friction_factor.xlsm</a></div>
+<div class="exercise-cell"><a href="files/friction_factor_key.xlsm">friction_factor_key.xlsm</a></div>
+</div>
 Description	Difficulty	Start	Solution
 Headloss - Use the order of operations to calculate the fluid headloss in a pipe.	Easy	[headloss.xlsm](files/headloss.xlsm)	[headloss_key.xlsm](files/headloss_key.xlsm)
 Operators - Calculate the equations using formulas and taking into consideration the appropriate order of operations.	Medium	operators.xlsm	operators_key.xlsm

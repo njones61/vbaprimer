@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/03_advanced/05_gas/gas/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Google App Script - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Google App Script";
+        var mkdocs_page_input_path = "03_advanced/05_gas/gas.md";
+        var mkdocs_page_url = "/en/latest/03_advanced/05_gas/gas/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Google App Script</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#google-sheets-vs-excel">Google Sheets vs Excel</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#learning-javascript">Learning JavaScript</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#importing-excel-files">Importing Excel Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opening-a-new-sheet">Opening a New Sheet</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opening-the-editor">Opening the Editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#writing-your-first-function">Writing Your First Function</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hello-world">Hello World</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recording-a-macro">Recording a Macro</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-gas-examples">Advanced GAS Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#working-with-ranges">Working with Ranges</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-custom-functions">Creating Custom Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#working-with-multiple-sheets">Working with Multiple Sheets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#event-triggers">Event Triggers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common-gas-methods">Common GAS Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#spreadsheet-methods">Spreadsheet Methods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sheet-methods">Sheet Methods</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#range-methods">Range Methods</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#finished">Finished!</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-resources">Additional Resources</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Advanced Topics</li>
+      <li class="breadcrumb-item active">Google App Script</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/03_advanced/05_gas/gas.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="google-sheets-and-google-apps-script">Google Sheets and Google Apps Script</h1>
+<p>Now that you are familiar with Excel and VBA, you may wish to start exploring Google Sheets and Google Apps Script. When you create a Google account, you have free access to cloud storage on Google Drive, where you can use a free suite of productivity tools to create documents. One of these free tools is Google Sheets, a spreadsheet application. Google Sheets is very similar to Excel. Formulas are created in the same fashion and most of the same functions are supported.</p>
+<p>Google Sheets supports a powerful scripting environment called Google Apps Script (GAS). GAS is a variant of JavaScript, the most common scripting language for web pages. GAS is an object-oriented programming language. A complete reference for the classes used in the Spreadsheet service of GAS can be found here:</p>
+<blockquote>
+<p><a href="https://developers.google.com/apps-script/reference/spreadsheet/">https://developers.google.com/apps-script/reference/spreadsheet/</a></p>
+</blockquote>
+<p>Example code is included. You can also google countless sites with sample GAS code and problem solutions.</p>
+<h2 id="google-sheets-vs-excel">Google Sheets vs Excel</h2>
+<p>Here are some differences/comparisons between Google Sheets/GAS and Excel/VBA:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Google Sheets/GAS</th>
+<th>Excel/VBA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Free</td>
+<td>Commercial product</td>
+</tr>
+<tr>
+<td><strong>Platform Support</strong></td>
+<td>Multi-platform, works on all platforms exactly the same way. All you need is a browser</td>
+<td>While the Mac version of Excel supports VBA, it is limited</td>
+</tr>
+<tr>
+<td><strong>Script Security</strong></td>
+<td>Simply give it permission to run once by making a few clicks and that is it</td>
+<td>You have to mess with the Macro security settings to get your VBA code to work and you have to save the file as *.xlsm</td>
+</tr>
+<tr>
+<td><strong>Sharing</strong></td>
+<td>You can easily share the document with someone else and each of you can edit it, even at the same time. Fantastic for collaborative projects</td>
+<td>Limited sharing capabilities</td>
+</tr>
+<tr>
+<td><strong>Ease of Scripting</strong></td>
+<td>GAS has a steeper learning curve</td>
+<td>Here I would give the edge to Excel/VBA</td>
+</tr>
+<tr>
+<td><strong>Controls</strong></td>
+<td>Google Sheets does NOT support ActiveX controls. You can execute your GAS in one of four ways: a) Using a menu command, b) using a drawing object (you can make it look like a button), c) as a custom function in a formula, d) using the run button in the Script Editor window</td>
+<td>Full support for ActiveX controls</td>
+</tr>
+<tr>
+<td><strong>Recording Macros</strong></td>
+<td>Both platforms allow you to record actions and turn them into code</td>
+<td>Both platforms allow you to record actions and turn them into code</td>
+</tr>
+</tbody>
+</table>
+<h2 id="learning-javascript">Learning JavaScript</h2>
+<p>Before diving into Google Sheets and GAS, I recommend you spend some time learning about JavaScript. No need to buy a textbook, there are tons of free resources on the web. I recommend the following site:</p>
+<blockquote>
+<p><a href="http://www.w3schools.com/">http://www.w3schools.com/</a></p>
+</blockquote>
+<p>Click on the JavaScript link on the left.</p>
+<h2 id="importing-excel-files">Importing Excel Files</h2>
+<p>If you have an Excel file you want to try in Google Sheets, just upload it to your Google Drive and then right-click on it and select Open With|Sheets. It will create a copy of the file in Google Sheets format and open it. Your VBA code will not be preserved, but almost everything else will be.</p>
+<h2 id="opening-a-new-sheet">Opening a New Sheet</h2>
+<p>You can also create a new blank sheet. In Google Drive, click on the New button and then select Google Sheets.</p>
+<p><img alt="new_sheet.png" src="../images/new_sheet.png" /></p>
+<h2 id="opening-the-editor">Opening the Editor</h2>
+<p>Once you open your sheet, you can access the editor by selecting the <strong>Tools|Script Editor...</strong> command. This takes you to the editor with a new project, a new code file (Code.gs), and an empty function:</p>
+<p><img alt="new_project.png" src="../images/new_project.png" /></p>
+<h2 id="writing-your-first-function">Writing Your First Function</h2>
+<p>Lets change the function code so that it multiplies the input by 2:</p>
+<pre><code class="language-javascript">function double_it(x) {
+  return x*2;
+}
+</code></pre>
+<p>Save the changes and then go to the sheet and try the formula:</p>
+<p><img alt="double_it_1.png" src="../images/double_it_1.png" /></p>
+<p>It's that easy!</p>
+<p><img alt="double_it_2.png" src="../images/double_it_2.png" /></p>
+<h2 id="hello-world">Hello World</h2>
+<p>Let's write a function that prints "hello world". In Excel VBA, we would write a custom sub. In GAS, we write a function with no parameters and it behaves like a sub. Add the following:</p>
+<pre><code class="language-javascript">function hello_world() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName(&quot;Sheet1&quot;); 
+  sheet.getRange(&quot;C3:D11&quot;).setValue(&quot;hello world&quot;);
+}
+</code></pre>
+<p>To run the code, change the function selector in the toolbar to the editor to "hello_world". This sets the active function.</p>
+<p><img alt="hello_world_1.png" src="../images/hello_world_1.png" /></p>
+<p>Then click on the Play button. The first time you do this you will need to give permission for the script to run. When it finishes, you should see this:</p>
+<p><img alt="hello_world_2.png" src="../images/hello_world_2.png" /></p>
+<h2 id="recording-a-macro">Recording a Macro</h2>
+<p>Next, let's record a macro. This process is almost identical to Excel. We will record a simple macro that formats the range of "hello world" cells. First, select the <strong>Macros|Record macro</strong> command in the <strong>Tools</strong> menu.</p>
+<p><img alt="macro_1.png" src="../images/macro_1.png" /></p>
+<p>This puts you into <em>record</em> mode. You should see this window at the bottom of your screen:</p>
+<p><img alt="macro_2.png" src="../images/macro_2.png" /></p>
+<p>Next, apply some formatting as follows:</p>
+<ol>
+<li>Select all of the cells that contain "hello world"</li>
+<li>Change the font to italic</li>
+<li>Change the cell alignment to center the text</li>
+<li>Apply borders to the selected cells</li>
+<li>Fill the selected cells with a color</li>
+</ol>
+<p>You don't have to follow those steps exactly. Feel free to apply whatever formatting you want. When you are done it will look something like this:</p>
+<p><img alt="macro_4.png" src="../images/macro_4.png" /></p>
+<p>When you are done, select the <strong>Save</strong> command in the macro window at the bottom of your browser. That will bring up the save dialog. Enter "<strong>my_macro</strong>" and select <strong>Save</strong>.</p>
+<p><img alt="macro_3.png" src="../images/macro_3.png" /></p>
+<p>Now we are ready to try our macro out. Before doing so, select the <strong>undo</strong> button (repeatedly if necessary) to remove the formatting.</p>
+<p><img alt="macro_5.png" src="../images/macro_5.png" /></p>
+<p>To run the macro, select the <strong>Macros|my_macro</strong> command.</p>
+<p><img alt="macro_6.png" src="../images/macro_6.png" /></p>
+<p>Boom! Your table should be reformatted.</p>
+<p>To view the code, go back to the Code Editor and click on the macros.gs item on the left. Your macro code will appear. As is the case with Excel, you can now modify this code, copy-paste it to a different module, etc.</p>
+<p><img alt="macro_7.png" src="../images/macro_7.png" /></p>
+<h2 id="advanced-gas-examples">Advanced GAS Examples</h2>
+<h3 id="working-with-ranges">Working with Ranges</h3>
+<pre><code class="language-javascript">function workWithRanges() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+
+  // Get a range
+  var range = sheet.getRange(&quot;A1:B10&quot;);
+
+  // Set values
+  range.setValue(&quot;Hello&quot;);
+
+  // Get values
+  var values = range.getValues();
+
+  // Loop through values
+  for (var i = 0; i &lt; values.length; i++) {
+    for (var j = 0; j &lt; values[i].length; j++) {
+      if (values[i][j] === &quot;&quot;) {
+        values[i][j] = &quot;Empty&quot;;
+      }
+    }
+  }
+
+  // Set the modified values back
+  range.setValues(values);
+}
+</code></pre>
+<h3 id="creating-custom-functions">Creating Custom Functions</h3>
+<pre><code class="language-javascript">function calculateArea(length, width) {
+  return length * width;
+}
+
+function getCurrentDate() {
+  return new Date();
+}
+
+function formatCurrency(amount) {
+  return &quot;$&quot; + amount.toFixed(2);
+}
+</code></pre>
+<h3 id="working-with-multiple-sheets">Working with Multiple Sheets</h3>
+<pre><code class="language-javascript">function processAllSheets() {
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  var sheets = spreadsheet.getSheets();
+
+  for (var i = 0; i &lt; sheets.length; i++) {
+    var sheet = sheets[i];
+    var sheetName = sheet.getName();
+
+    // Skip certain sheets
+    if (sheetName === &quot;Summary&quot; || sheetName === &quot;Template&quot;) {
+      continue;
+    }
+
+    // Process each sheet
+    processSheet(sheet);
+  }
+}
+
+function processSheet(sheet) {
+  // Your sheet processing logic here
+  var lastRow = sheet.getLastRow();
+  var dataRange = sheet.getRange(2, 1, lastRow - 1, 5);
+
+  // Example: Sum all numeric values in the first column
+  var values = dataRange.getValues();
+  var sum = 0;
+
+  for (var i = 0; i &lt; values.length; i++) {
+    if (typeof values[i][0] === 'number') {
+      sum += values[i][0];
+    }
+  }
+
+  // Put the sum in the last row
+  sheet.getRange(lastRow + 1, 1).setValue(&quot;Total:&quot;);
+  sheet.getRange(lastRow + 1, 2).setValue(sum);
+}
+</code></pre>
+<h3 id="event-triggers">Event Triggers</h3>
+<pre><code class="language-javascript">function onEdit(e) {
+  var range = e.range;
+  var sheet = range.getSheet();
+
+  // Only run on specific sheet
+  if (sheet.getName() === &quot;Data&quot;) {
+    // Check if the edited cell is in a specific column
+    if (range.getColumn() === 3) {
+      // Auto-calculate something based on the edit
+      autoCalculate(range);
+    }
+  }
+}
+
+function autoCalculate(range) {
+  var row = range.getRow();
+  var sheet = range.getSheet();
+
+  // Example: Calculate total for the row
+  var values = sheet.getRange(row, 1, 1, 3).getValues()[0];
+  var total = values.reduce(function(sum, value) {
+    return sum + (isNaN(value) ? 0 : value);
+  }, 0);
+
+  sheet.getRange(row, 4).setValue(total);
+}
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Use meaningful function names</strong> - Make your code self-documenting</li>
+<li><strong>Add comments</strong> - Explain complex logic</li>
+<li><strong>Handle errors gracefully</strong> - Use try-catch blocks for error handling</li>
+<li><strong>Optimize for performance</strong> - Minimize API calls by batching operations</li>
+<li><strong>Test thoroughly</strong> - GAS can behave differently than local VBA code</li>
+<li><strong>Use version control</strong> - Consider using Git for complex projects</li>
+</ol>
+<h2 id="common-gas-methods">Common GAS Methods</h2>
+<h3 id="spreadsheet-methods">Spreadsheet Methods</h3>
+<ul>
+<li><code>SpreadsheetApp.getActiveSpreadsheet()</code> - Get current spreadsheet</li>
+<li><code>SpreadsheetApp.openById(id)</code> - Open by ID</li>
+<li><code>SpreadsheetApp.openByUrl(url)</code> - Open by URL</li>
+</ul>
+<h3 id="sheet-methods">Sheet Methods</h3>
+<ul>
+<li><code>getSheetByName(name)</code> - Get sheet by name</li>
+<li><code>getSheets()</code> - Get all sheets</li>
+<li><code>getActiveSheet()</code> - Get active sheet</li>
+<li><code>insertSheet(name)</code> - Insert new sheet</li>
+<li><code>deleteSheet(sheet)</code> - Delete sheet</li>
+</ul>
+<h3 id="range-methods">Range Methods</h3>
+<ul>
+<li><code>getRange(row, column)</code> - Get single cell</li>
+<li><code>getRange(row, column, numRows, numColumns)</code> - Get range</li>
+<li><code>getRange(a1Notation)</code> - Get range by A1 notation</li>
+<li><code>setValue(value)</code> - Set single value</li>
+<li><code>setValues(values)</code> - Set multiple values</li>
+<li><code>getValues()</code> - Get values</li>
+<li><code>getValue()</code> - Get single value</li>
+</ul>
+<h2 id="finished">Finished!</h2>
+<p>OK, now you have enough to get started. Have fun!</p>
+<p>Click <a href="https://docs.google.com/spreadsheets/d/1YXzBVI6e-W3IXEoUfOnZfIAUzdcA6ARqIq1DFfWzg-s/copy">here</a> to get a copy of the sheet used in this page.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://developers.google.com/apps-script">Google Apps Script Documentation</a></li>
+<li><a href="https://developers.google.com/sheets/api/reference/rest">Google Sheets API Reference</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/google-apps-script">GAS Community</a></li>
+<li><a href="https://developers.google.com/apps-script/samples">GAS Examples Gallery</a></li>
+</ul>
+<p>Google Apps Script provides a powerful way to extend Google Sheets functionality and create web applications, making it an excellent next step for Excel VBA developers looking to explore cloud-based solutions.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../04_apps/apps/" class="btn btn-neutral float-left" title="Sample Apps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../04_apps/apps/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

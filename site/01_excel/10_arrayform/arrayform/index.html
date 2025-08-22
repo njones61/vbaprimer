@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/01_excel/10_arrayform/arrayform/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Array Formulas - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Array Formulas";
+        var mkdocs_page_input_path = "01_excel/10_arrayform/arrayform.md";
+        var mkdocs_page_url = "/en/latest/01_excel/10_arrayform/arrayform/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Array Formulas</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#simple-array-calculations">Simple Array Calculations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-arrays-with-functions">Using Arrays with Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#logical-functions">Logical Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-workbook">Sample Workbook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel Fundamentals</li>
+      <li class="breadcrumb-item active">Array Formulas</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/01_excel/10_arrayform/arrayform.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="array-formulas">Array Formulas</h1>
+<p>In Excel terminology, an array is a group of cells in a row (horizonal array), column (vertical array), or multiple rows and columns (2D array). In this chapter we discuss a special type of Excel formula called an "array formula" that operates on arrays. Array formulas can be a powerful tool for condensing a complex set of calculations in a simple, concise formula.</p>
+<p>To illustrate the power of array formulas, we will use the following workbook as an example:</p>
+<p><img alt="sheet-start.png" src="../images/sheet-start.png" /></p>
+<p>The workbook is designed to perform calculations associated with the sale of a set of products. Each column represents a sale. The product ID is in column A, the number units sold in the sale is in column B, and the wholesale and retail prices are in columns C and D. We will calculate the total sale amount in terms of wholesale and retail in columns E and F and then perform some summary computations in the section at the bottom.</p>
+<p>When dealing with array formulas, it is sometimes useful to use named ranges. This is not a requirement but it makes the formulas much easier to understand. For the purpose of this example, we will name the following set of ranges:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Range</th>
+<th style="text-align: center;">Column</th>
+<th style="text-align: center;">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">B6:B17</td>
+<td style="text-align: center;">Units</td>
+<td style="text-align: center;">units</td>
+</tr>
+<tr>
+<td style="text-align: center;">C6:C17</td>
+<td style="text-align: center;">Price-Wholesale</td>
+<td style="text-align: center;">pw</td>
+</tr>
+<tr>
+<td style="text-align: center;">D6:D17</td>
+<td style="text-align: center;">Price-Retail</td>
+<td style="text-align: center;">pr</td>
+</tr>
+<tr>
+<td style="text-align: center;">E6:E17</td>
+<td style="text-align: center;">Totals-Wholesale</td>
+<td style="text-align: center;">tw</td>
+</tr>
+<tr>
+<td style="text-align: center;">F6:F17</td>
+<td style="text-align: center;">Totals-Retail</td>
+<td style="text-align: center;">tr</td>
+</tr>
+</tbody>
+</table>
+<p>These names will be used in each of the formula examples shown below.</p>
+<h2 id="simple-array-calculations">Simple Array Calculations</h2>
+<p>To begin, we will use an array formula to calculate the wholesale total in column E. Normally, we will do this by entering the following formula cell E6:</p>
+<pre><code class="language-excel">=B6*C6
+</code></pre>
+<p>and then copying the formula to the rest of the cells in column E. To do this with an array formula, we first select the entire Total|Wholesale column (E6:E17) and then type the following in the formula bar:</p>
+<pre><code class="language-excel">=units*pw
+</code></pre>
+<p>and then rather than simply hitting the Enter key, we hit <em>Ctrl-Shift-Enter</em>. We must always use this key sequence when entering an array formula. Otherwise we get either an error message or the wrong answer, depending on what is selected. After entering the array formula, the entire column is populated as follows:</p>
+<p><img alt="form-trcolumn.png" src="../images/form-trcolumn.png" /></p>
+<p>Note the resulting format of the formula:</p>
+<pre><code class="language-excel">{=units*pw}
+</code></pre>
+<p>The curly braces indicate that is an array formula. If we wish to edit the formula, we can click on the formula bar and make changes, but we must always hit <em>Ctrl-Shift-Enter</em> when we are done.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<p>If you are using excel through a Microsoft 365 subscription, you may not need to hit <em>Ctrl-Shift-Enter</em> to create an array formula. However, it is good to know how to so that if you are ever on a different version of Excel that requires the <em>Ctrl-Shift-Enter</em> method, you will still be able to use array formulas.</p>
+<p>An array formula is similar to performing vector algebra. The formula essentially multiplies the units column by the wholesale price column. The result of multiplying these two vertical arrays is a vertical array of same dimension (12 items) where each item is equal to the number of units times the price for that particular entry (row in this case). The equation applies to the entire column in the <strong>Totals|Wholesale</strong> part of the table. One advantage of using an array formula in a case like this is that the resulting formula is simple and intuitive.</p>
+<p>Next, we will do the same thing for the <strong>Totals|Retail</strong> column. We will select the column and enter the following formula in the formula bar:</p>
+<pre><code class="language-excel">=units*pr
+</code></pre>
+<p>and finish with <em>Ctrl-Shift-Enter</em>. At this point, the table is complete:</p>
+<p><img alt="form-twcolumn.png" src="../images/form-twcolumn.png" /></p>
+<h2 id="using-arrays-with-functions">Using Arrays with Functions</h2>
+<p>Now we will focus on the bottom section where we will perform some summary calculations based on our sales totals using functions. There are many Excel functions such as <strong>Sum()</strong> or <strong>Average()</strong> that take an array as input and return a single number as output. We will use these formulas in combination with array algebra to create some interesting results.</p>
+<p>First of all, we calculate the wholesale total by calculating the sum of the number of units times the wholesale price. We could do that by calculating the sum of the <strong>Totats|Wholesale</strong> column, but with an array formula, we can perform the calculation without using this column. This is one of the advantages of array formulas is that we do not need any intermediate columns in order to some calculations involving multi-cell ranges. We will enter the following array formula in cell <strong>D20</strong>:</p>
+<pre><code class="language-excel">=SUM(units*pw)
+</code></pre>
+<p>and we get value of $4,865.00. Similarly, we can use the formula:</p>
+<pre><code class="language-excel">=SUM(units*pr)
+</code></pre>
+<p>to calculate the retail total (). Once again, after typing the formulas, we finish with Ctrl-Shift-Enter and the formulas are displayed with curly braces.</p>
+<pre><code class="language-excel">{=SUM(units*pw)}
+
+{=SUM(units*pr)}
+</code></pre>
+<p>Next we will calculate the total profit as the sum of the retail totals minus the sum of the wholesale totals in cell D22 using the following formula.</p>
+<pre><code class="language-excel">=SUM(tr-tw)
+</code></pre>
+<p>Note that we use the wholesale totals and retail totals columns in this calculation. But we could have performed the calculations directly from the units column and the prices columns as follows:</p>
+<pre><code class="language-excel">=SUM(units*pr-units*pw)
+</code></pre>
+<p>In cell D23, we will calculate the maximum markup (difference between retail and wholesale prices) as follows:</p>
+<pre><code class="language-excel">=MAX(pr-pw)
+</code></pre>
+<p>And the average markup as:</p>
+<pre><code class="language-excel">=AVERAGE(pr-pw)
+</code></pre>
+<p>The maximum profit (difference between retail and wholesale totals) can be computed as:</p>
+<pre><code class="language-excel">=MAX(tr-tw)
+</code></pre>
+<p>Finally, in cell <strong>D26</strong> we wish to compute the total high-price profit. The high-price profit is defined as the profit on items were the retail price is greater than $50. In order to calculate this correctly we need to compute a sum of only those items where the prices greater than $50. In order to do this we need to combine both the <strong>IF()</strong> funciton and the <strong>SUM()</strong> function as follows:</p>
+<pre><code class="language-excel">=SUM(IF(pr&gt;50,tr-tw,0))
+</code></pre>
+<p>This example is a nice illustration of the power of array formulas. Doing this type of calculation within a normal formula would've been much more difficult than it was in this case.</p>
+<p>At this point, our sales summary is complete:</p>
+<p><img alt="summary.png" src="../images/summary.png" /></p>
+<h2 id="logical-functions">Logical Functions</h2>
+<p>One caveat associated with using array formulas in Excel is that you have to be very careful when using logical functions such as <strong>OR()</strong> and <strong>AND()</strong>. For some reason, they don't behave the way you would normally expect, and can lead to logical errors in your formula results. However, there is a way you can reformulate your array formulas to work around this limitation. This issue and the associated workarounds are explained in the following article:</p>
+<p><a href="http://dailydoseofexcel.com/archives/2004/12/04/logical-operations-in-array-formulas/">http://dailydoseofexcel.com/archives/2004/12/04/logical-operations-in-array-formulas/</a></p>
+<p>The workarounds rely on the fact that the value of True is equal to the numerical value of 1 and a value of False is equal to the numerical value of 0.</p>
+<h2 id="sample-workbook">Sample Workbook</h2>
+<p>The workbook used in the examples shown above can be downloaded here:</p>
+<p><a href="../files/arrayform.xlsx">arrayform.xlsx</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Conduct a simple financial analysis on a list of items using arrays. This worksheet will help explain/show the benefits of using arrays.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/financial_arrays.xlsx">financial_arrays.xlsx</a></div>
+<div class="exercise-cell"><a href="files/financial_arrays_key.xlsx">financial_arrays_key.xlsx</a></div>
+<div class="exercise-cell">Calculate a range of expenses for buying a new car.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/new_car_expense_calculator.xlsx">new_car_expense_calculator.xlsx</a></div>
+<div class="exercise-cell"><a href="files/new_car_expense_calculator_key.xlsx">new_car_expense_calculator_key.xlsx</a></div>
+<div class="exercise-cell">Use arrays to find different statistics of force from test data.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/force_analysis.xlsx">force_analysis.xlsx</a></div>
+<div class="exercise-cell"><a href="files/force_analysis_key.xlsx">force_analysis_key.xlsx</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../09_annotation/annotation/" class="btn btn-neutral float-left" title="Annotation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../02_vba/01_gettingstarted/gettingstarted/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../09_annotation/annotation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../02_vba/01_gettingstarted/gettingstarted/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

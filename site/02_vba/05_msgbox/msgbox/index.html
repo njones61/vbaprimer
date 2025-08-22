@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/05_msgbox/msgbox/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>MsgBox - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "MsgBox";
+        var mkdocs_page_input_path = "02_vba/05_msgbox/msgbox.md";
+        var mkdocs_page_url = "/en/latest/02_vba/05_msgbox/msgbox/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">MsgBox</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#msgbox">MsgBox</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prompt">Prompt</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#buttons">Buttons</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#style">Style</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#title">Title</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#inputbox">InputBox</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#prompt_1">Prompt</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#title_1">Title</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#default">Default</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">MsgBox</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/05_msgbox/msgbox.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="msgbox-and-inputbox">MsgBox and InputBox</h1>
+<p>There are many occasions when programming where it is convenient to show a prompt to display a message to the user, and in some cases ask a simple question or ask for some simple feedback. In VBA, this can be accomplished with the MsgBox and InputBox tools.</p>
+<h2 id="msgbox">MsgBox</h2>
+<p>MsgBox is used to display a simple message to the user. Here is the syntax:</p>
+<p><img alt="syntax_msgbox.png" src="../images/syntax_msgbox.png" /></p>
+<p>The last two arguments (HelpFile, Context) are rarely used. The other arguments are described below.</p>
+<h3 id="prompt">Prompt</h3>
+<p>Note that the only argument that is required is the Prompt. Here is a simple example. The code:</p>
+<pre><code class="language-vb">MsgBox &quot;Hello World&quot;
+</code></pre>
+<p>Brings up the following window:</p>
+<p><img alt="sample_msgbox_helloworld.png" src="../images/sample_msgbox_helloworld.png" /></p>
+<h3 id="buttons">Buttons</h3>
+<p>The second argument can be used to control what buttons are displayed. For example, the code:</p>
+<pre><code class="language-vb">MsgBox &quot;Hello World&quot;, vbOKCancel
+</code></pre>
+<p>Brings up the following window:</p>
+<p><img alt="sample_msgbox_okcancel.png" src="../images/sample_msgbox_okcancel.png" /></p>
+<p>The buttons argument is what is called an enumerated type, meaning you can only pick from a pre-defined set of options. The options are defined as VB constants, hence the "vb" prefix. Here are the more commonly used options:</p>
+<ul>
+<li>vbOKOnly</li>
+<li>vbOKCancel</li>
+<li>vbRetryCancel</li>
+<li>vbYesNo</li>
+<li>vbYesNoCancel</li>
+</ul>
+<p>To determine which button is selected, you need to apply MsgBox as a function rather than as a sub. For example:</p>
+<pre><code class="language-vb">Dim mybutton As Variant
+mybutton = MsgBox(&quot;This will delete your sheet. Continue?&quot;, vbOKCancel)
+If mybutton = vbOK Then
+    'PUT THE CODE HERE TO DELETE THE SHEET
+Else
+    Exit Sub
+End If
+</code></pre>
+<p>In other words, when used as a function, MsgBox returns a code indicating the button that was selected. Once again, the button codes are defined as a set of VB constants:</p>
+<ul>
+<li>vbOK</li>
+<li>vbCancel</li>
+<li>vbYes</li>
+<li>vbNo</li>
+<li>vbRetry</li>
+</ul>
+<h3 id="style">Style</h3>
+<p>You can also choose to add an icon to the MsgBox by adding another constant to the button argument. For example, the code:</p>
+<pre><code class="language-vb">MsgBox &quot;This sheet brought to you by Norm Jones&quot;, vbInformation + vbOKOnly
+</code></pre>
+<p>Brings up the following window:</p>
+<p><img alt="sample_msgbox_stylebutton.png" src="../images/sample_msgbox_stylebutton.png" /></p>
+<p>Note that the style constants can be added to the button constants. The style constants are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Constant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="msgbox_style_information.png" src="../images/msgbox_style_information.png" /></td>
+<td>vbInformation</td>
+</tr>
+<tr>
+<td><img alt="msgbox_style_exclarmation.png" src="../images/msgbox_style_exclarmation.png" /></td>
+<td>vbExclamation</td>
+</tr>
+<tr>
+<td><img alt="msgbox_style_critical.png" src="../images/msgbox_style_critical.png" /></td>
+<td>vbCritical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="title">Title</h3>
+<p>For each of the examples show above, note that the text shown in the title bar is "Microsoft Excel". You can change the title by using the third argument as follows:</p>
+<pre><code class="language-vb">MsgBox &quot;Hello World&quot;, vbOKOnly, &quot;Greetings&quot;
+</code></pre>
+<p>This code brings up:</p>
+<p><img alt="sample_msgbox_title.png" src="../images/sample_msgbox_title.png" /></p>
+<h2 id="inputbox">InputBox</h2>
+<p>InputBox is very similar to MsgBox, but it is used when you need to prompt the user to input some text (or a number or a date) before you execute some code. The syntax is as follows:</p>
+<p><img alt="syntax_inputbox.png" src="../images/syntax_inputbox.png" /></p>
+<h3 id="prompt_1">Prompt</h3>
+<p>Once again, the prompt is the message that is displayed and it is the only required argument. For example, the code:</p>
+<pre><code class="language-vb">name = inputbox(&quot;Please enter your name&quot;)
+</code></pre>
+<p>brings up:</p>
+<p><img alt="sample_inputbox_promptonly.png" src="../images/sample_inputbox_promptonly.png" /></p>
+<p>Note that InputBox is always used as a function. The value returned by the function is the text string entered by the user. If the user selects the Cancel button, InputBox returns an empty string. Therefore, to determine what button was selected, you simply test the value of the return string as follows:</p>
+<pre><code class="language-vb">result = inputbox(&quot;Please enter your name&quot;)
+If result &lt;&gt; &quot;&quot; Then
+    'DO SOMETHING WITH NAME HERE
+End If
+</code></pre>
+<h3 id="title_1">Title</h3>
+<p>The <strong>Title</strong> argument is used to specify a text string to go in the title bar, similar to MsgBox.</p>
+<h3 id="default">Default</h3>
+<p>The Default argument is used to provide a default text string in the input box when it first comes up. For example:</p>
+<pre><code class="language-vb">result = inputbox(&quot;Please enter your name&quot;, &quot;Greetings&quot;, &quot;Joe Blow&quot;)
+If result &lt;&gt; &quot;&quot; Then
+    'DO SOMETHING WITH NAME HERE
+End If
+</code></pre>
+<p>brings up:</p>
+<p><img alt="syntax_inputbox2.png" src="../images/syntax_inputbox2.png" /></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>MsgBox -</strong> Create a control button that displays a message box with a congratulatory statement.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/msgbox.xlsm">msgbox.xlsm</a></div>
+<div class="exercise-cell"><a href="files/msgbox_key.xlsm">msgbox_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Unit Weight -</strong> Create a message box that will only calculate the unit weight if the user clicks on "OK."</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/unit_weight.xlsm">unit_weight.xlsm</a></div>
+<div class="exercise-cell"><a href="files/unit_weight_key.xlsm">unit_weight_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Scholarship Letter -</strong> Create an input box that asks for the recipient's name and adds it to the scholarship award letter template.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/scholarship_letter.xlsm">scholarship_letter.xlsm</a></div>
+<div class="exercise-cell"><a href="files/scholarship_letter_key.xlsm">scholarship_letter_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../04_ranges/ranges/" class="btn btn-neutral float-left" title="Ranges"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../06_variables/variables/" class="btn btn-neutral float-right" title="Variables">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../04_ranges/ranges/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../06_variables/variables/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

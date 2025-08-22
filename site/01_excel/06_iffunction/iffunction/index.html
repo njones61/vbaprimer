@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/01_excel/06_iffunction/iffunction/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>IF Function - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "IF Function";
+        var mkdocs_page_input_path = "01_excel/06_iffunction/iffunction.md";
+        var mkdocs_page_url = "/en/latest/01_excel/06_iffunction/iffunction/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">IF Function</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#syntax">Syntax</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compound-conditions">Compound Conditions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nested-if-functions">Nested IF Functions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-workbook">Sample Workbook</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel Fundamentals</li>
+      <li class="breadcrumb-item active">IF Function</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/01_excel/06_iffunction/iffunction.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="using-the-if-function">Using the IF Function</h1>
+<p>There are many instances when using Excel where we need to write a formula that produces one of two different results, depending on some condition. For example, consider the following version of our cylinder analysis worksheet:</p>
+<p><img alt="workbook-1.png" src="../images/workbook-1.png" /></p>
+<p>Suppose we wish to add a "Class" item in column F indicating whether the cylinders are standard or overweight. This can be done by entering the following formula in cell F7 and copying it down to the end of the table:</p>
+<pre><code class="language-excel">=IF(E7&lt;35000, &quot;Standard&quot;, &quot;Overweight&quot;)
+</code></pre>
+<p>Resulting in the following:</p>
+<p><img alt="workbook-2.png" src="../images/workbook-2.png" /></p>
+<h2 id="syntax">Syntax</h2>
+<p>The syntax of the IF function is as follows:</p>
+<pre><code class="language-excel">= IF(logical_test, value_if_true, value_if_false)
+</code></pre>
+<p>The logical_test argument needs to be a conditional expression that returns a TRUE or FALSE value. Conditional expression are typically formed with one of the following operators:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: center;">Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">=</td>
+<td style="text-align: center;">A4=0</td>
+<td>Equal</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt;&gt;</td>
+<td style="text-align: center;">A4&lt;&gt;B5</td>
+<td>Not equal to</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;</td>
+<td style="text-align: center;">D7&gt;3</td>
+<td>Greater than</td>
+</tr>
+<tr>
+<td style="text-align: center;">&gt;=</td>
+<td style="text-align: center;">D4&gt;=0</td>
+<td>Greater than or equal to</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt;</td>
+<td style="text-align: center;">G3&lt;(G4-7)</td>
+<td>Less than</td>
+</tr>
+<tr>
+<td style="text-align: center;">&lt;=</td>
+<td style="text-align: center;">0&lt;=F12</td>
+<td>Less than or equal to</td>
+</tr>
+<tr>
+<td style="text-align: center;">AND</td>
+<td style="text-align: center;">AND(0&lt;=B5, B5&lt;=5)</td>
+<td>True if both statements are true.</td>
+</tr>
+<tr>
+<td style="text-align: center;">OR</td>
+<td style="text-align: center;">OR(A4=0, B5=0)</td>
+<td>True if either or both statements are true.</td>
+</tr>
+<tr>
+<td style="text-align: center;">NOT</td>
+<td style="text-align: center;">NOT(A4=0)</td>
+<td>True if the statement is false.</td>
+</tr>
+</tbody>
+</table>
+<p>If the conditional expression evaluates to true, the value_if_true argument is used. Otherwise, the value_if_false argument is used. These arguments can any type of expression, including constants, cells references, or formulas. Here are some additional example formulas that use the IF function:</p>
+<pre><code class="language-excel">=IF(A4&lt;&gt;0, 1/A4, &quot;Error - Divide by Zero!&quot;)
+
+=IF(B4&lt;=$D$2, -2.3*G4/4, -3.9*G4/4+6)
+
+=IF(units=&quot;Metric&quot;, &quot;[m/sec], &quot;[ft/sec]&quot;)
+</code></pre>
+<h2 id="compound-conditions">Compound Conditions</h2>
+<p>Sometimes we need to utilize compound conditional expressions with the IF function. But we need to be very careful when doing so. For example, suppose we want to represent the following mathematical expression:</p>
+<p><span class="arithmatex">\(0 ≤ x ≤ 5\)</span></p>
+<p>in an Excel formula and "x" is stored in cell B5. It would be tempting to use the following conditional expression:</p>
+<pre><code class="language-excel">0&lt;=B5&lt;=5
+</code></pre>
+<p>for the first argument in the IF function. However, this creates a useless and incorrect expression that will always return TRUE, regardless of the contents of cell B5. This is because a compound expression like this is evaluated one operator at a time from left to right. In other words, the first part of the expression:</p>
+<pre><code class="language-excel">0&lt;=B5&lt;=5
+</code></pre>
+<p>will be evaluated first. The result of this evaluation will be True or False, depending on whether or not B5 is greater than or equal to zero. This result is then compared against the rest of the expression. In computational terms, True and False evaluate to 1 or 0, respectively. Thus, if B5 is greater than or equal to zero, the expression simplifies to:</p>
+<pre><code class="language-excel">1&lt;=5
+</code></pre>
+<p>otherwise (B5&gt;0), it simplifies to:</p>
+<pre><code class="language-excel">0&lt;=5
+</code></pre>
+<p>Both of these statements will then evaluate to True, regardless of the value of B5. In other words, the original expresssion is equivalent to:</p>
+<pre><code class="language-excel">(0&lt;=B5)&lt;=5
+</code></pre>
+<p>which is fundamentally different from the mathematical expression we are trying to emulate. To solve this problem correctly, we need to use the AND function as follows:</p>
+<pre><code class="language-excel">AND(0&lt;=B5, B5&lt;=5)
+</code></pre>
+<p>This function returns True if both statements are true. Otherwise it returns False. Likewise, there is an OR function that returns True if either or both of the two expressions evaluate to True.</p>
+<h2 id="nested-if-functions">Nested IF Functions</h2>
+<p>It is possible to nest multiple instances of the IF function. For example:</p>
+<pre><code class="language-excel">=IF(A4&gt;=18,&quot;Adult&quot;,IF(A4&gt;12,&quot;Teen&quot;,&quot;Child&quot;))
+</code></pre>
+<p>The second IF function is only evaluated in the first condition is False. There are three possible outcomes in this case: "Adult", "Teen", and "Child".</p>
+<h2 id="sample-workbook">Sample Workbook</h2>
+<p>The workbook used in the first example shown above can be downloaded here:</p>
+<p><a href="../files/cylinders3.xlsx">cylinders3.xlsx</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Calculate the Reynolds' or Froude's number by inputing an IF equation into the appropriate cell.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/reynolds_and_froude.xlsx">reynolds_and_froude.xlsx</a></div>
+<div class="exercise-cell"><a href="files/reynolds_and_froude_key.xlsx.xlsm">reynolds_and_froude_key.xlsx.xlsm</a></div>
+<div class="exercise-cell">Use an IF equation to determine the varying prices of different concrete projects.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/concrete_price_estimator.xlsx">concrete_price_estimator.xlsx</a></div>
+<div class="exercise-cell"><a href="files/concrete_price_estimator_key.xlsx">concrete_price_estimator_key.xlsx</a></div>
+<div class="exercise-cell">Determine which types and how many vehicles you can park along side a given curb.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/parking.xlsx">parking.xlsx</a></div>
+<div class="exercise-cell"><a href="files/parking_key.xlsx">parking_key.xlsx</a></div>
+<div class="exercise-cell">Use IF statements and user inputs/selections to determine how many years that the user has left to finish school.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/years_left_of_school.xlsx">years_left_of_school.xlsx</a></div>
+<div class="exercise-cell"><a href="files/years_left_of_school_key.xlsx">years_left_of_school_key.xlsx</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../05_operators/operators/" class="btn btn-neutral float-left" title="Operators"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../07_goalseek/goalseek/" class="btn btn-neutral float-right" title="Goal Seek">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../05_operators/operators/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../07_goalseek/goalseek/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

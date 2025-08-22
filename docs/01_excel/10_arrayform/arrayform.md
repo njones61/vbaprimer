@@ -10,19 +10,19 @@ The workbook is designed to perform calculations associated with the sale of a s
 
 When dealing with array formulas, it is sometimes useful to use named ranges. This is not a requirement but it makes the formulas much easier to understand. For the purpose of this example, we will name the following set of ranges:
 
-|   Range    |       Column       |  Name  |
+| Range | Column | Name |
 |:----------:|:------------------:|:------:|
-|   B6:B17   |       Units        | units  |
-|   C6:C17   |  Price-Wholesale   |   pw   |
-|   D6:D17   |    Price-Retail    |   pr   |
-|   E6:E17   |  Totals-Wholesale  |   tw   |
-|   F6:F17   |   Totals-Retail    |   tr   |
+| B6:B17 | Units | units |
+| C6:C17 | Price-Wholesale | pw |
+| D6:D17 | Price-Retail | pr |
+| E6:E17 | Totals-Wholesale | tw |
+| F6:F17 | Totals-Retail | tr |
 
 These names will be used in each of the formula examples shown below.
 
 ## Simple Array Calculations
 
-To begin, we will use an array formula to calculate the wholesale total in column E. Normally, we will do  this by entering the following formula cell E6:
+To begin, we will use an array formula to calculate the wholesale total in column E. Normally, we will do this by entering the following formula cell E6:
 
 ```excel
 =B6*C6
@@ -47,7 +47,7 @@ Note the resulting format of the formula:
 The curly braces indicate that is an array formula. If we wish to edit the formula, we can click on the formula bar and make changes, but we must always hit _Ctrl-Shift-Enter_ when we are done.
 
 !!! Note
-    If you are using excel through a Microsoft 365 subscription, you may not need to hit _Ctrl-Shift-Enter_ to create an array formula. However, it is good to know how to so that if you are ever on a different version of Excel that requires the _Ctrl-Shift-Enter_ method, you will still be able to use array formulas.
+ If you are using excel through a Microsoft 365 subscription, you may not need to hit _Ctrl-Shift-Enter_ to create an array formula. However, it is good to know how to so that if you are ever on a different version of Excel that requires the _Ctrl-Shift-Enter_ method, you will still be able to use array formulas.
 
 An array formula is similar to performing vector algebra. The formula essentially multiplies the units column by the wholesale price column. The result of multiplying these two vertical arrays is a vertical array of same dimension (12 items) where each item is equal to the number of units times the price for that particular entry (row in this case). The equation applies to the entire column in the **Totals|Wholesale** part of the table. One advantage of using an array formula in a case like this is that the resulting formula is simple and intuitive.
 
@@ -145,9 +145,22 @@ The workbook used in the examples shown above can be downloaded here:
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise	| Description	                                                                                                                                          | Difficulty	| Start	| Solution	|
-|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------|:-------|:----------|
-| Financial Arrays	| Conduct a simple financial analysis <br>on a list of items using arrays. This <br>worksheet will help explain/show<br> the benefits of using arrays.	 | Easy	| [financial_arrays.xlsx](files/financial_arrays.xlsx)	| [financial_arrays_key.xlsx](files/financial_arrays_key.xlsx)	|
-| New Car Expense Calculator	| Calculate a range of expenses for <br>buying a new car.	                                                                                              | Medium	| [new_car_expense_calculator.xlsx](files/new_car_expense_calculator.xlsx)	| [new_car_expense_calculator_key.xlsx](files/new_car_expense_calculator_key.xlsx)	|
-| Force Analysis	| Use arrays to find different <br>statistics of force from test data.	                                                                                 | Hard	| [force_analysis.xlsx](files/force_analysis.xlsx)	| [force_analysis_key.xlsx](files/force_analysis_key.xlsx)	|
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Conduct a simple financial analysis on a list of items using arrays. This worksheet will help explain/show the benefits of using arrays.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/financial_arrays.xlsx">financial_arrays.xlsx</a></div>
+<div class="exercise-cell"><a href="files/financial_arrays_key.xlsx">financial_arrays_key.xlsx</a></div>
+<div class="exercise-cell">Calculate a range of expenses for buying a new car.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/new_car_expense_calculator.xlsx">new_car_expense_calculator.xlsx</a></div>
+<div class="exercise-cell"><a href="files/new_car_expense_calculator_key.xlsx">new_car_expense_calculator_key.xlsx</a></div>
+<div class="exercise-cell">Use arrays to find different statistics of force from test data.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/force_analysis.xlsx">force_analysis.xlsx</a></div>
+<div class="exercise-cell"><a href="files/force_analysis_key.xlsx">force_analysis_key.xlsx</a></div>
+</div>
 

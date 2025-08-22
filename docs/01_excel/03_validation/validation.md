@@ -28,8 +28,17 @@ The Data option can be used to select "between", "greater than", "less than", et
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise | Description                                                                                     | Difficulty | Start | Solution |
-|----------|-------------------------------------------------------------------------------------------------|------------|-------|----------|
-| Inventory | Validate columns of a table used to keep track<br> of inventory of various construction items.  | Easy | [inventory.xlsx](files/inventory.xlsx) | [inventory_key.xlsx](files/inventory_key.xlsx) |
-| Dog Show | Use data validation to control the user inputs <br>on a spreadsheet used for scoring at a dog show. | Medium | [dog_show.xlsx](files/dog_show.xlsx) | [dog_show_key.xlsx](files/dog_show_key.xlsx) |
-
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Validate columns of a table used to keep track of inventory of various construction items.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/inventory.xlsx">inventory.xlsx</a></div>
+<div class="exercise-cell"><a href="files/inventory_key.xlsx">inventory_key.xlsx</a></div>
+<div class="exercise-cell">Use data validation to control the user inputs on a spreadsheet used for scoring at a dog show.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/dog_show.xlsx">dog_show.xlsx</a></div>
+<div class="exercise-cell"><a href="files/dog_show_key.xlsx">dog_show_key.xlsx</a></div>
+</div>

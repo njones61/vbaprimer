@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/03_advanced/01_graphics/graphics/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Graphics - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Graphics";
+        var mkdocs_page_input_path = "03_advanced/01_graphics/graphics.md";
+        var mkdocs_page_url = "/en/latest/03_advanced/01_graphics/graphics/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Graphics</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-shape-object">The Shape Object</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-shapes-collection">The Shapes Collection</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-shapes">Creating Shapes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#the-addline-method">The AddLine Method</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-addpolyline-method">The AddPolyline Method</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-addshape-method">The AddShape Method</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#excel-coordinate-system">Excel Coordinate System</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-creating-a-cantilever-beam">Example: Creating a Cantilever Beam</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manipulating-existing-shapes">Manipulating Existing Shapes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-graphics-techniques">Advanced Graphics Techniques</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-complex-geometries">Creating Complex Geometries</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#interactive-graphics">Interactive Graphics</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#example-applications">Example Applications</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Advanced Topics</li>
+      <li class="breadcrumb-item active">Graphics</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/03_advanced/01_graphics/graphics.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="custom-graphics">Custom Graphics</h1>
+<p>A common task faced by programmers is how to display custom graphics using source code. It is often useful to display an object that is properly dimensioned in terms of the input parameters supplied on the user. For example, one could display the geometry of a cantilever beam or a column based on the user input. At the other end of the spectrum, it is possible to write sophisticated computer programs with 3D graphics and animation.</p>
+<p>Standard VB (applied to a VB form) has a simple, yet powerful set of graphics options. You create a Picture object and then use a series of commands to draw lines and simple shapes in the Picture object. However, none of these tools can used for VBA in Excel. With Excel, an entirely different approach must be used. This approach involves a special type of object called a "Shape". Shapes can be created manually by the user of the spreadsheet using the standard MS Office drawing tools:</p>
+<p><img alt="shapespicker.png" src="../images/shapespicker.png" /></p>
+<p>Any of the graphical objects in this menu (lines, connectors, basic shapes, etc.) are classified as shapes. Once created, they can be manipulated via VB code. Since the basic shapes include lines, rectangles, circles, and polygons, you can create just about any custom drawing that you can think of.</p>
+<h2 id="the-shape-object">The Shape Object</h2>
+<p>When dealing with shapes in VB code, we use the <strong>Shape</strong> object. All of the objects in the drawing layer of a worksheet, including AutoShapes, freeforms, OLE objects, or pictures, are Shape type objects.</p>
+<p>To declare a variable as a Shape object, do the following:</p>
+<pre><code class="language-vb">Dim sh As Shape
+</code></pre>
+<p>The Creating Shapes section below discusses how to create Shape objects.</p>
+<h2 id="the-shapes-collection">The Shapes Collection</h2>
+<p>All of the Shape type objects associated with a specific sheet are organized into a set of objects called the <strong>Shapes</strong> collection. The Shapes collection is a special type of object that has it's own unique set of properties and methods. For example, you can traverse through all of the Shape objects in the Shapes collection using the following code.</p>
+<pre><code class="language-vb">'Check to see if there is already a polygon named &quot;mypolygon&quot;
+'If so, we will delete it.
+Dim sh As Shape
+For Each sh In Shapes
+    If sh.Name = &quot;mypolygon&quot; Then
+        sh.Delete
+    End If
+Next sh
+</code></pre>
+<p>When you create a new Shape object, it is added to the Shapes collection.</p>
+<h2 id="creating-shapes">Creating Shapes</h2>
+<p>The simplest way to create new shapes is to use one of the "Addxxx" methods associated with the Shapes collection. These methods include the AddLine, AddPolyline, and AddShape methods. Each of these methods creates a new shape object that is added to the Shapes collection.</p>
+<h3 id="the-addline-method">The AddLine Method</h3>
+<p>The <strong>AddLine</strong> method creates a simple line defined by xy coordinates of the beginning and end of the line. The syntax for the method is:</p>
+<pre><code class="language-vb">expression.AddLine(BeginX, BeginY, EndX, EndY)
+</code></pre>
+<p>where <em>expression</em> is a Shapes type object. For example, the following code:</p>
+<pre><code class="language-vb">Shapes.AddLine 10, 10, 250, 250
+</code></pre>
+<p>creates a line that starts at the coordinates (10, 10) and ends at (250, 250) and adds it to the Shapes collection for the active worksheet. If you want to be more explicit about which sheet the shape is assigned to, you can use the following code:</p>
+<pre><code class="language-vb">Worksheets(1).Shapes.AddLine 10, 10, 250, 250
+</code></pre>
+<p>or</p>
+<pre><code class="language-vb">Worksheets(&quot;Sheet1&quot;).Shapes.AddLine 10, 10, 250, 250
+</code></pre>
+<h3 id="the-addpolyline-method">The AddPolyline Method</h3>
+<p>The <strong>AddPolyline</strong> method creates a sequence of line segments defined by a list of coordinates. If the first coordinate is repeated at the end of the list, the method creates a closed polygon. The syntax for the method is:</p>
+<pre><code class="language-vb">expression.AddPolyline(SafeArrayOfPoints)
+</code></pre>
+<p>where <em>expression</em> is a Shapes type object and <em>SafeArrayOfPoints</em> is a 2D array of Singles representing the coordinates of the polygon. For example, the following code creates a polygon representing a triangle (from the VBA Excel Help File):</p>
+<pre><code class="language-vb">Dim triArray(1 To 4, 1 To 2) As Single
+triArray(1, 1) = 25    'x coordinate of vertex 1
+triArray(1, 2) = 100   'y coordinate of vertex 1
+triArray(2, 1) = 100
+triArray(2, 2) = 150
+triArray(3, 1) = 150
+triArray(3, 2) = 50
+triArray(4, 1) = 25    ' Last point has same coordinates as first
+triArray(4, 2) = 100
+Shapes.AddPolyline triArray
+</code></pre>
+<p>Once again, the object is added to the Shapes collection for the current sheet.</p>
+<h3 id="the-addshape-method">The AddShape Method</h3>
+<p>The AddShape method can be used to create a new Shape object that is an <strong>AutoShape</strong>. The syntax for the method is:</p>
+<pre><code class="language-vb">expression.AddShape(Type, Left, Top, Width, Height)
+</code></pre>
+<p>where <em>expression</em> is a Shapes collection, <em>Type</em> is the type of AutoShape, and <em>Left, Top, Width</em>, and <em>Height</em> are singles defining the location and size of the object. For example, the following code creates a rectangle:</p>
+<pre><code class="language-vb">Shapes.AddShape msoShapeRectangle, 25, 50, 150, 200
+</code></pre>
+<p>The msoShapeRectangle is a VB constant defining the AutoShape type. There are many AutoShape constants available including:</p>
+<ul>
+<li>msoShapeRectangle</li>
+<li>msoShapeOval</li>
+<li>msoShapeDiamond</li>
+<li>msoShapeTriangle</li>
+<li>msoShapeStar</li>
+<li>msoShapeFlowchartDecision</li>
+<li>msoShapeFlowchartProcess</li>
+<li>msoShapeFlowchartConnector</li>
+<li>And many more...</li>
+</ul>
+<h2 id="excel-coordinate-system">Excel Coordinate System</h2>
+<p>When working with shapes in Excel, it's important to understand the coordinate system. Excel uses a coordinate system where:</p>
+<ul>
+<li>The origin (0,0) is at the top-left corner of the worksheet</li>
+<li>X increases from left to right</li>
+<li>Y increases from top to bottom</li>
+<li>Units are typically in points (1/72 inch)</li>
+</ul>
+<p><img alt="excel_coord_sys.jpg" src="../images/excel_coord_sys.jpg" /></p>
+<h2 id="example-creating-a-cantilever-beam">Example: Creating a Cantilever Beam</h2>
+<p>Here's an example of how to create a simple cantilever beam using VBA:</p>
+<pre><code class="language-vb">Sub CreateCantileverBeam()
+    Dim beamLength As Double
+    Dim beamHeight As Double
+    Dim startX As Double
+    Dim startY As Double
+
+    ' Set parameters
+    beamLength = 200
+    beamHeight = 50
+    startX = 100
+    startY = 100
+
+    ' Create the main beam (rectangle)
+    Dim beam As Shape
+    Set beam = Shapes.AddShape(msoShapeRectangle, startX, startY, beamLength, beamHeight)
+    beam.Name = &quot;MainBeam&quot;
+
+    ' Create support (triangle)
+    Dim supportArray(1 To 4, 1 To 2) As Single
+    supportArray(1, 1) = startX - 20
+    supportArray(1, 2) = startY + beamHeight
+    supportArray(2, 1) = startX
+    supportArray(2, 2) = startY + beamHeight + 30
+    supportArray(3, 1) = startX + 20
+    supportArray(3, 2) = startY + beamHeight
+    supportArray(4, 1) = startX - 20
+    supportArray(4, 2) = startY + beamHeight
+
+    Dim support As Shape
+    Set support = Shapes.AddPolyline(supportArray)
+    support.Name = &quot;Support&quot;
+
+    ' Create load arrow
+    Dim loadArrow As Shape
+    Set loadArrow = Shapes.AddShape(msoShapeDownArrow, startX + beamLength/2, startY - 40, 20, 30)
+    loadArrow.Name = &quot;Load&quot;
+End Sub
+</code></pre>
+<h2 id="manipulating-existing-shapes">Manipulating Existing Shapes</h2>
+<p>Once you have created shapes, you can manipulate their properties:</p>
+<pre><code class="language-vb">' Change the fill color of a shape
+Shapes(&quot;MainBeam&quot;).Fill.ForeColor.RGB = RGB(255, 0, 0)  ' Red
+
+' Change the line color
+Shapes(&quot;MainBeam&quot;).Line.ForeColor.RGB = RGB(0, 0, 255)  ' Blue
+
+' Change the line weight
+Shapes(&quot;MainBeam&quot;).Line.Weight = 3
+
+' Move a shape
+Shapes(&quot;MainBeam&quot;).Left = Shapes(&quot;MainBeam&quot;).Left + 50
+Shapes(&quot;MainBeam&quot;).Top = Shapes(&quot;MainBeam&quot;).Top + 25
+
+' Resize a shape
+Shapes(&quot;MainBeam&quot;).Width = Shapes(&quot;MainBeam&quot;).Width * 1.5
+Shapes(&quot;MainBeam&quot;).Height = Shapes(&quot;MainBeam&quot;).Height * 1.2
+
+' Rotate a shape
+Shapes(&quot;MainBeam&quot;).Rotation = 45  ' 45 degrees
+</code></pre>
+<h2 id="advanced-graphics-techniques">Advanced Graphics Techniques</h2>
+<h3 id="creating-complex-geometries">Creating Complex Geometries</h3>
+<p>For more complex shapes, you can combine multiple basic shapes or use mathematical functions to generate coordinates:</p>
+<pre><code class="language-vb">Sub CreateSineWave()
+    Dim i As Integer
+    Dim x As Double, y As Double
+    Dim amplitude As Double, frequency As Double
+    Dim points() As Single
+    Dim numPoints As Integer
+
+    amplitude = 30
+    frequency = 0.02
+    numPoints = 100
+
+    ReDim points(1 To numPoints, 1 To 2)
+
+    For i = 1 To numPoints
+        x = (i - 1) * 5
+        y = 150 + amplitude * Sin(frequency * x)
+        points(i, 1) = x
+        points(i, 2) = y
+    Next i
+
+    Dim wave As Shape
+    Set wave = Shapes.AddPolyline(points)
+    wave.Name = &quot;SineWave&quot;
+End Sub
+</code></pre>
+<h3 id="interactive-graphics">Interactive Graphics</h3>
+<p>You can create interactive graphics that respond to user input:</p>
+<pre><code class="language-vb">Sub CreateInteractiveBeam()
+    Dim length As Double
+    Dim height As Double
+
+    ' Get dimensions from user
+    length = InputBox(&quot;Enter beam length:&quot;, &quot;Beam Length&quot;, 200)
+    height = InputBox(&quot;Enter beam height:&quot;, &quot;Beam Height&quot;, 50)
+
+    ' Create beam with user dimensions
+    Dim beam As Shape
+    Set beam = Shapes.AddShape(msoShapeRectangle, 100, 100, length, height)
+    beam.Name = &quot;InteractiveBeam&quot;
+
+    ' Add text label
+    Dim label As Shape
+    Set label = Shapes.AddTextbox(msoTextOrientationHorizontal, 100, 80, 100, 20)
+    label.TextFrame.Characters.Text = &quot;L=&quot; &amp; length &amp; &quot;, H=&quot; &amp; height
+End Sub
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Always name your shapes</strong> - This makes them easier to reference later</li>
+<li><strong>Use variables for coordinates</strong> - Makes your code more readable and maintainable</li>
+<li><strong>Check for existing shapes</strong> - Delete old shapes before creating new ones to avoid clutter</li>
+<li><strong>Use meaningful variable names</strong> - Makes your code self-documenting</li>
+<li><strong>Group related shapes</strong> - Consider using shape groups for complex drawings</li>
+</ol>
+<h2 id="example-applications">Example Applications</h2>
+<p>Custom graphics in Excel VBA can be used for:</p>
+<ul>
+<li>Engineering drawings and diagrams</li>
+<li>Flowcharts and process maps</li>
+<li>Mathematical visualizations</li>
+<li>Interactive dashboards</li>
+<li>Educational materials</li>
+<li>Technical documentation</li>
+</ul>
+<p>The power of VBA graphics lies in the ability to create dynamic, parameter-driven drawings that automatically update based on user input or calculations, making Excel a powerful tool for technical graphics and visualization.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../../02_vba/18_standards/standards/" class="btn btn-neutral float-left" title="Standards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../02_email/email/" class="btn btn-neutral float-right" title="Email">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../../02_vba/18_standards/standards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../02_email/email/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

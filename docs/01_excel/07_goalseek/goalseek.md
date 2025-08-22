@@ -93,9 +93,25 @@ $$ Exercises
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise | Description                                                                                                                                                                                             | Difficulty | Start | Solution                                              |
-|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------|-------|-------------------------------------------------------|
-| Going Fishing | Use goalseek on a parabolic function<br> to find where the fish strikes the fly.                                                                                                                        | Easy | [going_fishing.xlsm](files/going_fishing.xlsm) | [going_fishing_key.xlsm](files/going_fishing_key.xlsm) |
-| Polynomials | Use goalseek to find the zeros<br> of a polynomial function.                                                                                                                                                | Medium | [polynomials.xlsm](files/polynomials.xlsm) | [polynomials_key.xlsm](files/polynomials_key.xlsm)                                                      |
-| Topo Solver | Use goalseek and solver to <br>identify key points on a topographic<br> map.                                                                                                                                    | Medium | [topo_solver.xlsm](files/topo_solver.xlsm) |          [topo_solver_key.xlsm](files/topo_solver_key.xlsm)                         |
-| Missile Trajectory | A asteroid is headed for earth.<br> You need to determine if the <br>rajectory of a "asteroid-stopping" defense <br>missile will clear the nearby buildings<br> and destroy the asteroid before it <br>impacts with earth. | Hard | [missile_trajectory.xlsm](files/missile_trajectory.xlsm) |                      [missile_trajectory_key.xlsm](files/missile_trajectory_key.xlsm)      |
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Use goalseek on a parabolic function to find where the fish strikes the fly.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/going_fishing.xlsm">going_fishing.xlsm</a></div>
+<div class="exercise-cell"><a href="files/going_fishing_key.xlsm">going_fishing_key.xlsm</a></div>
+<div class="exercise-cell">Use goalseek to find the zeros of a polynomial function.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/polynomials.xlsm">polynomials.xlsm</a></div>
+<div class="exercise-cell"><a href="files/polynomials_key.xlsm">polynomials_key.xlsm</a></div>
+<div class="exercise-cell">Use goalseek and solver to identify key points on a topographic map.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/topo_solver.xlsm">topo_solver.xlsm</a></div>
+<div class="exercise-cell"><a href="files/topo_solver_key.xlsm">topo_solver_key.xlsm</a></div>
+<div class="exercise-cell">A asteroid is headed for earth. You need to determine if the rajectory of a "asteroid-stopping" defense missile will clear the nearby buildings and destroy the asteroid before it impacts with earth.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/missile_trajectory.xlsm">missile_trajectory.xlsm</a></div>
+<div class="exercise-cell"><a href="files/missile_trajectory_key.xlsm">missile_trajectory_key.xlsm</a></div>
+</div>

@@ -22,12 +22,12 @@ Once the material values are entered in column E, we are ready to use the VLOOKU
 
 where:
 
-| Argument       | Description                                                                 |
+| Argument | Description |
 |----------------|-----------------------------------------------------------------------------|
-| `lookup_value`  | The value to be found in the first column of the array                     |
-| `table_array`    | The table of information in which data is looked up. Use a reference to a range or a range name |
-| `col_index_num`  | The column number in table_array from which the matching value must be returned |
-| `range_lookup`   | A logical value (TRUE or FALSE) that specifies whether you want VLOOKUP to find an exact match or an approximate match. |
+| `lookup_value` | The value to be found in the first column of the array |
+| `table_array` | The table of information in which data is looked up. Use a reference to a range or a range name |
+| `col_index_num` | The column number in table_array from which the matching value must be returned |
+| `range_lookup` | A logical value (TRUE or FALSE) that specifies whether you want VLOOKUP to find an exact match or an approximate match. |
 
 
 So for our case, we will use VLOOKUP to select a unit weight value from the table using the user-specified material. The unit weight returned by the function is then multiplied by the volume to compute the cylinder weight as follows:
@@ -44,13 +44,13 @@ If the values in the lookup table are edited, all of the weights would be automa
 
 In the example shown in the previous section, we are doing an exact match on the lookup value in the first column. In some cases we are not looking for an exact match, but we need to find a match from a set of numerical ranges. For example, suppose that we wanted to categorize the cylinder weights using the following guidelines:
 
-| Weight (wt) | Category      |
+| Weight (wt) | Category |
 |-------------|---------------|
-| wt ≤ 1000   | Ultra Light   |
-| 1000 ≤ wt ≤ 2000 | Light         |
-| 2000 ≤ wt ≤ 10,000 | Medium        |
-| 10,000 ≤ wt ≤ 100,000 | Heavy         |
-| 100,000 ≤ wt | Extra Heavy   |
+| wt ≤ 1000 | Ultra Light |
+| 1000 ≤ wt ≤ 2000 | Light |
+| 2000 ≤ wt ≤ 10,000 | Medium |
+| 10,000 ≤ wt ≤ 100,000 | Heavy |
+| 100,000 ≤ wt | Extra Heavy |
 
 We will then add a new table and an extra column as follows:
 
@@ -93,16 +93,31 @@ Note that we are using a range lookup on elevation so the last argument to VLOOK
 ## Sample Workbooks
 The workbooks used in the examples shown above can be downloaded here:
 
-[cylinders2.xlsx](files/cylinders2.xlsx)<br>
-[tempvselev.xlsx](files/tempvselev.xlsx)
+[cylinders2.xlsx](files/cylinders2.xlsx) [tempvselev.xlsx](files/tempvselev.xlsx)
 
 ## Exercises
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise Name	| Description	                                                                                                                                                          | Difficulty	| Start File	| Solution File	|
-|----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|--------------|----------------|
-| Dog Years | Use VLOOKUP to match the number <br>of human years to the appropriate dog <br>years shown in the table.	                                                              | Easy	| [dog_years.xlsx](files/dog_years.xlsx)	| [dog_years_key.xlsx](files/dog_years_key.xlsx)	|
-| Construction Fencing | From a list of fencing materials, <br> match the price using VLOOKUP and the <br> table given. Thenx multiply by the amount of <br>yards needed to obtain the total cost.	 | Easy	| [construction_fencing.xlsm](files/construction_fencing.xlsm)	| [construction_fencing_key.xlsm](files/construction_fencing_key.xlsm)	|
-| Conversion Factor | Use VLOOKUP to multiply the user input by<br> the appropriate conversion factor desired.	                                                                             | Medium	| [conversion_factor.xlsm](files/conversion_factor.xlsm)	| [conversion_factor_key.xlsm](files/conversion_factor_key.xlsm)	|
-| Diet Monitor | From a list of foods and servings, use <br>VLOOKUP to calculate the number of <br>calories and carbs.	                                                                    | Hard	| [diet_monitor.xlsx](files/diet_monitor.xlsx)	| [diet_monitor_key.xlsx](files/diet_monitor_key.xlsx)	|
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Use VLOOKUP to match the number of human years to the appropriate dog years shown in the table.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/dog_years.xlsx">dog_years.xlsx</a></div>
+<div class="exercise-cell"><a href="files/dog_years_key.xlsx">dog_years_key.xlsx</a></div>
+<div class="exercise-cell">From a list of fencing materials, match the price using VLOOKUP and the table given. Thenx multiply by the amount of yards needed to obtain the total cost.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/construction_fencing.xlsm">construction_fencing.xlsm</a></div>
+<div class="exercise-cell"><a href="files/construction_fencing_key.xlsm">construction_fencing_key.xlsm</a></div>
+<div class="exercise-cell">Use VLOOKUP to multiply the user input by the appropriate conversion factor desired.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/conversion_factor.xlsm">conversion_factor.xlsm</a></div>
+<div class="exercise-cell"><a href="files/conversion_factor_key.xlsm">conversion_factor_key.xlsm</a></div>
+<div class="exercise-cell">From a list of foods and servings, use VLOOKUP to calculate the number of calories and carbs.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/diet_monitor.xlsx">diet_monitor.xlsx</a></div>
+<div class="exercise-cell"><a href="files/diet_monitor_key.xlsx">diet_monitor_key.xlsx</a></div>
+</div>

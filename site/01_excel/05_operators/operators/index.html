@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/01_excel/05_operators/operators/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Operators - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Operators";
+        var mkdocs_page_input_path = "01_excel/05_operators/operators.md";
+        var mkdocs_page_url = "/en/latest/01_excel/05_operators/operators/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Operators</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel Fundamentals</li>
+      <li class="breadcrumb-item active">Operators</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/01_excel/05_operators/operators.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="operators-and-precedence">Operators and Precedence</h1>
+<p>When developing engineering applications with Excel, we often take complex equations and convert them to Excel formulas. In so doing, it is easy to compose the formula in such a way that leads to incorrect results. For example, consider the following spreadsheet:</p>
+<p><img alt="quadsheet_start.png" src="../images/quadsheet_start.png" /></p>
+<p>The objective of the spreadsheet is to solve for the roots of a quadratic equation of the form:</p>
+<blockquote>
+<p><span class="arithmatex">\(ax^2 + bx + c = 0\)</span></p>
+</blockquote>
+<p>using the two equations shown above. Let's focus on the euqation for root 1 which would be entered in cell D5. How should one go about transforming the native equation into a formula that is properly interpreted by Excel? Consider the following potential solution:</p>
+<pre><code class="language-excel">=-B5+B5^2-4*A5*C5^0.5/2*A5
+</code></pre>
+<p>This results in a solution of:</p>
+<p><img alt="numerror.png" src="../images/numerror.png" /></p>
+<p>The most obvious error is that we need to put parentheses around the discriminant (b2 - 4ac) part before taking the square root ( we are taking the square root by raising to a power of 0.5). Otherwise we are only taking the square root of c only. After making this correction:</p>
+<pre><code class="language-excel">=-B5+(B5^2-4*A5*C5)^0.5/2*A5
+</code></pre>
+<p>which gives us an answer of 6.58, which is still wrong. The correct answer is 1.65. In order to get the correct answer, we need to put parentheses around both the numerator and denominator as follows:</p>
+<pre><code class="language-excel">=(-B5+(B5^2-4*A5*C5)^0.5)/(2*A5)
+</code></pre>
+<p>After doing so, we finally get the correct set of answers:</p>
+<p><img alt="solution.png" src="../images/solution.png" /></p>
+<p>So how do we determine when and where to use parentheses? Are they always required? Here is another example. Take the following formula that uses cell names:</p>
+<pre><code class="language-excel">=x+y*z^p/2*x
+</code></pre>
+<p>Which of the following corresponds to the equation defined by this formula?</p>
+<p>a.&nbsp;    <span class="arithmatex">\(x + yz^\left({\dfrac{p}{2x}}\right)\)</span></p>
+<p>b.&nbsp;    <span class="arithmatex">\(\dfrac{x + yz^p}{2x}\)</span></p>
+<p>c.&nbsp;    <span class="arithmatex">\(x + \dfrac{yz^p}{2x}\)</span></p>
+<p>d.&nbsp;    <span class="arithmatex">\(x + \dfrac{yz^p}{2}x\)</span></p>
+<p>The correct answer is (d). But how do we know this? One can always very explicitly define the order of operations by using parentheses. But we can better understand how and when to use parentheses by learning the precedence and associativity rules applied to Excel formulas. The following table indicates the order in which the operators are evaluated when a formular is parsed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Order</th>
+<th style="text-align: center;">Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">^</td>
+<td>Power (exponent)</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">* /</td>
+<td>Multiplication and division</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">+ -</td>
+<td>Addition and subtraction</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Within levels 2 and 3, operations are carried out from left to right. So, let's reexamine our formula from above:</li>
+</ul>
+<pre><code class="language-excel">=x+y*z^p/2*x
+</code></pre>
+<p>The first step would be to evaluate the power operator (^):</p>
+<pre><code class="language-excel">=x+y*(z^p)/2*x
+</code></pre>
+<p>Next, the multiplication (*) and division (/) operators would be evaluated from left to right.</p>
+<pre><code class="language-excel">=x+(y*(z^p))/2*x
+</code></pre>
+<pre><code class="language-excel">=x+((y*(z^p))/2)*x
+</code></pre>
+<pre><code class="language-excel">=x+(((y*(z^p))/2)*x)
+</code></pre>
+<p>Finally, the addition (+) operator would be evaluated last.</p>
+<pre><code class="language-excel">=x+(((y*(z^p))/2)*x)
+</code></pre>
+<p>Of course, these parentheses are not all required. Once we understand the precedence rules, we can begin to build concise, but correct formulas. For example, this is how you would write a formula for each of the equations shown above:</p>
+<p>a.      =x+y<em>z^(p/(2</em>x))</p>
+<p>b.      =(x+y<em>z^p)/(2</em>x)</p>
+<p>c.      =x+(y<em>z^p)/(2</em>x)</p>
+<p>d.      =x+y<em>z^p/2</em>x</p>
+<p>The worksheet associated with the exercises shown above can be downloaded here:</p>
+<p><a href="../files/quadequation.xlsm">quadequation.xlsm</a></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Use the order of operations to calculate the fluid headloss in a pipe.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/headloss.xlsm">headloss.xlsm</a></div>
+<div class="exercise-cell"><a href="files/headloss_key.xlsm">headloss_key.xlsm</a></div>
+<div class="exercise-cell">Calculate the equations using formulas and taking into consideration the appropriate order of operations.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/operators.xlsm">operators.xlsm</a></div>
+<div class="exercise-cell"><a href="files/operators_key.xlsm">operators_key.xlsm</a></div>
+<div class="exercise-cell">Use the correct order of operations to calculate the friction factor.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/friction_factor.xlsm">friction_factor.xlsm</a></div>
+<div class="exercise-cell"><a href="files/friction_factor_key.xlsm">friction_factor_key.xlsm</a></div>
+</div>
+<p>Description Difficulty  Start   Solution
+Headloss - Use the order of operations to calculate the fluid headloss in a pipe.   Easy    <a href="../files/headloss.xlsm">headloss.xlsm</a>    <a href="../files/headloss_key.xlsm">headloss_key.xlsm</a>
+Operators - Calculate the equations using formulas and taking into consideration the appropriate order of operations.   Medium  operators.xlsm  operators_key.xlsm
+Friction Factor - Use the correct order of operations to calculate the friction factor. Hard    friction_factor.xlsm    friction_factor_key.xlsm</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../04_names/names/" class="btn btn-neutral float-left" title="Names"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../06_iffunction/iffunction/" class="btn btn-neutral float-right" title="IF Function">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../04_names/names/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../06_iffunction/iffunction/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

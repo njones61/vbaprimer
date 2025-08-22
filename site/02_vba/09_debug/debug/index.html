@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/09_debug/debug/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Debugging - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Debugging";
+        var mkdocs_page_input_path = "02_vba/09_debug/debug.md";
+        var mkdocs_page_url = "/en/latest/02_vba/09_debug/debug/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Debugging</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#types-of-bugs">Types of Bugs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#syntax-errors">Syntax Errors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run-time-errors">Run-Time Errors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logic-errors">Logic Errors</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debugging-tools">Debugging Tools</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#breakpoints">Breakpoints</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#step-options">Step Options</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run-commands">Run Commands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#examining-variables-and-expressions">Examining Variables and Expressions</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Debugging</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/09_debug/debug.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="debugging-finding-and-fixing-errors">Debugging - Finding and Fixing Errors</h1>
+<p>One of the more frustrating parts of programming can be finding and fixing errors. This process is called "debugging" and errors in computer code are called "bugs". Debugging your code is much easier if you utilize the built-in debugging tools provided with the Visual Basic Editor.</p>
+<h2 id="types-of-bugs">Types of Bugs</h2>
+<p>Before discussing the debugging tools, it is helpful to review the three basic types of bugs: syntax errors, run-time errors, and logic errors.</p>
+<h3 id="syntax-errors">Syntax Errors</h3>
+<p>All programming languages have a set of rules that must be followed when writing the code. These rules are called the code syntax. When you write code, a utility called the compiler parses through your code and converts it to low-level machine language. If you do not use proper syntax, the compiler cannot understand what it is you are trying to do. For example, a common syntax error would be forgetting to include the "Then" part of an If statement. If you hit the return key before typing "Then", you get a message like this:</p>
+<p><img alt="syntax_message.png" src="../images/syntax_message.png" /></p>
+<p>Another common error would be misspelling a keyword ("Iff"). Most syntax errors are caught immediately by the VB Editor when you hit the return key. You can also check for syntax errors by selecting the <strong>Compile VBA Project</strong> command in the <strong>Debug</strong> menu.</p>
+<p>Syntax errors are the easiest to find and fix.</p>
+<h3 id="run-time-errors">Run-Time Errors</h3>
+<p>Run-Time errors occur when your code has correct syntax, but the logic of the code is such that it generates an error when you execute the code. For example, the code:</p>
+<pre><code class="language-vb">x = 0
+y = 1 / x
+</code></pre>
+<p>Has legal syntax but generates a "Divide By Zero" error when you run the code. When this happens you get an error message and the Visual Basic Editor pops to the front and the line with the offending code is highlighted. Sometimes it is obvious what is causing the run-time error, but in some cases you will need to use the debugging tools to figure it out.</p>
+<h3 id="logic-errors">Logic Errors</h3>
+<p>A logic error is when your code has correct syntax and does not produce a run-time error but your code produces incorrect results (generates the wrong numbers, for example). Logic errors are the most difficult kind of bug to find and fix. You can spend hours trying to fix your logic errors, but the debugging tools described below can greatly simplify the process.</p>
+<h2 id="debugging-tools">Debugging Tools</h2>
+<p>The debugging tools are located in the Debug menu in the VB Editor. These tools can be used to trace the execution of your code in a line-by-line fashion and examine the value of variables to determine what is causing your run-time or logic errors.</p>
+<h3 id="breakpoints">Breakpoints</h3>
+<p>The first thing you should do when debugging is create one or more breakpoints. A breakpoint is a location in the code where you want execution to halt so that you can examine the state of your variables and objects and/or begin to trace execution line-by-line. To set a breakpoint, you simply click in the gray column on the left side of the editor and a red dot will appear:</p>
+<p><img alt="breakpoint.png" src="../images/breakpoint.png" /></p>
+<p>When you run the code, the execution will then stop at the breakpoint and the line will be highlighted in yellow.</p>
+<p><img alt="breakpoint2.png" src="../images/breakpoint2.png" /></p>
+<p>The yellow highlight means that the yellow line has NOT been executed yet, but it is the next line to execute.</p>
+<p>You can also set a breakpoint by putting the cursor on a line and selecting the <strong>Debug|Toggle Breakpoint</strong> command or by pressing <strong>F9</strong>. You can clear a breakpoint by clicking on it. You can get rid of all of your breakpoints by selecting the <strong>Debug|Clear All Breakpoints</strong> command.</p>
+<h3 id="step-options">Step Options</h3>
+<p>Once you have halted execution using a breakpoint, you can then trace the execution of your code one line at a time using the Step options. In most cases, the easiest thing to do is press the <strong>F8</strong> key to execute the <strong>Step Into</strong> command. This executes the current line and then highlights the next line in yellow. However, if the current line contains a custom sub or function (i.e., one that you wrote as opposed to a built-in VB sub or function), then you need to be a little more careful. There are actually three different Step commands and each behaves a little differently based on how you want to trace your code.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Shortcut</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Step Into</strong></td>
+<td>F8</td>
+<td>Executes the current line of code and if the code contains a call to a custom sub or function, the code execution jumps to the first line in the sub or function and then pauses. This gives you the chance to trace the execution of the sub or function.</td>
+</tr>
+<tr>
+<td><strong>Step Over</strong></td>
+<td>Shift+F8</td>
+<td>Executes the current line of code and if the code contains a call to a custom sub or function, the sub or function is executed but that execution is not traced. After executing the line (including referenced subs and/or functions) the next line of code in the current module is highlighted and the execution pauses. You should use this option when you are confident that your subs or functions do not contain errors and you don't need to trace their execution.</td>
+</tr>
+<tr>
+<td><strong>Step Out</strong></td>
+<td>Ctrl+Shift+F8</td>
+<td>This command should be used when you are in the middle of tracing the execution of your code inside a custom sub or function and you are satisfied that the sub or function does not contain the error you are looking for. This completes the execution of the sub or function and returns you to the next line following the line where the sub or function was called.</td>
+</tr>
+<tr>
+<td><strong>Run to Cursor</strong></td>
+<td>Ctrl+F8</td>
+<td>This command executes all code between the current yellow-highlighted line and the line containing the cursor. The line containing the cursor is then highlighted and the execution pauses.</td>
+</tr>
+</tbody>
+</table>
+<p>It is important to note that none of these four options "skips" code in the sense that portions of your code are not executed. All of the code is executed, but in some cases you may not see the step-by-step execution. If for some reason you want to actually skip one or more lines of code, you should set the cursor in the first line following the code you want to skip and then select the <strong>Debug|Set Next Statement</strong> command.</p>
+<h3 id="run-commands">Run Commands</h3>
+<p>After stopping at a breakpoint and examining some code, you may wish to quickly finish all of your remaining lines of code, or execute all lines of code between the current line and the next breakpoint. You can do this using the Run command. There is a set of Run-Pause-Stop commands in the VB Editor menu.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Symbol</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Run</strong></td>
+<td><img alt="command_run.png" src="../images/command_run.png" /></td>
+<td>Execute the code from the current position to the next breakpoint or until the code is completed.</td>
+</tr>
+<tr>
+<td><strong>Pause</strong></td>
+<td><img alt="command_pause.png" src="../images/command_pause.png" /></td>
+<td>Pause the execution. This button can be used when your code appears to be stuck in an infinite loop. It causes the code execution to pause and the next line of code to be executed is highlighted.</td>
+</tr>
+<tr>
+<td><strong>Stop</strong></td>
+<td><img alt="command_stop.png" src="../images/command_stop.png" /></td>
+<td>This command can be used either when the code is running or when it is paused. It causes the execution to stop and everything is reset to the non-running state.</td>
+</tr>
+</tbody>
+</table>
+<p>The Run command can also be used as a shortcut to run a specific sub by putting the cursor in the sub and then selecting the Run button in the VB Editor. For example, this could be used to execute the code associated with a button without actually having to click the button.</p>
+<h3 id="examining-variables-and-expressions">Examining Variables and Expressions</h3>
+<p>When the code execution is paused, it is extremely helpful to examine the status of your variables, expressions, and objects. To examine the value of a variable, simply hover the cursor over the variable and the current value is displayed:</p>
+<p><img alt="cursor_hover_variable.png" src="../images/cursor_hover_variable.png" /></p>
+<p>You can also select part or all of an expression to see the value of the highlighted part:</p>
+<p><img alt="cursor_hover_expression.png" src="../images/cursor_hover_expression.png" /></p>
+<p>If you find yourself checking the value of a particular variable or expression repeatedly, you can select the variable or expression and then select the <strong>Debug|Add Watch...</strong> command. This opens the Watch window at the bottom of the VB Editor and displays the value of the variable or expression in the window.</p>
+<p><img alt="watches.png" src="../images/watches.png" /></p>
+<p>These values are constantly updated as the code is executed.</p>
+<p>If you add an array or object to the watch window, you can click the plus button to expand the object and view the values of object/array members. In this example, x and y are two arrays of doubles:</p>
+<p><img alt="watch_arrays.png" src="../images/watch_arrays.png" /></p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Total Head Debug -</strong> Find a run-time error, logic error and syntax error for the code solving for the total head in the bernoulli equation.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/total_head_debug.xlsm">total_head_debug.xlsm</a></div>
+<div class="exercise-cell"><a href="files/total_head_debug_key.xlsm">total_head_debug_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Citation Machine -</strong> Debug the code so that a message box with the correct citation displays when the user clicks "Create Citation."</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/citation_machine.xlsm">citation_machine.xlsm</a></div>
+<div class="exercise-cell"><a href="files/citation_machine_key.xlsm">citation_machine_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Debugging -</strong> Debug the code that calculates three equations.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/debugging.xlsm">debugging.xlsm</a></div>
+<div class="exercise-cell"><a href="files/debugging_key.xlsm">debugging_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../08_ifthen/ifthen/" class="btn btn-neutral float-left" title="If Statements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../10_loops/loops/" class="btn btn-neutral float-right" title="Loops">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../08_ifthen/ifthen/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../10_loops/loops/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

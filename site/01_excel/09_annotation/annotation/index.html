@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/01_excel/09_annotation/annotation/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Annotation - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Annotation";
+        var mkdocs_page_input_path = "01_excel/09_annotation/annotation.md";
+        var mkdocs_page_url = "/en/latest/01_excel/09_annotation/annotation/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Annotation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#drawing-tools">Drawing Tools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-equation-editor">The Equation Editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#selecting-objects">Selecting Objects</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#grouping">Grouping</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#display-order">Display Order</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sample-workbooks">Sample Workbooks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel Fundamentals</li>
+      <li class="breadcrumb-item active">Annotation</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/01_excel/09_annotation/annotation.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="annotation-drawings-and-equations">Annotation - Drawings and Equations</h1>
+<p>When developing worksheets as a tool for solving engineering problems that we frequently encounter in practice, it is helpful to make the worksheets as clear and easy to use as possible. One of the ways this can be accomplished is to add graphics to the worksheet illustrating the problem being solved. In some cases, showing the equations in native form is also helpful. For example, suppose we are just starting to develop a worksheet for solving the deflection of a simply-supported beam subjected to a point load.</p>
+<p><img alt="beamsheet-start.png" src="../images/beamsheet-start.png" /></p>
+<p>The equations associated with the problem are as follows:</p>
+<p><img alt="beam.png" src="../images/beam.png" /></p>
+<p><img alt="beam_eq.gif" src="../images/beam_eq.gif" /></p>
+<p>Before entering the formulas, it would be very helpful to future users of the workbook if we could add some annotation to the workbook including a diagram and set of equations similar to those shown above. In this chapter, we will use this example to review the basic tools provided in Excel for making simple drawings and for composing graphical equations.</p>
+<p>(Note: You may want to open the sample workbook at the bottom of this chapter and follow along.)</p>
+<h2 id="drawing-tools">Drawing Tools</h2>
+<p>The drawing tools in Excel are the same set of tools utilized in other Microsoft Office products, including Word and Powerpoint. Drawings are created using a set of objects called <strong>shapes</strong>. You begin creating a drawing in Excel by inserting a shape. To insert a shape, click on the <strong>Insert</strong> tab, and then click on the <strong>Shapes</strong> menu in the <strong>Illustrations</strong> section.</p>
+<p><img alt="shapes.png" src="../images/shapes.png" /></p>
+<p>To create our drawing, we will first create the lines corresponding to the x and y axes. Since the have an arrow at the ends, we will use the line shape with an arrow on one end (<img alt="shape-arrow.png" src="../images/shape-arrow.png" />). To create the x-axis, start on the left and click and drag to the right. If you hold the shift key down while dragging, the line will stay perfectly flat. After creating the line, you will shift into drawing mode and the drawing tools will be displayed:</p>
+<p><img alt="drawingtools.png" src="../images/drawingtools.png" /></p>
+<p>If you click anywhere on the worksheet so that no shapes are selected, the drawing tool ribbon will go away. To get it back, you can simply click on one of your shapes or insert another shape using the process described above.</p>
+<p>Now we need to create the y-axis. Reselect the line/arrow tool from the shape pallette on the left side of the drawing tools ribbon. Then start at the left side of the axis (the origin) and repeat the process dragging straight up, again holding down the shift key while dragging. At this point, the drawing should look like this:</p>
+<p><img alt="drawing-axes.png" src="../images/drawing-axes.png" /></p>
+<p>Next, we will create the deflected beam shape. The best way to do this is with the curve shape (<img alt="shape-curve.png" src="../images/shape-curve.png" />). Select the curve shape. Curves are created by clicking on a set of pivot points defining the curve and then double-clicking at the end. To create the beam, we will click on three points: one on the left side of the beam to start, one at the middle of the beam, then we will double-click on the right side to end. Star creating your beam by clicking on the coordinate origin. Then click at the midpoint of the beam as follows:</p>
+<p><img alt="curve-1.png" src="../images/curve-1.png" /></p>
+<p>The double-click on the right side of the beam:</p>
+<p><img alt="curve-2.png" src="../images/curve-2.png" /></p>
+<p>Note that you have created a nice smooth curve based on these three points. If you want to fine-tune the shape of the curve, select the curve and then select the <strong>Edit Shape|Edit Points</strong> command from the Insert Shapes section of the Drawing Tools ribbon.</p>
+<p><img alt="editpoints1.png" src="../images/editpoints1.png" /></p>
+<p>At this point, the three points defining the curve will appear. If click on one of the points, a set of handles will appear:</p>
+<p><img alt="editpoints2.png" src="../images/editpoints2.png" /></p>
+<p>Repositioning the point in the center or dragging the handles will reshape the curve. Experimenting for a few minutes will give you a good sense of how this works. When you are done try to restore the curve to the shape shown above as best you can (or delete and recreate the curve).</p>
+<p>Next we will create the support points. In the drawing shown above, the supports are shown with a triangle and circle. To keep things simple we will use a triangle only. Select the triangle shape (<img alt="shape-triangle.png" src="../images/shape-triangle.png" />) and drag a triangle at the left end of the beam. You may need to create the shape and the drag it into position. You may also need to use the handles at the corners of the shape to resize it. If you want to give the shape a professional look, you can apply one of the "3D" shape styles:</p>
+<p><img alt="shape-styles.png" src="../images/shape-styles.png" /></p>
+<p>At this point, the support should look like this:</p>
+<p><img alt="support-left.png" src="../images/support-left.png" /></p>
+<p>To create a support on the other end, we can either repeat the entire process, or we can create a duplicate of the shape by pressing Ctrl-D and reposition it to the right end as follows:</p>
+<p><img alt="support-right.png" src="../images/support-right.png" /></p>
+<p>Next we will create the shape representing the load. To do this we will use the block arrow tool corresponding to a down arrow (<img alt="shape-blockarrow.png" src="../images/shape-blockarrow.png" />). Click and draw in a long vertical shape to create the load arrow. Apply one of the 3D styles and the reposition the arrow as follows:</p>
+<p><img alt="load-arrow.png" src="../images/load-arrow.png" /></p>
+<p>Now we are ready to apply the lines associated with the dimensioning. Using a combination of the line tools (<img alt="shape-arrow.png" src="../images/shape-arrow.png" /><img alt="shape-arrow2.png" src="../images/shape-arrow2.png" /> <img alt="shape-line.png" src="../images/shape-line.png" /> ) and the techniques described above, create the following lines:</p>
+<p><img alt="dimension-lines.png" src="../images/dimension-lines.png" /></p>
+<p>As you create the lines, you may want to simply duplicate the existing lines. Also, if you need to align some of the shapes, select multiple shapes using the shift key and then select the Align menu in the Arrange section of the Drawing Tools ribbon.</p>
+<p><img alt="aligntools.png" src="../images/aligntools.png" /></p>
+<p>The last step is to add the text labels to the drawing. We will start with the "P" by the load arrow. To add the label, select the text box shape (<img alt="shape-text.png" src="../images/shape-text.png" />) and drag a box by the load arrow. Then type "P" and click on the box containing the label to reposition it if necessary. To get right of the line around the text box, select the label and then select the <strong>Shape Outline</strong> menu in the <strong>Shape Styles</strong> section of the ribbon and select <strong>No Outline</strong>. To change the font attributes (size, font, bold, alignment, etc.) you will need to click on the <strong>Home</strong> ribbon and use the tools in the <strong>Font</strong> section while the textbox shape is selected.</p>
+<p><img alt="text-line-format.png" src="../images/text-line-format.png" /></p>
+<p>To create the remaining labels, duplicate (Ctrl-D) the current label and then change the text. Reposition and re-format as needed. When you are finished, our drawing is complete!</p>
+<p><img alt="completedrawing.png" src="../images/completedrawing.png" /></p>
+<h2 id="the-equation-editor">The Equation Editor</h2>
+<p>Next we will use the <strong>Excel Equation Editor</strong> to create a graphical representation of the equations describing the deflection of a simply supported beam. To make things interesting, we will start with the second equation shown here:</p>
+<p><img alt="equation-start.png" src="../images/equation-start.png" /></p>
+<p>To insert a new equation, select a cell somewhere in the vicinity of where you would like to put the equation and then click on the Insert tab. Over on the far right end of the tab, you will see a <strong>Symbols</strong> section. Click on the <strong>Equation</strong> menu.</p>
+<p><img alt="equation-menu.png" src="../images/equation-menu.png" /></p>
+<p>If you click on the down arrow, the menu lists some frequently-used equations for cases where you want to start with something and then modify. But we need to start from scratch, so we need to click on top part of the Equation button. This inserts a new equation and opends up the <strong>Equation Tools</strong> ribbon.</p>
+<p><img alt="equation-ribbon.png" src="../images/equation-ribbon.png" /></p>
+<p>The ribbon is divided into two main sections: <strong>Symbols</strong> and <strong>Structures</strong>. The structures represent basic components of equations that define positional relationships. In general, you form an equation by inserting a structure and then filling in the elements of the structure by typing standard characters (x, y, p, t, etc.) or by selecting symbols. We will start our equation by typing "v=". Then we select the <strong>Fraction</strong> menu and select the first (upper left) option ("stacked fraction"). This creates an empty fraction with a placeholder for the numerator and the denominator:</p>
+<p><img alt="equation-edit-1.png" src="../images/equation-edit-1.png" /></p>
+<p>Click on the numerator box to and type "-Pb". Then click on the denominator box and type "6E". At this point, we need to enter "Iu" with the "u" part as a subscript. To do so, we click on the <strong>Script</strong> menu in the <strong>Structures</strong> section and select the second item on the top row. This creates a place holder for the main part and the subscript. Click on the main part and type "I" and then click on the subscript and type "u". (Note that you rather than clicking on the placeholders, you can use the arrow keys on your keyboard to navigate between the different placeholders.) At this point, the equation should look like this:</p>
+<p><img alt="equation-edit-2.png" src="../images/equation-edit-2.png" /></p>
+<p>At this point, we are finished with the fraction and need to enter the remainder of the equation. Before doing so, we need to move the cursor out of the denominator, otherwise whatever we type will be in the denominator. To do so, we simply hit the right-arrow key on the keyboard a couple of times until the cursor is to right of and even with the main part of the equation:</p>
+<p><img alt="equation-edit-3.png" src="../images/equation-edit-3.png" /></p>
+<p>Next we need to create a set of square brackets for the right side of the equation. We could simply type the "[" and "]" characters on the keyboard, but we need the brackets to automatically resize themselves based on the content in the brackets, so we need to use a structure. Click on the <strong>Brackets</strong> menu and select the square brackets option (second item in the top row).</p>
+<p><img alt="equation-edit-4.png" src="../images/equation-edit-4.png" /></p>
+<p>Click on the placeholder in the middle of the brackets and insert another fraction structure. Enter "L" for the numerator and "b" for the denominator.</p>
+<p><img alt="equation-edit-5.png" src="../images/equation-edit-5.png" /></p>
+<p>Then hit the right arrow key once to exit the denominator.</p>
+<p>Next, we need to enter (x-a)3. To do this, we will need two structures: a superscript and a bracket. First insert the superscript structure, then click on the main part of the superscript structure and enter a bracket "()" structure. Then enter "x-a" in the main part of the bracket structure and click on the superscript and type "3".</p>
+<p><img alt="equation-edit-6.png" src="../images/equation-edit-6.png" /></p>
+<p>Hit the right arrow key to exit the superscript and finish the rest of the equation using the procedures described above. When you are finished, the equation should look like this:</p>
+<p><img alt="equation-edit-7.png" src="../images/equation-edit-7.png" /></p>
+<p>After creating the equation, you can move it around to reposition it. To edit it, simply click on it and the <strong>Equation Tools</strong> ribbon will appear again.</p>
+<p>You can now continue and try creating the other equations shown above if you wish.</p>
+<h2 id="selecting-objects">Selecting Objects</h2>
+<p>After creating a set of shapes and equations, it is sometimes necessary to select them as a group by dragging a box around them. For example, this is necessary if you wish to reposition all of them at once. If you just drag a box around the objects, they are not selected. To do this, you need to activate the "Select Objects" mode. This is accomplished by clicking on the <strong>Home</strong> tab and then selecting the <strong>Select Objects</strong> item in the <strong>Find and Select</strong> menu on the far right end of the ribbon.</p>
+<p><img alt="selectobjects.png" src="../images/selectobjects.png" /></p>
+<h2 id="grouping">Grouping</h2>
+<p>When dealing with large sets of shapes and equations as described in the previous section, it is sometimes helpful to organize the objects into groups. This allows you to select and move them as a single item. To group a set of objects, select them and then select the <strong>Group</strong> item in <strong>Arrange</strong> section in the <strong>Drawing Tools</strong> ribbon. Select the <strong>Group</strong> option from the menu.</p>
+<p><img alt="group.png" src="../images/group.png" /></p>
+<p>The ungroup command can be used to undo the process of grouping a set of objects.</p>
+<h2 id="display-order">Display Order</h2>
+<p>When working with shapes that are filled, sometimes one objects can obscure another. You can directly control the order in which the objects are displayed using the options in the Bring Forward and Send Backward menus in the Arrange section of the Drawing Tools ribbon.</p>
+<p><img alt="arrange.png" src="../images/arrange.png" /></p>
+<h2 id="sample-workbooks">Sample Workbooks</h2>
+<p>The workbook used in the examples shown above can be downloaded here:</p>
+<p><a href="../files/simplebeam.xlsx">simplebeam.xlsx</a>&lt;-- Without annotation. Start here if you want to try creating the drawings and equations <a href="../files/simplebeam-key.xlsx">simplebeam-key.xlsx</a>  &lt;-- With completed annotation.</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Create an annotated figure of drag force on a baseball and compute the drag force that the ball experiences.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/drag_equation.xlsx">drag_equation.xlsx</a></div>
+<div class="exercise-cell"><a href="files/drag_equation_key.xlsx">drag_equation_key.xlsx</a></div>
+<div class="exercise-cell">Create an annotated soil profile and write an equation to compute the unit weight of the two soil layers.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/unit_weight.xlsx">unit_weight.xlsx</a></div>
+<div class="exercise-cell"><a href="files/unit_weight_key.xlsx">unit_weight_key.xlsx</a></div>
+<div class="exercise-cell">Annotate a figure of a pipe with the necessary equations to calculate headloss. Then calculate the headloss with the given values and equations.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/headloss.xlsx">headloss.xlsx</a></div>
+<div class="exercise-cell"><a href="files/headloss_key.xlsx">headloss_key.xlsx</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../08_charts/charts/" class="btn btn-neutral float-left" title="Charts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../10_arrayform/arrayform/" class="btn btn-neutral float-right" title="Array Formulas">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../08_charts/charts/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../10_arrayform/arrayform/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

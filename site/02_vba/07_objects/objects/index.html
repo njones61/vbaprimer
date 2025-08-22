@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/07_objects/objects/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Objects - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Objects";
+        var mkdocs_page_input_path = "02_vba/07_objects/objects.md";
+        var mkdocs_page_url = "/en/latest/02_vba/07_objects/objects/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Objects</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#properties">Properties</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#methods">Methods</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#events">Events</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#collections">Collections</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#object-browser">Object Browser</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">Objects</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/07_objects/objects.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="working-with-objects">Working with Objects</h1>
+<p>VBA is an object-oriented language. Controls, cells, ranges, shapes, worksheets, and workbooks are all different types of objects that can be manipulated using VBA in Excel. Objects have three types of features: properties, methods, and events.</p>
+<h2 id="properties">Properties</h2>
+<p>Properties are attributes associated with an object. For example, a command button has properties for the control name, the caption, the size, the font, and the colors. You can change properties using the Properties window or in code using an assignment statement:</p>
+<pre><code class="language-vb">Range(&quot;B5&quot;).Formula = &quot;=A5/12 + B15&quot;
+</code></pre>
+<p>Properties can be thought of as a collection of variables associated with an object. Each property has a type (integer, double, string) and some properties are other objects. For example, the following line of code shows how to modify a property associated with an embedded object.</p>
+<pre><code class="language-vb">Range(&quot;B5&quot;).Interior.Color = 65535
+</code></pre>
+<h2 id="methods">Methods</h2>
+<p>Methods are actions that can be performed by an object. For example, a range object has a Select method that selects the cells in the range.</p>
+<pre><code class="language-vb">Range(&quot;B4:D12&quot;).Select
+</code></pre>
+<p>The following Method clears the data in a set of cells while keeping the formatting intact:</p>
+<pre><code class="language-vb">Range(&quot;B5&quot;).ClearContents
+</code></pre>
+<p>Not all objects include methods.</p>
+<h2 id="events">Events</h2>
+<p>An event is something that happens to an object. We write code in response to events. Events are described in more detail on the <a href="../../17_events/events/">Working with Events</a> section.</p>
+<h2 id="collections">Collections</h2>
+<p>A collection is a special type of object that is a set of objects. For example, the Sheets collection contains all of the Sheet objects in a workbook. For each sheet, there is a collection of Shape objects called Shapes. There is also a collection of Comment objects called Comments. All collection objects contain a Count property that tracks the number of objects in the collection. To reference the objects in a collection, you can use the index of the object:</p>
+<pre><code class="language-vb">Sheets(2).Activate
+</code></pre>
+<p>Or if you know the name of the object, you can reference it by name:</p>
+<pre><code class="language-vb">Sheets(&quot;Sheet2&quot;).Activate
+</code></pre>
+<p>To traverse a collection, we use the <strong>For Each</strong> type of loop. For example, to delete all of the shapes on a page, we could do the following:</p>
+<pre><code class="language-vb">Dim myshape As Shape
+For Each myshape In Shapes
+    myshape.Delete
+Next myshape
+</code></pre>
+<p>The For Each loop is explained in more detail in the <a href="../../10_loops/loops/">Loops</a> chapter.</p>
+<h2 id="object-browser">Object Browser</h2>
+<p>When we work with objects in Excel, we are using the <strong>Microsoft Excel Object Model</strong>. The model can be explored in the Visual Basic Editor using the <strong>Object Browser</strong>. To access the browser, you click on the Object Browser icon <img alt="obicon.png" src="../images/obicon.png" />. This brings up the Object Browser window:</p>
+<p><img alt="browser.png" src="../images/browser.png" /></p>
+<p>The Object Browser is a great way to explore objects and learn what members (properties, methods) are available with the object. The top left item lets us pick which object model to browse. You typically want to change this to "Excel" (as shown) to focus on the Excel objects rather than browsing all objects in MS Office. You can then use the search field (to the left of the binocular icon) to search for a particular object type. You then pick the object of interest in the search results and the members of the object (properties and methods) are listed in the main part of the window. You can click on each member and get a summary at the bottom of the window. You can also right-click on a member to bring up context sensitive help on that member. For example, doing this:</p>
+<p><img alt="rightclick.png" src="../images/rightclick.png" /></p>
+<p>brings up this:</p>
+<p><img alt="help.png" src="../images/help.png" /></p>
+<p>Of course, you can also look up information on objects directly using the search feature in the Visual Basic Help utility.</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Project Management -</strong> Use a variety of objects and change their appearance and/or values through methods and properties to update the project management table.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/project_management.xlsm">project_management.xlsm</a></div>
+<div class="exercise-cell"><a href="files/project_management_key.xlsm">project_management_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Objects -</strong> Run through a few object.method basics to obtain specific results and get rid of an Excel Bug :)</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/objects.xlsm">objects.xlsm</a></div>
+<div class="exercise-cell"><a href="files/objects_key.xlsm">objects_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Pop the Balloon -</strong> Use shape objects and use methods and properties to create an animation that pumps up a balloon until it pops!</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/pop_the_balloon.xlsm">pop_the_balloon.xlsm</a></div>
+<div class="exercise-cell"><a href="files/pop_the_balloon_key.xlsm">pop_the_balloon_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../06_variables/variables/" class="btn btn-neutral float-left" title="Variables"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../08_ifthen/ifthen/" class="btn btn-neutral float-right" title="If Statements">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../06_variables/variables/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../08_ifthen/ifthen/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -6,11 +6,11 @@ The most basic feature of Excel is the ability to enter data and then write form
 
 An Excel workbook contains a collection of sheets. Each sheet contains a collection of cells organized into rows and columns. The rows are indexed with numbers (1,2,3...) and the columns are indexed with letters (A,B,C...). Each cell can be uniquely identified by a cells address defined by the column-row combination.
 
-| Address | Description        |
+| Address | Description |
 |---------|--------------------|
-| A5      | Row 1, Column 1    |
-| D3      | Row 3, Column 4    |
-| AJ234   | Row 234, Column 36 |
+| A5 | Row 1, Column 1 |
+| D3 | Row 3, Column 4 |
+| AJ234 | Row 234, Column 36 |
 
 Note that after column Z (26), the column numbers are indexed as AA,AB,AC... To reference a group of cells with single address we combine the upper left corner of the region with the lower right corner separated by a semicolon. For example, to reference the following range:
 
@@ -59,18 +59,11 @@ or you can double click on the cell containing the formula and edit it directly 
 
 One of the most powerful features of Excel is built-in functions. A function typically takes one or more arguments as input and returns a value. Functions are extremenly useful in formulas. For example, you can use trig functions:
 
->sin(a)<br>
-cos(a)<br>
-tan(a)<br>
-etc.
+>sin(a) cos(a) tan(a) etc.
 
 where a = an angle in radians. There are also many functions that operate on a range as input:
 
->Sum(r)<br>
-Average(r)<br>
-Min(r)<br>
-Max(r)<br>
-etc.
+>Sum(r) Average(r) Min(r) Max(r) etc.
 
 where r = a range of cells. For example, this formula computes the sum of a list of values:
 
@@ -122,9 +115,9 @@ Sometimes it is useful to use a mixed reference. Here is a summary of the ways i
 
 | Type | Description |
 |------|-------------|
-| D4   | Row and column are both relative |
-| $D4  | Row is relative and column is absolute |
-| D$4  | Row is absolute and column is relative |
+| D4 | Row and column are both relative |
+| $D4 | Row is relative and column is absolute |
+| D$4 | Row is absolute and column is relative |
 | $D$4 | Row and column are both absolute |
 
 For the example shown above, we could have gotten away with a mixed reference ("B\$4") because we copied the formulas within a single column, but it works fine with a complete absolute reference ("\$B\$4"). To do a mixed reference, you can either directly type the "\$" symbols or you can repeatedly press the F4 key to get the combination you are seeking.
@@ -139,10 +132,29 @@ The workbook used in the examples shown above can be downloaded here:
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Name | Description                                                                                                            | Difficulty | Start | Solution |
-|------------|------------------------------------------------------------------------------------------------------------------------|------------|-------|----------|
-| The Basics | Run through some basic ways to <br> input formulas into cells.                                                         | Easy                                                                                                                      | [the_basics.xlsm](files/the_basics.xlsm) | [the_basics_key.xlsm](files/the_basics_key.xlsm) |
-| Buoyancy | Calculate the buoyant force on <br>different sized objects using formulas<br> and cell references.                     | Medium                                                          | [buoyancy.xlsm](files/buoyancy.xlsm) | [buoyancy_key.xlsm](files/buoyancy_key.xlsm) |
-| Name Counter | Use a formula to count the number<br> of names found inside a table range.                                             | Medium                                                                                          | [name_counter.xlsx](files/name_counter.xlsx) | [name_counter_key.xlsx](files/name_counter_key.xlsx) |
-| Trigonometry | Use trigonometric functions inside<br> of formulas to find the missing angles<br> and/or sides<br> of a few triangles. | Medium                                                                                         | [trigonometry.xlsm](files/trigonometry.xlsm) | [trigonometry_key.xlsm](files/trigonometry_key.xlsm) |
-| Employee Database | Use formulas to conduct <br>statistics on an employee database.                                                        | Hard                                                                                                                | [employee_database.xlsm](files/employee_database.xlsm) | [employee_database_key.xlsm](files/employee_database_key.xlsm) |
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Run through some basic ways to input formulas into cells.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/the_basics.xlsm">the_basics.xlsm</a></div>
+<div class="exercise-cell"><a href="files/the_basics_key.xlsm">the_basics_key.xlsm</a></div>
+<div class="exercise-cell">Calculate the buoyant force on different sized objects using formulas and cell references.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/buoyancy.xlsm">buoyancy.xlsm</a></div>
+<div class="exercise-cell"><a href="files/buoyancy_key.xlsm">buoyancy_key.xlsm</a></div>
+<div class="exercise-cell">Use a formula to count the number of names found inside a table range.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/name_counter.xlsx">name_counter.xlsx</a></div>
+<div class="exercise-cell"><a href="files/name_counter_key.xlsx">name_counter_key.xlsx</a></div>
+<div class="exercise-cell">Use trigonometric functions inside of formulas to find the missing angles and/or sides of a few triangles.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/trigonometry.xlsm">trigonometry.xlsm</a></div>
+<div class="exercise-cell"><a href="files/trigonometry_key.xlsm">trigonometry_key.xlsm</a></div>
+<div class="exercise-cell">Use formulas to conduct statistics on an employee database.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/employee_database.xlsm">employee_database.xlsm</a></div>
+<div class="exercise-cell"><a href="files/employee_database_key.xlsm">employee_database_key.xlsm</a></div>
+</div>

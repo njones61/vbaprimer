@@ -1,0 +1,34 @@
+header {
+	background-color: #3d4953;
+	color: #FFFFFF;
+	padding: 10px;
+}
+footer {
+	background-color: #3d4953;
+	color: #FFFFFF;
+	padding: 10px;
+}
+
+/* Sets the style for unvisited links. */
+.hclass a:link {
+	color: #ff9800;
+	text-decoration: none;
+}
+/* Sets the style for visited links. */
+.hclass a:visited {
+	color: #ff9800;
+	text-decoration: none;
+}
+/* Sets the style for links on mouseover. */
+.hclass a:hover {
+	color: #D23500;
+	text-decoration: underline;
+}
+/* Sets the style for a link that has focus. */
+.hclass a:focus {
+	color: #000;
+}
+/* Sets the style for a link that is being activated/clicked. */
+.hclass a:active {
+	color: #FFFFFF;
+}

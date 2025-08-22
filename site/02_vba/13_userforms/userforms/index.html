@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/02_vba/13_userforms/userforms/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>User Forms - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "User Forms";
+        var mkdocs_page_input_path = "02_vba/13_userforms/userforms.md";
+        var mkdocs_page_url = "/en/latest/02_vba/13_userforms/userforms/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">User Forms</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-the-form">Creating the Form</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#launching-the-form">Launching the Form</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#writing-the-user-form-code">Writing the User Form Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exercises">Exercises</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/03_files/files/">Files</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../03_advanced/05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Excel VBA</li>
+      <li class="breadcrumb-item active">User Forms</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/02_vba/13_userforms/userforms.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-custom-user-forms">Creating Custom User Forms</h1>
+<p>Occasionally it is useful to prompt the user with a user form and wait for the user to enter some information to the user form before proceeding to execute some code. In many cases, this can be accomplished with <a href="../../05_msgbox/msgbox/">MsgBox/InputBox</a>, but there are other cases where we need more detailed information and it is not convenient to pull that information from the cells on a sheet. In such cases, it is possible to create a custom user form containing a set of controls.</p>
+<p>To illustrate the process of using a custom user form, assume that we have a workbook where we need to routinely add new sheets to the workbook, but rather than adding blank sheets, we want the sheets to be copied from one of three pre-defined templates (stored as hidden sheets). You can download a copy of the spreadsheet used in this example by clicking <a href="../files/sample%20code.xlsm">here</a>.</p>
+<h2 id="creating-the-form">Creating the Form</h2>
+<p>The first step is to create the user form. To do this, go to the VB Editor and right-click in the empty space in the project explorer window and select Insert|UserForm.</p>
+<p><img alt="add_user_form.png" src="../images/add_user_form.png" /></p>
+<p>This will create a new empty user form and launch the control toolbox:</p>
+<p><img alt="new_user_form.png" src="../images/new_user_form.png" /></p>
+<p>Next, we will change the name of the user form and change the user form title (default = "UserForm1"). We do this by clicking on the Properties button <img alt="propertiesbutton.png" src="../images/propertiesbutton.png" /> in the VB Editor menu. This will dock the Properties window just below the project explorer window. Change the name to "frmAddSheet". The prefix "frm" identifies the object in code as a user form and the "AddSheet" part makes the name descriptive of the user form's objective. Next, change the Caption property to "New Sheet Options" (or something similarly descriptive). Note that the caption appears in the form title bar.</p>
+<p>Now we are ready to add controls to the sheet. Fortunately, this process is identical to the manner in which <a href="../../03_controls/controls/">controls are added to sheets</a>. Add a set of controls to create a layout as follows. Note that you can use the handles on the sides and corners of the user form to resize the form.</p>
+<p><img alt="user_form.png" src="../images/user_form.png" /></p>
+<p>The text strings ("Sheet title", "Template:") are created with label-type controls. Note that the value property of the checkbox has been set to true because we want this option to be on by default.</p>
+<p>At any time while editing the sheet, you can test to see how the sheet behaves by pressing the <strong>Run</strong> button <img alt="command_run.png" src="../../09_debug/images/command_run.png" /> in the VB Editor menu. To close the form, click on the red X in the upper right corner.</p>
+<h2 id="launching-the-form">Launching the Form</h2>
+<p>The next thing we need to do is create some way to launch our form. In this case, we will add a button somewhere on the main sheet of our workbook as follows:</p>
+<p><img alt="add_sheet_button.png" src="../images/add_sheet_button.png" /></p>
+<p>Note the use of the ellipsis on the button title (...). This should be added to a button caption whenever the button is used to bring up a user form. This is standard user interface protocol. To make the button launch the form, double-click on the button in design mode and type the code for the click event as follows:</p>
+<pre><code class="language-vb">Private Sub cmdAddSheet_Click()
+frmAddSheet.Show
+End Sub
+</code></pre>
+<p>We are calling the <strong>.Show</strong> method which launches the sheet. Exit design mode and test your button.</p>
+<h2 id="writing-the-user-form-code">Writing the User Form Code</h2>
+<p>Finally, we will write the code associated with the user form. While it is possible to write code associated with the click event for each control, we don't need to do anything while the user is interacting with the controls on the main part of the form. The only controls that need code are the OK and Cancel buttons. For the Cancel button, we will simply write code to make the form go away. For the OK button, we will write code that makes the form go away and then it will use the selections in the form to guide the creation of a new sheet from a template.</p>
+<p>For the Cancel button, go to the VB Editor and double-click on the Cancel button. This will bring up the code window for the form. Type the following:</p>
+<pre><code class="language-vb">Private Sub cmdCancel_Click()
+frmAddSheet.Hide
+End Sub
+</code></pre>
+<p>This executes the <strong>.Hide</strong> method to make the form go away.</p>
+<p>Now we need to return to the form editor window. To make it appear again, click on the second icon <img alt="controlwindowbutton.png" src="../images/controlwindowbutton.png" /> at the top of the Project Explorer. You can switch back to the code window by clicking on the first icon <img alt="codewindowbutton.png" src="../images/codewindowbutton.png" />. You can also make the control view appear by double-clicking on the form in the Project Explorer.</p>
+<p>To write the code associated with the OK button, double-click on the OK button and write the following. Note how the control names are used when the sheet is copied. (Note: this assumes that you have three extra sheets named "Template-CI", "Template-CO", and "Template-WL" and that the "Add Sheet..." button is on a sheet named "Main").</p>
+<pre><code class="language-vb">Private Sub cmdOK_Click()
+
+Dim template As String
+
+'Hide the sheet
+frmAddSheet.Hide
+
+'Determine which template was selected.
+If optCustomerInvoice Then
+    template = &quot;Template-CI&quot;
+ElseIf optChangeOrder Then
+    template = &quot;Template-CO&quot;
+Else 'Work log
+    template = &quot;Template-WL&quot;
+End If
+
+'Copy the template to create a new sheet.
+Sheets(template).Select
+Sheets(template).Copy After:=Sheets(Sheets.Count)
+
+'Make the sheet visible in case the template is hidden
+ActiveSheet.Visible = xlSheetVisible
+
+'Rename the sheet
+ActiveSheet.Name = txtSheetTitle
+
+'Bring main sheet back to front if necessary
+If chkBringToFront = False Then
+    Sheets(&quot;Main&quot;).Select
+End If
+
+End Sub
+</code></pre>
+<p>That's it! Creating custom user forms is easy and fun.</p>
+<h2 id="exercises">Exercises</h2>
+<p>You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:</p>
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell"><strong>Battleship -</strong> By creating a user form, the user will be able to begin playing Battleship vs the computer.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/battleship.xlsm">battleship.xlsm</a></div>
+<div class="exercise-cell"><a href="files/battleship_key.xlsm">battleship_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Rainfall Log -</strong> Create a user form to log recent rainfall and compute the total rainfall to date.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/rainfall_log.xlsm">rainfall_log.xlsm</a></div>
+<div class="exercise-cell"><a href="files/rainfall_log_key.xlsm">rainfall_log_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Recruiting Spreadsheet -</strong> Create a user form that allows the user to insert prospective employees into a recruiting table.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/recruiting_spreadsheet.xlsm">recruiting_spreadsheet.xlsm</a></div>
+<div class="exercise-cell"><a href="files/recruiting_spreadsheet_key.xlsm">recruiting_spreadsheet_key.xlsm</a></div>
+<div class="exercise-cell"><strong>Advanced Recruiting -</strong> Create a user form that inserts prospective employees into the recruiting table and highlights those who meet criteria chosen from an additional user form.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/advanced_recruiting.xlsm">advanced_recruiting.xlsm</a></div>
+<div class="exercise-cell"><a href="files/advanced_recruiting_key.xlsm">advanced_recruiting_key.xlsm</a></div>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../12_strings/strings/" class="btn btn-neutral float-left" title="Strings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../14_functions/functions/" class="btn btn-neutral float-right" title="Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../12_strings/strings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../14_functions/functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

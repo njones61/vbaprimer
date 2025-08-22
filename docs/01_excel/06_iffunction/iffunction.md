@@ -24,17 +24,17 @@ The syntax of the IF function is as follows:
 
 The logical_test argument needs to be a conditional expression that returns a TRUE or FALSE value. Conditional expression are typically formed with one of the following operators:
 
-| Operator | Example      | Description               |
+| Operator | Example | Description |
 |:--------:|:------------:|---------------------------|
-| =        | A4=0        | Equal                     |
-| <>       | A4<>B5      | Not equal to              |
-| >        | D7>3        | Greater than              |
-| >=       | D4>=0       | Greater than or equal to  |
-| <        | G3<(G4-7)    | Less than                 |
-| <=       | 0<=F12      | Less than or equal to     |
-| AND      | AND(0<=B5, B5<=5) | True if both statements are true. |
-| OR       | OR(A4=0, B5=0) | True if either or both statements are true. |
-| NOT      | NOT(A4=0)   | True if the statement is false. |
+| = | A4=0 | Equal |
+| <> | A4<>B5 | Not equal to |
+| > | D7>3 | Greater than |
+| >= | D4>=0 | Greater than or equal to |
+| < | G3<(G4-7) | Less than |
+| <= | 0<=F12 | Less than or equal to |
+| AND | AND(0<=B5, B5<=5) | True if both statements are true. |
+| OR | OR(A4=0, B5=0) | True if either or both statements are true. |
+| NOT | NOT(A4=0) | True if the statement is false. |
 
 If the conditional expression evaluates to true, the value_if_true argument is used. Otherwise, the value_if_false argument is used. These arguments can any type of expression, including constants, cells references, or formulas. Here are some additional example formulas that use the IF function:
 
@@ -111,9 +111,25 @@ The workbook used in the first example shown above can be downloaded here:
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise	| Description	                                                                                                      | Difficulty	| Start	| Solution	|
-|:--------:|-------------------------------------------------------------------------------------------------------------------|:----------:|:-----:|:--------:|
-| Reynolds and Froude | Calculate the Reynolds' or Froude's<br> number by inputing an IF equation into<br> the appropriate cell.              | Easy | [reynolds_and_froude.xlsx](files/reynolds_and_froude.xlsx) | [reynolds_and_froude_key.xlsx.xlsm](files/reynolds_and_froude_key.xlsx.xlsm) |
-| Concrete Price Estimator | Use an IF equation to determine <br>the varying prices of different concrete <br>projects.                                | Medium | [concrete_price_estimator.xlsx](files/concrete_price_estimator.xlsx) | [concrete_price_estimator_key.xlsx](files/concrete_price_estimator_key.xlsx) |
-| Parking | Determine which types and how many<br> vehicles you can park along side<br> a given curb.                                 | Medium | [parking.xlsx](files/parking.xlsx) | [parking_key.xlsx](files/parking_key.xlsx) |
-| Years Left of School | Use IF statements and user <br>inputs/selections to determine how <br>many years that the user<br> has left to finish school. | Hard | [years_left_of_school.xlsx](files/years_left_of_school.xlsx) | [years_left_of_school_key.xlsx](files/years_left_of_school_key.xlsx) |
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Calculate the Reynolds' or Froude's number by inputing an IF equation into the appropriate cell.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/reynolds_and_froude.xlsx">reynolds_and_froude.xlsx</a></div>
+<div class="exercise-cell"><a href="files/reynolds_and_froude_key.xlsx.xlsm">reynolds_and_froude_key.xlsx.xlsm</a></div>
+<div class="exercise-cell">Use an IF equation to determine the varying prices of different concrete projects.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/concrete_price_estimator.xlsx">concrete_price_estimator.xlsx</a></div>
+<div class="exercise-cell"><a href="files/concrete_price_estimator_key.xlsx">concrete_price_estimator_key.xlsx</a></div>
+<div class="exercise-cell">Determine which types and how many vehicles you can park along side a given curb.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/parking.xlsx">parking.xlsx</a></div>
+<div class="exercise-cell"><a href="files/parking_key.xlsx">parking_key.xlsx</a></div>
+<div class="exercise-cell">Use IF statements and user inputs/selections to determine how many years that the user has left to finish school.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/years_left_of_school.xlsx">years_left_of_school.xlsx</a></div>
+<div class="exercise-cell"><a href="files/years_left_of_school_key.xlsx">years_left_of_school_key.xlsx</a></div>
+</div>

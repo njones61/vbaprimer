@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Norm Jones" /><link rel="canonical" href="https://vbaprimer.readthedocs.io/en/latest/03_advanced/03_files/files/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Files - Excel VBA Primer</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../css/custom.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Files";
+        var mkdocs_page_input_path = "03_advanced/03_files/files.md";
+        var mkdocs_page_url = "/en/latest/03_advanced/03_files/files/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/excel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vbnet.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/vba.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Excel VBA Primer
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel Fundamentals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/01_formulas/formulas/">Formulas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/02_vlookup/vlookup/">VLOOKUP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/03_validation/validation/">Validation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/04_names/names/">Names</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/05_operators/operators/">Operators</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/06_iffunction/iffunction/">IF Function</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/07_goalseek/goalseek/">Goal Seek</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/08_charts/charts/">Charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/09_annotation/annotation/">Annotation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../01_excel/10_arrayform/arrayform/">Array Formulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Excel VBA</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/01_gettingstarted/gettingstarted/">Getting Started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/02_macros/macros/">Macros</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/03_controls/controls/">Controls</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/04_ranges/ranges/">Ranges</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/05_msgbox/msgbox/">MsgBox</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/06_variables/variables/">Variables</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/07_objects/objects/">Objects</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/08_ifthen/ifthen/">If Statements</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/09_debug/debug/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/10_loops/loops/">Loops</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/11_arrays/arrays/">Arrays</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/12_strings/strings/">Strings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/13_userforms/userforms/">User Forms</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/14_functions/functions/">Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/15_excelfunctions/excelfunctions/">Excel Functions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/16_subs/subs/">Subs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/17_events/events/">Events</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../02_vba/18_standards/standards/">Standards</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Advanced Topics</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../01_graphics/graphics/">Graphics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../02_email/email/">Email</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Files</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#renaming-the-files">Renaming the Files</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#input-options">Input Options</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code">Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#advanced-file-operations">Advanced File Operations</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#using-filesystemobject">Using FileSystemObject</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filtering-files-by-extension">Filtering Files by Extension</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#error-handling">Error Handling</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#common-use-cases">Common Use Cases</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../04_apps/apps/">Sample Apps</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../05_gas/gas/">Google App Script</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Excel VBA Primer</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Advanced Topics</li>
+      <li class="breadcrumb-item active">Files</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/njones61/vbaprimer/edit/master/docs/03_advanced/03_files/files.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="looping-over-files">Looping Over Files</h1>
+<p>One of the greatest benefits of using VBA with Excel is that you can automate tasks that can ordinarily be time-consuming. One form of automation that can be especially useful is to automatically open a set of files in a folder and open each of the files, make a change to the file content, and save the file. This can be accomplished quite easily with VBA in Excel, especially if the files correspond to Excel spreadsheets.</p>
+<p>In this page, we will work through an example of modifying a set of spreadsheet files via VBA. Using this example as a guide, you can modify the code to fit your circumstances. The files associated with this exercise are in a zip archive and can be downloaded here:</p>
+<ul>
+<li><a href="loopingfiles.xlsm">loopingfiles.xlsm</a></li>
+<li><a href="samplefiles.zip">samplefiles.zip</a></li>
+</ul>
+<p>If you wish to follow along, please download and unzip the files in the zip archive to a folder named "samplefiles". Then open the spreadsheet file ("loopingfiles.xlsm") in Excel.</p>
+<h2 id="renaming-the-files">Renaming the Files</h2>
+<p>When you unzip the samplefiles.zip archive, you should see the following set of files:</p>
+<p><img alt="file_list.png" src="../images/file_list.png" /></p>
+<p>In this case, each of these files is empty, but in other cases they may contain data. Our objective is to open each of these files and copy a table to the main sheet and then save the changes.</p>
+<p>Whenever you loop over files, you must have some systematic way of determining the names of the files in the folder. There used to be a FileSearch object that would list all of the files in a directory, but it was deprecated (discontinued) by Microsoft because it was being used to write viruses. So the simplest thing to do now is to name the files so that we can formulate the file name in code as we iterate through a For loop from 1 to the number of files. Fortunately, it is rather easy to rename the files as shown. If you have an existing set of files to rename, you can do it as follows:</p>
+<ol>
+<li>Select all of the files</li>
+<li>Right-click on the files and select the Rename command.</li>
+<li>Enter a common name ("worksheet" in the example shown above) and hit the return key.</li>
+</ol>
+<p>At this point all files are renamed as follows:</p>
+<p><img alt="file_list2.png" src="../images/file_list2.png" /></p>
+<p>This format is easier to recreate using code (see below).</p>
+<h2 id="input-options">Input Options</h2>
+<p>When you open the spreadsheet file you will see the main page:</p>
+<p><img alt="screenshot.png" src="../images/screenshot.png" /></p>
+<p>The inputs to the code are in three cells: <strong>B11</strong>, <strong>B13</strong>, and <strong>B15</strong>. B11 contains the path to the folder containing the files you wish to modify. B13 contains the prefix used when naming the files. Compare to file list shown above. B15 contains the number of files. Please note that cells B11, B13, and B15 have been named <strong>folderlocation</strong>, <strong>prefix</strong>, and <strong>nfiles</strong>, respectively. You may need to change these values before proceeding.</p>
+<p>Before looking at the code, click on the Sheet2 tab and note the contents:</p>
+<p><img alt="screenshot2.png" src="../images/screenshot2.png" /></p>
+<p>For our example problem, we will be copying this table from the loopingfiles.xlsm workbook to the first sheet in each of the files in the samplefiles folder and saving the changes.</p>
+<h2 id="code">Code</h2>
+<p>Next we will look at the source code associated with the <strong>Fix Files</strong> button.</p>
+<pre><code class="language-vb">Private Sub cmdFixFiles_Click()
+Dim myrow As Integer
+Dim i As Integer
+Dim nfiles As Integer
+Dim filepath As String
+
+'Set the default working directory
+ChDir Range(&quot;folderlocation&quot;)
+
+'Loop through each of the files in the folder
+nfiles = Range(&quot;nfiles&quot;)
+For i = 1 To nfiles
+
+    'Copy the header and table on Sheet2 to the clipboard
+    Sheets(&quot;Sheet2&quot;).Range(&quot;A1:E18&quot;).Copy
+
+    'Formulate a text string identifying the full path to file i
+    filepath = Range(&quot;startpath&quot;) &amp; &quot;\&quot; &amp; Range(&quot;prefix&quot;) &amp; &quot; (&quot; &amp; i &amp; &quot;).xlsx&quot;
+
+    'Open the file
+    Workbooks.Open Filename:=filepath
+
+    'Select the upper left cell and past the clipboard contents
+    ActiveSheet.Range(&quot;A1&quot;).Select
+    ActiveSheet.Paste
+
+    'Fit the column widths
+    ActiveSheet.Columns(&quot;B:B&quot;).EntireColumn.AutoFit
+    ActiveSheet.Columns(&quot;C:C&quot;).EntireColumn.AutoFit
+    ActiveSheet.Columns(&quot;D:D&quot;).EntireColumn.AutoFit
+    ActiveSheet.Columns(&quot;E:E&quot;).EntireColumn.AutoFit
+
+    'Select one of the cells so that the entire table is no longer selected (optional)
+    ActiveSheet.Range(&quot;B4&quot;).Select
+
+    'Save and close the file
+    ActiveWorkbook.Save
+    ActiveWorkbook.Close
+
+    'Go to the next file
+Next i
+
+'Exit cut/copy mode (optional)
+Application.CutCopyMode = False
+
+End Sub
+</code></pre>
+<p>Each of the steps in the code is documented with a comment. Note how the folder location, prefix, and file number are used to generate a complete path to the file as shown on this line:</p>
+<pre><code class="language-vb">'Formulate a text string identifying the full path to file i
+filepath = Range(&quot;startpath&quot;) &amp; &quot;\&quot; &amp; Range(&quot;prefix&quot;) &amp; &quot; (&quot; &amp; i &amp; &quot;).xlsx&quot;
+</code></pre>
+<p>Also, note that once you open another workbook, you have to be very careful how you reference cells and ranges. For example, if you reference cell <strong>A4</strong>, to which workbook does that apply? To ensure that there is no confusion, you should add the <strong>ActiveSheet</strong> or <strong>ActiveWorkbook</strong> prefix to all references to the external workbook after you open it. If you need to refer to the current workbook (the one containing the code) while the other workbook is open, use the prefix <strong>ThisWorkbook</strong> before all sheet or range references.</p>
+<p>If you are not sure how to structure the interaction between your two workbooks, you can always record a macro and perform the steps you wish to perform and then examine the macro code and adapt it to the sample shown above.</p>
+<p>You may wish to try running the code above. You will see the screen flash once for each sample file as the code runs. After running the code, open each of the sample files to verify that the table was properly copied.</p>
+<h2 id="advanced-file-operations">Advanced File Operations</h2>
+<h3 id="using-filesystemobject">Using FileSystemObject</h3>
+<p>For more advanced file operations, you can use the FileSystemObject:</p>
+<pre><code class="language-vb">Sub ProcessFilesWithFSO()
+    Dim FSO As Object
+    Dim folder As Object
+    Dim file As Object
+    Dim filePath As String
+
+    ' Create FileSystemObject
+    Set FSO = CreateObject(&quot;Scripting.FileSystemObject&quot;)
+
+    ' Get folder object
+    Set folder = FSO.GetFolder(Range(&quot;folderlocation&quot;).Value)
+
+    ' Loop through each file in the folder
+    For Each file In folder.Files
+        ' Check if it's an Excel file
+        If Right(file.Name, 4) = &quot;.xlsx&quot; Or Right(file.Name, 4) = &quot;.xlsm&quot; Then
+            filePath = file.Path
+
+            ' Process the file
+            ProcessSingleFile filePath
+        End If
+    Next file
+
+    Set FSO = Nothing
+End Sub
+
+Sub ProcessSingleFile(filePath As String)
+    Dim wb As Workbook
+
+    ' Open the workbook
+    Set wb = Workbooks.Open(filePath)
+
+    ' Make your changes here
+    ' ...
+
+    ' Save and close
+    wb.Save
+    wb.Close
+End Sub
+</code></pre>
+<h3 id="filtering-files-by-extension">Filtering Files by Extension</h3>
+<pre><code class="language-vb">Sub ProcessSpecificFileTypes()
+    Dim FSO As Object
+    Dim folder As Object
+    Dim file As Object
+    Dim extensions() As String
+    Dim i As Integer
+
+    ' Define file extensions to process
+    extensions = Split(&quot;xlsx,xlsm,xls&quot;, &quot;,&quot;)
+
+    Set FSO = CreateObject(&quot;Scripting.FileSystemObject&quot;)
+    Set folder = FSO.GetFolder(Range(&quot;folderlocation&quot;).Value)
+
+    For Each file In folder.Files
+        ' Check if file has one of our target extensions
+        For i = 0 To UBound(extensions)
+            If LCase(Right(file.Name, Len(extensions(i)))) = LCase(extensions(i)) Then
+                ProcessSingleFile file.Path
+                Exit For
+            End If
+        Next i
+    Next file
+
+    Set FSO = Nothing
+End Sub
+</code></pre>
+<h3 id="error-handling">Error Handling</h3>
+<p>It's important to add error handling when processing multiple files:</p>
+<pre><code class="language-vb">Sub ProcessFilesWithErrorHandling()
+    Dim FSO As Object
+    Dim folder As Object
+    Dim file As Object
+    Dim errorCount As Integer
+    Dim successCount As Integer
+
+    errorCount = 0
+    successCount = 0
+
+    On Error Resume Next
+
+    Set FSO = CreateObject(&quot;Scripting.FileSystemObject&quot;)
+    Set folder = FSO.GetFolder(Range(&quot;folderlocation&quot;).Value)
+
+    For Each file In folder.Files
+        If Right(file.Name, 4) = &quot;.xlsx&quot; Then
+            If ProcessSingleFile(file.Path) Then
+                successCount = successCount + 1
+            Else
+                errorCount = errorCount + 1
+            End If
+        End If
+    Next file
+
+    ' Report results
+    MsgBox &quot;Processing complete!&quot; &amp; vbCrLf &amp; _
+            &quot;Successful: &quot; &amp; successCount &amp; vbCrLf &amp; _
+            &quot;Errors: &quot; &amp; errorCount
+
+    Set FSO = Nothing
+End Sub
+
+Function ProcessSingleFile(filePath As String) As Boolean
+    On Error GoTo ErrorHandler
+
+    Dim wb As Workbook
+    Set wb = Workbooks.Open(filePath)
+
+    ' Your processing code here
+    ' ...
+
+    wb.Save
+    wb.Close
+    ProcessSingleFile = True
+    Exit Function
+
+ErrorHandler:
+    If Not wb Is Nothing Then
+        wb.Close SaveChanges:=False
+    End If
+    ProcessSingleFile = False
+End Function
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Always use error handling</strong> - Files can be locked, corrupted, or inaccessible</li>
+<li><strong>Close workbooks properly</strong> - Use proper workbook references and close them explicitly</li>
+<li><strong>Use meaningful variable names</strong> - Makes your code easier to understand and maintain</li>
+<li><strong>Test with a small number of files first</strong> - Verify your logic before processing hundreds of files</li>
+<li><strong>Back up important files</strong> - File processing can sometimes cause data loss</li>
+<li><strong>Use progress indicators</strong> - For long operations, show progress to the user</li>
+</ol>
+<h2 id="common-use-cases">Common Use Cases</h2>
+<ul>
+<li><strong>Batch formatting</strong> - Apply consistent formatting to multiple workbooks</li>
+<li><strong>Data consolidation</strong> - Combine data from multiple files into one master file</li>
+<li><strong>Report generation</strong> - Create reports from multiple data files</li>
+<li><strong>File cleanup</strong> - Remove unnecessary sheets, format data, etc.</li>
+<li><strong>Data validation</strong> - Check multiple files for data quality issues</li>
+</ul>
+<p>This technique of looping over files is one of the most powerful automation capabilities in Excel VBA, allowing you to process hundreds or thousands of files with a single click.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../02_email/email/" class="btn btn-neutral float-left" title="Email"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../04_apps/apps/" class="btn btn-neutral float-right" title="Sample Apps">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/njones61/vbaprimer" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../02_email/email/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../04_apps/apps/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+      <script src="../../../js/mathjax-config.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

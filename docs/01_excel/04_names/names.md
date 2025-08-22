@@ -8,9 +8,9 @@ The objective of the spreadsheet is to perform a set of calculations associated 
 
 | Cell | Formula |
 |------|---------|
-| range   | =(C6^2*SIN(2*C5))/C7 |
-| height  | =(C6^2*(SIN(C5))^2)/(2*C7) |
-| time  | =(2*C6*SIN(C5))/C7 |
+| range | =(C6^2*SIN(2*C5))/C7 |
+| height | =(C6^2*(SIN(C5))^2)/(2*C7) |
+| time | =(2*C6*SIN(C5))/C7 |
 
 These formulas can be compared to the equations shown in the above figure. To make our formulas easier to enter, read, and edit, we will now create a set of cells names and rewrite the formulas. Each cell has a default name based on the column-row combination (C6, D15, etc.). However, we can create an additional name (or alias) for a cell by selecting the cell and typing in a new name in the name box in the upper left corner just above the cells and below the menu. For example, to create a new name for the angle, we select cell C5 and then click in the name box and type in a new name ("alpha") and then hit Return as follows:
 
@@ -20,9 +20,9 @@ We then repeat the same process for cells C5 (v) and C7 (g). Now, we can rewrite
 
 | Cell | Formula |
 |------|---------|
-| range   | =(v^2*SIN(2*alpha))/g |
-| height  | =(v^2*(SIN(alpha))^2)/(2*g) |
-| time  | =(2*v*SIN(alpha))/g |
+| range | =(v^2*SIN(2*alpha))/g |
+| height | =(v^2*(SIN(alpha))^2)/(2*g) |
+| time | =(2*v*SIN(alpha))/g |
 
 Compare these formulas to the first set shown above and note how they more closely resemble the native set of equations shown in the first diagram. The names make the formulas easier to enter and easier to understand. This is especially true of longer formulas and cases where cells on different sheets are referenced.
 
@@ -70,8 +70,21 @@ The workbook used in the examples shown above can be downloaded here:
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 
-| Exercise | Description                                                                                   | Difficulty | Start | Solution |
-|----------|-----------------------------------------------------------------------------------------------|------------|-------|----------|
-| Names | Use cell naming to find the volume and<br> weight of different objects.                       | Easy | [names.xlsm](files/names.xlsm) | [names_key.xlsm](files/names_key.xlsm) |
-| Moment Arm | Use names as inputs to a formula to<br> calculate the moment arm on a lever at <br>different lengths. | Medium | [moment_arm.xlsm](files/moment_arm.xlsm) | [moment_arm_key.xlsm](files/moment_arm_key.xlsm) |
-| Bernoulli Problem | Use names inside of formulas<br> to determine the solution to the <br>bernoulli equation.             | Hard | [bernoulli_problem.xlsm](files/bernoulli_problem.xlsm) | [bernoulli_problem_key.xlsm](files/bernoulli_problem_key.xlsm) |
+<div class="exercise-grid" data-columns="4">
+<div class="exercise-header">Description</div>
+<div class="exercise-header">Difficulty</div>
+<div class="exercise-header">Start</div>
+<div class="exercise-header">Solution</div>
+<div class="exercise-cell">Use cell naming to find the volume and weight of different objects.</div>
+<div class="exercise-cell">Easy</div>
+<div class="exercise-cell"><a href="files/names.xlsm">names.xlsm</a></div>
+<div class="exercise-cell"><a href="files/names_key.xlsm">names_key.xlsm</a></div>
+<div class="exercise-cell">Use names as inputs to a formula to calculate the moment arm on a lever at different lengths.</div>
+<div class="exercise-cell">Medium</div>
+<div class="exercise-cell"><a href="files/moment_arm.xlsm">moment_arm.xlsm</a></div>
+<div class="exercise-cell"><a href="files/moment_arm_key.xlsm">moment_arm_key.xlsm</a></div>
+<div class="exercise-cell">Use names inside of formulas to determine the solution to the bernoulli equation.</div>
+<div class="exercise-cell">Hard</div>
+<div class="exercise-cell"><a href="files/bernoulli_problem.xlsm">bernoulli_problem.xlsm</a></div>
+<div class="exercise-cell"><a href="files/bernoulli_problem_key.xlsm">bernoulli_problem_key.xlsm</a></div>
+</div>
