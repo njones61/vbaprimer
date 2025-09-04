@@ -34,11 +34,11 @@ Next, we will create the deflected beam shape. The best way to do this is with t
 
 ![curve-1.png](images/curve-1.png)
 
-The double-click on the right side of the beam:
+Then double-click on the right side of the beam:
 
 ![curve-2.png](images/curve-2.png)
 
-Note that you have created a nice smooth curve based on these three points. If you want to fine-tune the shape of the curve, select the curve and then select the **Edit Shape|Edit Points** command from the Insert Shapes section of the Drawing Tools ribbon.
+Note that you have created a nice smooth curve based on these three points. If you want to fine-tune the shape of the curve, select the curve and then select the **Edit Shape|Edit Points** command from the **Insert Shapes** section of the **Drawing Tools** ribbon.
 
 ![editpoints1.png](images/editpoints1.png)
 
@@ -68,7 +68,7 @@ Now we are ready to apply the lines associated with the dimensioning. Using a co
 
 ![dimension-lines.png](images/dimension-lines.png)
 
-As you create the lines, you may want to simply duplicate the existing lines. Also, if you need to align some of the shapes, select multiple shapes using the shift key and then select the Align menu in the Arrange section of the Drawing Tools ribbon.
+As you create the lines, you may want to simply duplicate the existing lines. Also, if you need to align some of the shapes, select multiple shapes using the shift key and then select the **Align** menu in the **Arrange** section of the **Drawing Tools** ribbon.
 
 ![aligntools.png](images/aligntools.png)
 
@@ -90,7 +90,7 @@ To insert a new equation, select a cell somewhere in the vicinity of where you w
 
 ![equation-menu.png](images/equation-menu.png)
 
-If you click on the down arrow, the menu lists some frequently-used equations for cases where you want to start with something and then modify. But we need to start from scratch, so we need to click on top part of the Equation button. This inserts a new equation and opends up the **Equation Tools** ribbon.
+If you click on the down arrow, the menu lists some frequently-used equations for cases where you want to start with something and then modify. But we need to start from scratch, so we need to click on top part of the **Equation** button. This inserts a new equation and opends up the **Equation Tools** ribbon.
 
 ![equation-ribbon.png](images/equation-ribbon.png)
 
@@ -144,7 +144,7 @@ The ungroup command can be used to undo the process of grouping a set of objects
 
 ## Display Order
 
-When working with shapes that are filled, sometimes one objects can obscure another. You can directly control the order in which the objects are displayed using the options in the Bring Forward and Send Backward menus in the Arrange section of the Drawing Tools ribbon.
+When working with shapes that are filled, sometimes one objects can obscure another. You can directly control the order in which the objects are displayed using the options in the **Bring Forward** and **Send Backward** menus in the **Arrange** section of the **Drawing Tools** ribbon.
 
 ![arrange.png](images/arrange.png)
 
@@ -152,7 +152,7 @@ When working with shapes that are filled, sometimes one objects can obscure anot
 
 The workbook used in the examples shown above can be downloaded here:
 
-[simplebeam.xlsx](files/simplebeam.xlsx)<-- Without annotation. Start here if you want to try creating the drawings and equations [simplebeam-key.xlsx](files/simplebeam-key.xlsx)	<-- With completed annotation.
+[simplebeam.xlsx](files/simplebeam.xlsx)<-- Without annotation. Start here if you want to try creating the drawings and equations<br>[simplebeam-key.xlsx](files/simplebeam-key.xlsx)	<-- With completed annotation.
 
 ## Exercises
 

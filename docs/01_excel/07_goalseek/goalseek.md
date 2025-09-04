@@ -1,6 +1,6 @@
 # Using the Goal Seek and Solver Tools
 
-There are many cases when performing computations in Excel where we need to solve an equation that is either difficult or impossible to solve directly. Therefore, we need to solve it using some sort of iterative process. The Goal Seek and Solver tools are perfectly suited for these cases. For example, consider the following workbook:
+There are many cases when performing computations in Excel where we need to solve an equation that is either difficult or impossible to solve directly. Therefore, we need to solve it using some sort of iterative process. The **Goal Seek** and **Solver** tools are perfectly suited for these cases. For example, consider the following workbook:
 
 ![workbook-1.png](images/workbook-1.png)
 
@@ -28,7 +28,7 @@ To find a root, we can enter a guess (0.4 for starters) into F4 and iteratively 
 
 ## Goal Seek
 
-A more efficient way to solve for the roots is to let Excel perform the iterative calculations using the Goal Seek tool. This tool is located in the Data ribbon under the What-If Analysis menu. It has three inputs. For the case shown above, the inputs should be like this:
+A more efficient way to solve for the roots is to let Excel perform the iterative calculations using the Goal Seek tool. This tool is located in the **Data** ribbon under the **What-If Analysis** menu. It has three inputs. For the case shown above, the inputs should be like this:
 
 ![goalseek-1.png](images/goalseek-1.png)
 
@@ -55,13 +55,13 @@ There is another tool in Excel for performing iterative calculations called the 
 5. If **Solver Add-in** is not listed in the **Add-Ins available** box, click **Browse** to locate the add-in
 6. If you get prompted that the **Solver Add-in** is not currently installed on your computer, click **Yes** to install it.
 
-After you load the Solver Add-in, the Solver command is available in the Analysis group on the Data tab. These steps only need to be completed once.
+After you load the Solver Add-in, the **Solver** command is available in the **Analysis** group on the **Data** tab. These steps only need to be completed once.
 
 After launching the Solver, the following window appears:
 
 ![solver-1.png](images/solver-1.png)
 
-In general, the Solver is like Goal Seek in that it iteratively changes one (or more) input cell(s) until some condition is met. But in this case there are three possible conditions (max, min, value of) and a set of constraints can be defined. When we use the Value Of option, it is essentially the same as Goal Seek. Using the options shown above, we can solve for one of the roots of the parabola by clicking the Solve button. Doing so brings up the following message:
+In general, the Solver is like Goal Seek in that it iteratively changes one (or more) input cell(s) until some condition is met. But in this case there are three possible conditions (max, min, value of) and a set of constraints can be defined. When we use the **Value Of** option, it is essentially the same as Goal Seek. Using the options shown above, we can solve for one of the roots of the parabola by clicking the **Solve** button. Doing so brings up the following message:
 
 ![solver-2.png](images/solver-2.png)
 
@@ -71,7 +71,7 @@ Generally you want to select the OK option to keep the solver solution. The solu
 
 which is the same as above (the starting value was near the second root), but a little more accurate.
 
-The real power of the solver is to perform optimization using the Max and Min options. This is something that cannot be done with Goal Seek. For example, suppose we wanted to find the x location corresponding the lowest point on the parabola. We could simply enter a guess for the x value and run the Solver with the following options:
+The real power of the solver is to perform optimization using the **Max** and **Min** options. This is something that cannot be done with Goal Seek. For example, suppose we wanted to find the x location corresponding the lowest point on the parabola. We could simply enter a guess for the x value and run the Solver with the following options:
 
 ![solver-4.png](images/solver-4.png)
 
@@ -89,7 +89,7 @@ The workbook used in the examples shown above can be downloaded here:
 
 [parabola.xlsx](files/parabola.xlsx)
 
-$$ Exercises
+## Exercises
 
 You may wish to complete following exercises to gain practice with and reinforce the topics covered in this chapter:
 

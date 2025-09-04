@@ -22,7 +22,7 @@ The syntax of the IF function is as follows:
 = IF(logical_test, value_if_true, value_if_false)
 ```
 
-The logical_test argument needs to be a conditional expression that returns a TRUE or FALSE value. Conditional expression are typically formed with one of the following operators:
+The **logical_test** argument needs to be a conditional expression that returns a TRUE or FALSE value. Conditional expression are typically formed with one of the following operators:
 
 | Operator | Example | Description |
 |:--------:|:------------:|---------------------------|
@@ -36,7 +36,7 @@ The logical_test argument needs to be a conditional expression that returns a TR
 | OR | OR(A4=0, B5=0) | True if either or both statements are true. |
 | NOT | NOT(A4=0) | True if the statement is false. |
 
-If the conditional expression evaluates to true, the value_if_true argument is used. Otherwise, the value_if_false argument is used. These arguments can any type of expression, including constants, cells references, or formulas. Here are some additional example formulas that use the IF function:
+If the conditional expression evaluates to true, the **value_if_true** argument is used. Otherwise, the **value_if_false** argument is used. These arguments can any type of expression, including constants, cells references, or formulas. Here are some additional example formulas that use the IF function:
 
 ```excel
 =IF(A4<>0, 1/A4, "Error - Divide by Zero!")
@@ -61,7 +61,7 @@ in an Excel formula and "x" is stored in cell B5. It would be tempting to use th
 for the first argument in the IF function. However, this creates a useless and incorrect expression that will always return TRUE, regardless of the contents of cell B5. This is because a compound expression like this is evaluated one operator at a time from left to right. In other words, the first part of the expression:
 
 ```excel
-0<=B5<=5
+0<=B5
 ```
 
 
@@ -83,13 +83,13 @@ Both of these statements will then evaluate to True, regardless of the value of 
 (0<=B5)<=5
 ```
 
-which is fundamentally different from the mathematical expression we are trying to emulate. To solve this problem correctly, we need to use the AND function as follows:
+which is fundamentally different from the mathematical expression we are trying to emulate. To solve this problem correctly, we need to use the **AND** function as follows:
 
 ```excel
 AND(0<=B5, B5<=5)
 ```
 
-This function returns True if both statements are true. Otherwise it returns False. Likewise, there is an OR function that returns True if either or both of the two expressions evaluate to True.
+This function returns True if both statements are true. Otherwise it returns False. Likewise, there is an **OR** function that returns True if either or both of the two expressions evaluate to True.
 
 ## Nested IF Functions
 

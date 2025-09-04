@@ -15,7 +15,7 @@ The first step in creating a chart is selecting the type of chart to use. This w
 | ![type-pie.png](images/type-pie.png) |Pie | Use this chart to show proportions of a whole. Use it when the total of your numbers is 100%. |
 | ![type-scatter.png](images/type-scatter.png) |Scatter (X,Y) | Use this chart type to show the relationship between sets of values. |
 
-For scientific and engineering applications, the most common type of chart is the **Scatter (X,Y)** chart, which is sometimes called an XY Scatter chart. As the "XY" part of the name implies, this chart is used to represent one set of data (Y) which is dependent upon, or related to another set of data (X), both of which are numeric values. In other words:
+For scientific and engineering applications, the most common type of chart is the **Scatter (X,Y)** chart, which is sometimes called an **XY Scatter** chart. As the "XY" part of the name implies, this chart is used to represent one set of data (Y) which is dependent upon, or related to another set of data (X), both of which are numeric values. In other words:
 
 $y = f(x)$
 
@@ -29,7 +29,7 @@ The steps to creating a new chart are as follows:
 2. Select the **Insert** tab.
 3. In the **Charts** section, click on one of the chart type icons and then select the specific type of chart you wish to create.
 
-To illustrate the process, consider the following example worksheet. This is a variation of the parabola worksheet described in the Goal Seek and Solver chapter.
+To illustrate the process, consider the following example worksheet. This is a variation of the parabola worksheet described in the [Goal Seek and Solver](https://vbaprimer.readthedocs.io/en/latest/01_excel/07_goalseek/goalseek/) chapter.
 
 ![parabola-start.png](images/parabola-start.png)
 
@@ -37,11 +37,11 @@ Our objective is to create an XY Scatter chart of the XY values shown in the tab
 
 $y = x^2 - 3x + 1$
 
-for a the range of x values varying from -1 to 4. To create the chart, we select the cells in the range **B12:B22** and follow the steps outlined above as follows:
+for a range of x values varying from -1 to 4. To create the chart, we select the cells in the range **B12:B22** and follow the steps outlined above as follows:
 
 ![insert-chart.png](images/insert-chart.png)
 
-Note that the chart type selected was **Scatter with Smoth Lines**. The "Smooth Lines" part means that a smooth curve is fit the to XY points that interpolates the points and provides a natural curvature between the points using some type of spline function. This is typically the best option to select. By contrast, this is what the "Straight Lines" option looks like:
+Note that the chart type selected was **Scatter with Smooth Lines**. The "Smooth Lines" part means that a smooth curve is fit the to XY points that interpolates the points and provides a natural curvature between the points using some type of spline function. This is typically the best option to select. By contrast, this is what the "Straight Lines" option looks like:
 
 ![straight-lines.png](images/straight-lines.png)
 
@@ -53,7 +53,7 @@ And the **Markers Only** option:
 
 ![markers-only.png](images/markers-only.png)
 
-As a matter of style, markers should only be used when there is a some kind of significance to each of the XY pairs. For example, perhaps the XY pairs represent data collected in the field or lab and each point corresponds to a sample or measurement. In many cases, however, the XY values represent some underlying fuction (such as the case shown above) and the points are arbitrarily selected. In this case, markers should not be used as they simply detract from the display of the function.
+As a matter of style, markers should only be used when there is a some kind of significance to each of the XY pairs. For example, perhaps the XY pairs represent data collected in the field or lab and each point corresponds to a sample or measurement. In many cases, however, the XY values represent some underlying function (such as the case shown above) and the points are arbitrarily selected. In this case, **markers should not be used** as they simply detract from the display of the function.
 
 ## Formatting a Chart
 
@@ -81,7 +81,8 @@ Clicking the **Reset** button would revert back to the automatic setting. After 
 
 In some cases, after creating the chart we wish to change the set of cells associated with the chart (i.e., the "data source"). For example, perhaps we have deleted some of our XY pairs or we have extended the table to add additional pairs. When we do so, the chart is not automatically updated to reflect the change; we must manually make the correction. To change the data source, you can do the following:
 
-Click on the curve in the chart to select it. This will display the range of cells associated with the chart. Using the handles at the corners of the highlighted ranges, drag the corners to resize the selection to the desired range.
+1. Click on the curve in the chart to select it. This will display the range of cells associated with the chart.
+2. Using the handles at the corners of the highlighted ranges, drag the corners to resize the selection to the desired range.
 
 ![data-source-1.png](images/data-source-1.png)
 

@@ -28,11 +28,11 @@ Compare these formulas to the first set shown above and note how they more close
 
 ## Relative vs. Absolute
 
-It is important to note that using a cell name in a formula represents an absolute reference. It is not possible to refer to a cell via a name as a relative reference unless you are using array formulas. This is also an advantage to named cells because you can simply type the cell name without worrying about the "$" symbols associated with an absolute reference.
+It is important to note that using a cell name in a formula represents an **absolute** reference. It is not possible to refer to a cell via a name as a relative reference unless you are using [array formulas](https://vbaprimer.readthedocs.io/en/latest/01_excel/10_arrayform/arrayform/). This is also an advantage to named cells because you can simply type the cell name without worrying about the "$" symbols associated with an absolute reference.
 
 ## Ranges
 
-Names can not only be applied to individual cells, but also to ranges of cells. For example, you can select the range B14:D10 and call it "xytable" or something. This is especially useful when writing formulas using the VLOOKUP function where you need to make an absolute reference to a range of cells for the vlookup_table argument.
+Names can not only be applied to individual cells, but also to ranges of cells. For example, you can select the range B14:D10 and call it "xytable" or something. This is especially useful when writing formulas using the [VLOOKUP](https://vbaprimer.readthedocs.io/en/latest/01_excel/02_vlookup/vlookup/) function where you need to make an absolute reference to a range of cells for the vlookup_table argument.
 
 ## Naming Rules
 
@@ -46,7 +46,7 @@ You can assign as many names as you like to the same cell or range of cells. Any
 
 ## Name Manager
 
-In addition to using the name box as described above, you can also name a cell using the Name Manager button located in the Fomulas ribbon:
+In addition to using the name box as described above, you can also name a cell using the **Name Manager** button located in the Formulas ribbon:
 
 ![namebutton.png](images/namebutton.png)
 
@@ -58,7 +58,7 @@ This dialog can be used to edit and/or delete names, or to create new names.
 
 ## Deleting a Name
 
-One needs to be careful when deleting a name associated with a cell or range. You CANNOT select the cell or range and then delete the name from the name box in the upper left corner of the worksheet. This may appear to delete the name but it does not. The only way to delete a name is using the Name Manager.
+One needs to be careful when deleting a name associated with a cell or range. You CANNOT select the cell or range and then delete the name from the name box in the upper left corner of the worksheet. This may appear to delete the name but it does not. The only way to delete a name is using the **Name Manager**.
 
 ## Sample Workbook
 

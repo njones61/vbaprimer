@@ -47,7 +47,7 @@ Note the resulting format of the formula:
 The curly braces indicate that is an array formula. If we wish to edit the formula, we can click on the formula bar and make changes, but we must always hit _Ctrl-Shift-Enter_ when we are done.
 
 !!! Note
- If you are using excel through a Microsoft 365 subscription, you may not need to hit _Ctrl-Shift-Enter_ to create an array formula. However, it is good to know how to so that if you are ever on a different version of Excel that requires the _Ctrl-Shift-Enter_ method, you will still be able to use array formulas.
+    If you are using excel through a Microsoft 365 subscription, you may not need to hit _Ctrl-Shift-Enter_ to create an array formula. However, it is good to know how to so that if you are ever on a different version of Excel that requires the _Ctrl-Shift-Enter_ method, you will still be able to use array formulas.
 
 An array formula is similar to performing vector algebra. The formula essentially multiplies the units column by the wholesale price column. The result of multiplying these two vertical arrays is a vertical array of same dimension (12 items) where each item is equal to the number of units times the price for that particular entry (row in this case). The equation applies to the entire column in the **Totals|Wholesale** part of the table. One advantage of using an array formula in a case like this is that the resulting formula is simple and intuitive.
 
@@ -65,7 +65,7 @@ and finish with _Ctrl-Shift-Enter_. At this point, the table is complete:
 
 Now we will focus on the bottom section where we will perform some summary calculations based on our sales totals using functions. There are many Excel functions such as **Sum()** or **Average()** that take an array as input and return a single number as output. We will use these formulas in combination with array algebra to create some interesting results.
 
-First of all, we calculate the wholesale total by calculating the sum of the number of units times the wholesale price. We could do that by calculating the sum of the **Totats|Wholesale** column, but with an array formula, we can perform the calculation without using this column. This is one of the advantages of array formulas is that we do not need any intermediate columns in order to some calculations involving multi-cell ranges. We will enter the following array formula in cell **D20**:
+First of all, we calculate the wholesale total by calculating the sum of the number of units times the wholesale price. We could do that by calculating the sum of the **Totals|Wholesale** column, but with an array formula, we can perform the calculation without using this column. This is one of the advantages of array formulas is that we do not need any intermediate columns in order to some calculations involving multi-cell ranges. We will enter the following array formula in cell **D20**:
 
 ```excel
 =SUM(units*pw)
@@ -77,7 +77,7 @@ and we get value of $4,865.00. Similarly, we can use the formula:
 =SUM(units*pr)
 ```
 
-to calculate the retail total (). Once again, after typing the formulas, we finish with Ctrl-Shift-Enter and the formulas are displayed with curly braces.
+to calculate the retail total (). Once again, after typing the formulas, we finish with _Ctrl-Shift-Enter_ and the formulas are displayed with curly braces.
 
 ```excel
 {=SUM(units*pw)}
@@ -85,7 +85,7 @@ to calculate the retail total (). Once again, after typing the formulas, we fini
 {=SUM(units*pr)}
 ```
 
-Next we will calculate the total profit as the sum of the retail totals minus the sum of the wholesale totals in cell D22 using the following formula.
+Next we will calculate the total profit as the sum of the retail totals minus the sum of the wholesale totals in cell **D22** using the following formula.
 
 ```excel
 =SUM(tr-tw)
@@ -97,7 +97,7 @@ Note that we use the wholesale totals and retail totals columns in this calculat
 =SUM(units*pr-units*pw)
 ```
 
-In cell D23, we will calculate the maximum markup (difference between retail and wholesale prices) as follows:
+In cell **D23**, we will calculate the maximum markup (difference between retail and wholesale prices) as follows:
 
 ```excel
 =MAX(pr-pw)
@@ -115,7 +115,7 @@ The maximum profit (difference between retail and wholesale totals) can be compu
 =MAX(tr-tw)
 ```
 
-Finally, in cell **D26** we wish to compute the total high-price profit. The high-price profit is defined as the profit on items were the retail price is greater than \$50. In order to calculate this correctly we need to compute a sum of only those items where the prices greater than \$50. In order to do this we need to combine both the **IF()** funciton and the **SUM()** function as follows:
+Finally, in cell **D26** we wish to compute the total high-price profit. The high-price profit is defined as the profit on items were the retail price is greater than \$50. In order to calculate this correctly we need to compute a sum of only those items where the prices greater than \$50. In order to do this we need to combine both the **IF()** function and the **SUM()** function as follows:
 
 ```excel
 =SUM(IF(pr>50,tr-tw,0))
@@ -133,7 +133,7 @@ One caveat associated with using array formulas in Excel is that you have to be 
 
 [http://dailydoseofexcel.com/archives/2004/12/04/logical-operations-in-array-formulas/](http://dailydoseofexcel.com/archives/2004/12/04/logical-operations-in-array-formulas/)
 
-The workarounds rely on the fact that the value of True is equal to the numerical value of 1 and a value of False is equal to the numerical value of 0.
+The workarounds rely on the fact that the value of **True** is equal to the numerical value of **1** and a value of **False** is equal to the numerical value of **0**.
 
 ## Sample Workbook
 

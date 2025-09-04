@@ -10,7 +10,7 @@ The objective of this exercise is to determine the appropriate unit weight for e
 
 ## Data Validation
 
-Before using the VLOOKUP function, we need to enter a set of materials in the Material column. We need to be careful as we do this because due to the way the VLOOKUP function works, we need to ensure that the items in the Materials column are spelled exactly the same way they are spelled in the unit weight table at the top. We can do this with a tool called Data Validation. This process is described in the Data Validation chapter.
+Before using the VLOOKUP function, we need to enter a set of materials in the Material column. We need to be careful as we do this because due to the way the VLOOKUP function works, we need to ensure that the items in the Materials column are spelled exactly the same way they are spelled in the unit weight table at the top. We can do this with a tool called **Data Validation**. This process is described in the [Data Validation](https://vbaprimer.readthedocs.io/en/latest/01_excel/03_validation/validation/) chapter.
 
 ## VLOOKUP Function
 
@@ -60,7 +60,7 @@ Note that the weight values in the first column of the weight-category table at 
 
 ![rangelookup-2.png](images/rangelookup-2.png)
 
-Notice that the last argument (range_lookup) has a value of TRUE. This means that we take the lookup_value ("235.6" in this case) and we look through the first column of the table until we find a row where the value on the row is less than or equal to the lookup_value and the value on the next row is greater than the lookup_value. In this case, the match occurs on the first row and so the resulting value from column 2 is "Ultra Light". After copying the formula to the rest of the Category column, the resulting values are as follows:
+Notice that the last argument (range_lookup) has a value of **TRUE**. This means that we take the lookup_value ("235.6" in this case) and we look through the first column of the table until we find a row where the value on the row is less than or equal to the lookup_value and the value on the next row is greater than the lookup_value. In this case, the match occurs on the first row and so the resulting value from column 2 is "Ultra Light". After copying the formula to the rest of the Category column, the resulting values are as follows:
 
 ![rangelookup-3.png](images/rangelookup-3.png)
 
@@ -72,28 +72,28 @@ Occasionally it is useful to do a two-dimensional lookup where a value is found 
 
 ![tempelev.png](images/tempelev.png)
 
-Starting at row 24, another table is listed and the objective is to fill in the Temp column with a formula that looks up the temp corresponding to the elevation from column C and the month associated with the date provided in column B. This requires a double lookup. We use VLOOKUP to find the row we need based on a range lookup of elevation using the VLOOKUP function. Then, for the third argument to VLOOKUP, we need to determine which column to use based on the month desired. To find the right column based on the month, we first need to find the month label ("Jan", "Feb", etc.) from a date value. This can be accomplished using the TEXT function which takes a date as an argument and returns the month or day value depending on the format specified by the second argument as follows:
+Starting at row 24, another table is listed and the objective is to fill in the **Temp** column with a formula that looks up the temp corresponding to the elevation from column **C** and the month associated with the date provided in column **B**. This requires a double lookup. We use VLOOKUP to find the row we need based on a range lookup of elevation using the VLOOKUP function. Then, for the third argument to VLOOKUP, we need to determine which column to use based on the month desired. To find the right column based on the month, we first need to find the month label ("Jan", "Feb", etc.) from a date value. This can be accomplished using the **TEXT** function which takes a date as an argument and returns the month or day value depending on the format specified by the second argument as follows:
 
 ```
 =TEXT(B24,"MMM")
 ```
 
-For the values shown, the function would return "Mar". Then we need to use this text string to automatically find the index of the column corresponding to this month. This can be done with the MATCH function as follows:
+For the values shown, the function would return "**Mar**". Then we need to use this text string to automatically find the index of the column corresponding to this month. This can be done with the **MATCH** function as follows:
 
 ```
 =MATCH(TEXT(B24,"MMM"),$C$5:$N$5,0)
 ```
 
-The first argument to the MATCH funciton is the lookup value, the second argument is an array (row or column of values) and the third argument indicates the type of match to perform (a value of 0 tells it to find an exact match). The function looks through the array to find the lookup value and returns the index of the item if found. For the arguments shown, the function would return a value of 3. At this point, we are ready to use the VLOOKUP function. We would formulate the function call as follows:
+The first argument to the MATCH function is the lookup value, the second argument is an array (row or column of values) and the third argument indicates the type of match to perform (a value of **0** tells it to find an exact match). The function looks through the array to find the lookup value and returns the index of the item if found. For the arguments shown, the function would return a value of **3**. At this point, we are ready to use the VLOOKUP function. We would formulate the function call as follows:
 
 ![tempelev2.png](images/tempelev2.png)
 
-Note that we are using a range lookup on elevation so the last argument to VLOOKUP is TRUE.
+Note that we are using a range lookup on elevation so the last argument to VLOOKUP is **TRUE**.
 
 ## Sample Workbooks
 The workbooks used in the examples shown above can be downloaded here:
 
-[cylinders2.xlsx](files/cylinders2.xlsx) [tempvselev.xlsx](files/tempvselev.xlsx)
+[cylinders2.xlsx](files/cylinders2.xlsx)<br>[tempvselev.xlsx](files/tempvselev.xlsx)
 
 ## Exercises
 

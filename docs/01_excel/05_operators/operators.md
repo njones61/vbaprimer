@@ -8,7 +8,7 @@ The objective of the spreadsheet is to solve for the roots of a quadratic equati
 
 >$ax^2 + bx + c = 0$
 
-using the two equations shown above. Let's focus on the euqation for root 1 which would be entered in cell D5. How should one go about transforming the native equation into a formula that is properly interpreted by Excel? Consider the following potential solution:
+using the two equations shown above. Let's focus on the equation for root 1 which would be entered in cell D5. How should one go about transforming the native equation into a formula that is properly interpreted by Excel? Consider the following potential solution:
 
 ```excel
 =-B5+B5^2-4*A5*C5^0.5/2*A5
@@ -58,7 +58,7 @@ The correct answer is (d). But how do we know this? One can always very explicit
 | 2 | * / | Multiplication and division |
 | 3 | + - | Addition and subtraction |
 
-- Within levels 2 and 3, operations are carried out from left to right. So, let's reexamine our formula from above:
+Within levels 2 and 3, operations are carried out from left to right. So, let's reexamine our formula from above:
 
 ```excel
 =x+y*z^p/2*x
@@ -126,7 +126,3 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-cell"><a href="files/friction_factor.xlsm">friction_factor.xlsm</a></div>
 <div class="exercise-cell"><a href="files/friction_factor_key.xlsm">friction_factor_key.xlsm</a></div>
 </div>
-Description	Difficulty	Start	Solution
-Headloss - Use the order of operations to calculate the fluid headloss in a pipe.	Easy	[headloss.xlsm](files/headloss.xlsm)	[headloss_key.xlsm](files/headloss_key.xlsm)
-Operators - Calculate the equations using formulas and taking into consideration the appropriate order of operations.	Medium	operators.xlsm	operators_key.xlsm
-Friction Factor - Use the correct order of operations to calculate the friction factor.	Hard	friction_factor.xlsm	friction_factor_key.xlsm
