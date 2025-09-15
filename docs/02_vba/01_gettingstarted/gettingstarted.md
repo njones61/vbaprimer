@@ -8,13 +8,13 @@ Writing VBA code for Excel is easy and fun!! Once you learn a few basics, you wi
 
 The first step in adding Visual Basic to your spreadsheet is to turn on the **Developer** tab. This is not a default part of the ribbon, so you may need to turn it on as follows:
 
-1. Select the **File|Options** menu command.
-2. Click on the **Customize Ribbon** button on the left.
-3. Turn on the **Developer** option shown in the **Main Tabs** section on the right.
+>1. Select the **File|Options** menu command.
+>2. Click on the **Customize Ribbon** button on the left.
+>3. Turn on the **Developer** option shown in the **Main Tabs** section on the right.
 
 ![exceloptions.png](images/exceloptions.png)
 
-4. Click **OK** to exit.
+>4. Click **OK** to exit.
 
 You should now see the **Developer** tab. This is where we interact with our VB code.
 
@@ -44,8 +44,8 @@ The **View Code** button brings up the Visual Basic Editor window shown above.
 
 Since VBA is such a flexible and powerful scripting environment, it also happens to be a popular method for writing viruses. For example, it is possible to write scripts that are automatically executed whenever a spreadsheet is opened. The script could theoretically attempt to do some damage to your computer (delete files, etc.) once it executes. To minimize the chance that a malicious script could cause damage, Microsoft turns on some default layers of security over VBA scripts. Before we can start writing VBA code, we need to adjust those settings.
 
-1. Go to the Developer tab.
-2. Click on Macro Security
+>1. Go to the Developer tab.
+>2. Click on Macro Security
 
 You will then be presented with the following options:
 

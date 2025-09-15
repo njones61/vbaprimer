@@ -72,17 +72,17 @@ Dim n As Integer, name As String, birthday As Date
 
 The advantage of explicitly declaring types is that if you ever try to store something of one type in a variable of another type, you will get an error message. Here are the most commonly-used variable types in VBA:
 
-| Type | Mem | Range |
-|------|-----|-------|
-| Boolean | 1B | True/False |
-| Currency | 8B | -922,337,203,685,477.5808 to 922,337,203,685,477.5807 |
-| Date | 8B | January 1, 100 to December 31, 9999 |
-| Single (single precision floating point numbers) | 4B | +/-1e-45 to +/-1e+38 |
-| Double (double precision floating point numbers) | 8B | +/-1e-324 to +/-1e+308 |
-| Integer (single precision whole numbers) | 2B | -32,768 to 32,767 |
-| Long (double precision whole numbers) | 4B | -2,147,483,648 to 2,147,483,647 |
-| String | Varies | 0 to ~2 billion characters |
-| Variant | Varies | All of the above |
+| Type                                             |   Mem   |                         Range                          |
+|:-------------------------------------------------|:-------:|:------------------------------------------------------:|
+| Boolean                                          |   1B    |                       True/False                       |
+| Currency                                         |   8B    | -922,337,203,685,477.5808 to 922,337,203,685,477.5807  |
+| Date                                             |   8B    |          January 1, 100 to December 31, 9999           |
+| Single (single precision floating point numbers) |   4B    |                  +/-1e-45 to +/-1e+38                  |
+| Double (double precision floating point numbers) |   8B    |                 +/-1e-324 to +/-1e+308                 |
+| Integer (single precision whole numbers)         |   2B    |                   -32,768 to 32,767                    |
+| Long (double precision whole numbers)            |   4B    |            -2,147,483,648 to 2,147,483,647             |
+| String                                           | Varies  |               0 to ~2 billion characters               |
+| Variant                                          | Varies  |                    All of the above                    |
 
 *Source: [MSDN - Visual Basic for Applications Reference, Data Type Summary](http://msdn.microsoft.com/en-us/library/aa263420(v=vs.60).aspx)*
 
@@ -134,8 +134,8 @@ If you are ever in doubt, there is no harm in assigning a value to a variable be
 
 When coming up with names for your variables, a few simple rules must be followed:
 
-1. You can only use the characters a-z, A-Z, 0-9, and the underscore character ("_").
-2. You cannot use reserved VB words such as "If", "Dim", etc.
+>1. You can only use the characters a-z, A-Z, 0-9, and the underscore character ("_").
+>2. You cannot use reserved VB words such as "If", "Dim", etc.
 
 You should also try to make your variable names reflective of the variable usage when possible. For example, use "last_name", "first_name" rather than "x1", "x2" if you are going to store names in your variables.
 

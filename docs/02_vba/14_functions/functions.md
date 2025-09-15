@@ -146,7 +146,7 @@ z = my_min(x, y)
 
 ## Arguments - ByVal vs. ByRef
 
-If you call a VB function from someone else in your VB code, you need to be careful how you handle the arguments. In most cases, the arguments are used as input values to our computations and we don't attempt to change the values of the arguments. But if you do change the values of the arguments, you need to be understand what happens. For example, consider the following code.
+If you call a VB function from someone else in your VB code, you need to be careful how you handle the arguments. In most cases, the arguments are used as input values to our computations and we don't attempt to change the values of the arguments. But if you do change the values of the arguments, you need to understand what happens. For example, consider the following code.
 
 ```vb
 Function foo(x As Double) As Double

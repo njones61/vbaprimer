@@ -185,10 +185,10 @@ So what is the advantage of the R1C1 notation? If you need to modify the formula
 
 | R1C1 Expression | Equivalent Expression* |
 |-----------------|------------------------|
-| `R[-4]C:R[-2]C` | F7:F9 |
-| `R[+2]C:R[+4]C` | F13:F15 |
-| `R4C2:RC[-1]` | $B$4:E11 |
-| `RC:R15C10` | F11:$J$15 |
+| `R[-4]C:R[-2]C` | F7:F9                  |
+| `R[+2]C:R[+4]C` | F13:F15                |
+| `R4C2:RC[-1]` | \$B\$4:E11             |
+| `RC:R15C10` | F11:\$J\$15            |
 
 *Assumes reference cell = F11
 

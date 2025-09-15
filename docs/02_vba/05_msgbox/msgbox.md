@@ -6,7 +6,7 @@ There are many occasions when programming where it is convenient to show a promp
 
 MsgBox is used to display a simple message to the user. Here is the syntax:
 
-![syntax_msgbox.png](images/syntax_msgbox.png)
+>![syntax_msgbox.png](images/syntax_msgbox.png)
 
 The last two arguments (HelpFile, Context) are rarely used. The other arguments are described below.
 
@@ -98,7 +98,7 @@ This code brings up:
 
 InputBox is very similar to MsgBox, but it is used when you need to prompt the user to input some text (or a number or a date) before you execute some code. The syntax is as follows:
 
-![syntax_inputbox.png](images/syntax_inputbox.png)
+>![syntax_inputbox.png](images/syntax_inputbox.png)
 
 ### Prompt
 

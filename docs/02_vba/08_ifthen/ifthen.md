@@ -74,14 +74,14 @@ If x = 0 Then y = 0 Else y = 1 / x
 
 Every If statement requires at least one conditional expression. A conditional expression is an expression that returns either True or False when evaluated. Conditional expressions are generally formulated using a binary conditional operator. A binary operator takes two arguments, one on each side of the operator. Here is a list of the commonly used operators:
 
-| Operator | Symbol | Example |
-|----------|--------|---------|
-| Equal | = | a = b |
-| Not equal | <> | a <> b |
-| Less than | < | x < y |
-| Greater than | > | p > q |
-| Less than Or equal to | <= | x <= 5.5 |
-| Greater than or equal to | >= | y >= p |
+| Operator                 |  Symbol  |  Example  |
+|:-------------------------|:--------:|:---------:|
+| Equal                    |    =     |   a = b   |
+| Not equal                |    <>    |  a <> b   |
+| Less than                |    <     |   x < y   |
+| Greater than             |    >     |   p > q   |
+| Less than Or equal to    |    <=    | x <= 5.5  |
+| Greater than or equal to |    >=    |  y >= p   |
 
 Multiple conditional expressions can be combined with the **And** and **Or** operators. With the And operator, the combined expression is true if both conditions are true. With the Or operator, the combined expression is true if either of the two conditions is true. For example,
 
@@ -119,7 +119,7 @@ Notice that Not True → False and Not False → True.
 
 When doing computations, it is common to need to determine if a number is inside a range. For example, in mathematics it is common two write a statement like this:
 
-> 0 ≤ x ≤ 5
+>>0 ≤ x ≤ 5
 
 When writing this as a compound conditional expression, it is tempting to write it as follows:
 

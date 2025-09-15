@@ -266,7 +266,7 @@ End If
 End Sub
 ```
 
-Both subs are designed to modify the numerical contents of a selected cell. Each sub first checks to see if the selection contains a single cell and if the cell contains a numerical value. If so, the **half_it** sub divides the value by half and the **double_it** sub multiplies the value by two. We would like to associate these subs with the F1 and F2 keys. Before doing so, we must ensure that both subs are declared inside a module (not in the code for a sheet or workbook).
+Both subs are designed to modify the numerical contents of a selected cell. Each sub first checks to see if the selection contains a single cell and if the cell contains a numerical value. If so, the **half_it** subdivides the value by half and the **double_it** sub multiplies the value by two. We would like to associate these subs with the F1 and F2 keys. Before doing so, we must ensure that both subs are declared inside a module (not in the code for a sheet or workbook).
 
 Next, we need to make a link between the subs and the keys using the **Application.OnKey** method. The best time to do this is when the workbook is first opened. Therefore, we will use the process described above. We will first open the code window associated with the workbook object. Then we select the Workbook item from the list on the left at the top of the window and then select the Open item from the list on the top right. This creates an empty sub for the **Workbook_Open** event as follows:
 

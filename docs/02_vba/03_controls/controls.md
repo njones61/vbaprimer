@@ -120,8 +120,6 @@ A label is simply a text string where you can change the value of the text strin
 
 An image control allows you to associate an image from a file with a control. The control is shown as a gray rectangle until you attach an image to the control using the **Picture** property. You select a file and the image in the file is then copied to the image control. You can use the **Visible** property to turn the image on or off and you can use the **Top** and **Left** properties to control the location of the image on your spreadsheet. You should only use this control on a spreadsheet if you intend to turn the image on or off or move it. Otherwise, just use the **Insert|Pictures** command in Excel.
 
-See the [Road Kill homework assignment](https://ce170.groups.et.byu.net/syllabus/homework/hw11/index.htm) for an example of how to use image controls.
-
 ### Toggle Buttons ![control_togglebutton.png](images/control_togglebutton.png)
 
 A toggle button is similar to a checkbox, but it uses a button that is in a normal or depressed state:
