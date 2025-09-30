@@ -17,6 +17,23 @@ The options are as follows:
 | ![macrosbutton.png](images/macrosbutton.png) | This button brings up a window listing all of the macros associated with a project. You can select a macro and click on the **Run** button to execute the macro. You can also delete macros. |
 | ![vbebutton.png](images/vbebutton.png) | This tool displays the [Visual Basic Editor](../01_gettingstarted/gettingstarted.md#the-visual-basic-editor). This is where you write the Visual Basic code. It also allows you to look at the code associated with your macros. The macros are stored in the **Modules** section of the Project Explorer. |
 
+<div class="exercise-grid" data-columns="2">
+<div class="exercise-header">Button</div>
+<div class="exercise-header">Description</div>
+<div class="exercise-cell"><img src="images/recordmacro.png" alt="recordmacro.png" width="32"/></div>
+<div class="exercise-cell">Click on this button to start recording your macro. You will then be prompted for the name of the macro. Once you start recording the macro, the button will change to Stop Recording.</div>
+<div class="exercise-cell"><img src="images/stoprecording.png" alt="stoprecording.png" width="32"/></div>
+<div class="exercise-cell">Click here when you are finished with the steps you wish to include in the macro.</div>
+<div class="exercise-cell"><img src="images/userelbutton.png" alt="userelbutton.png" width="32"/></div>
+<div class="exercise-cell">This is a toggle button. When it is turned on, the steps in the macro are recorded in a relative fashion. I.e., the cells affected by the macro will be based on the position of the cell(s) selected when the macro is executed. This can be used to make a macro that can be applied to any section of the spreadsheet. When using this option, be sure to select an appropriate part of the sheet prior to recording the macro.</div>
+<div class="exercise-cell"><img src="images/security.png" alt="security.png" width="32"/></div>
+<div class="exercise-cell">This option is used to establish the security settings for the VB code. VB macros can be used to write computer viruses. The security settings are used to minimize danger from such viruses.</div>
+<div class="exercise-cell"><img src="images/macrosbutton.png" alt="macrosbutton.png" width="32"/></div>
+<div class="exercise-cell">This button brings up a window listing all of the macros associated with a project. You can select a macro and click on the <strong>Run</strong> button to execute the macro. You can also delete macros.</div>
+<div class="exercise-cell"><img src="images/vbebutton.png" alt="vbebutton.png" width="32"/></div>
+<div class="exercise-cell">This tool displays the <a href="../01_gettingstarted/gettingstarted.md#the-visual-basic-editor"><strong>Visual Basic Editor</strong></a>. This is where you write the Visual Basic code. It also allows you to look at the code associated with your macros. The macros are stored in the <strong>Modules</strong> section of the Project Explorer.</div>
+</div>
+
 Macros are extremely useful when you are first learning how to write VBA code in Excel. If you want to do something in code such as change the background color of a cell, but you don't know to do it, simply run a macro, change the color manually, and then look at the macro. You can learn how to do just about anything simply by running macros.
 
 ## Recording a Macro
