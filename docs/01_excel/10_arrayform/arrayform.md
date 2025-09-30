@@ -150,15 +150,15 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Conduct a simple financial analysis on a list of items using arrays. This worksheet will help explain/show the benefits of using arrays.</div>
+<div class="exercise-cell"><strong>Financial Arrays -</strong> Conduct a simple financial analysis on a list of items using arrays. This worksheet will help explain/show the benefits of using arrays.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/financial_arrays.xlsx">financial_arrays.xlsx</a></div>
 <div class="exercise-cell"><a href="files/financial_arrays_key.xlsx">financial_arrays_key.xlsx</a></div>
-<div class="exercise-cell">Calculate a range of expenses for buying a new car.</div>
+<div class="exercise-cell"><strong>New Car Expense Calculator -</strong> Calculate a range of expenses for buying a new car.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/new_car_expense_calculator.xlsx">new_car_expense_calculator.xlsx</a></div>
 <div class="exercise-cell"><a href="files/new_car_expense_calculator_key.xlsx">new_car_expense_calculator_key.xlsx</a></div>
-<div class="exercise-cell">Use arrays to find different statistics of force from test data.</div>
+<div class="exercise-cell"><strong>Force Analysis -</strong> Use arrays to find different statistics of force from test data.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/force_analysis.xlsx">force_analysis.xlsx</a></div>
 <div class="exercise-cell"><a href="files/force_analysis_key.xlsx">force_analysis_key.xlsx</a></div>

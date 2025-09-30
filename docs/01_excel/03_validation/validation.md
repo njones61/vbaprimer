@@ -33,11 +33,11 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Validate columns of a table used to keep track of inventory of various construction items.</div>
+<div class="exercise-cell"><strong>Inventory -</strong> Validate columns of a table used to keep track of inventory of various construction items.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/inventory.xlsx">inventory.xlsx</a></div>
 <div class="exercise-cell"><a href="files/inventory_key.xlsx">inventory_key.xlsx</a></div>
-<div class="exercise-cell">Use data validation to control the user inputs on a spreadsheet used for scoring at a dog show.</div>
+<div class="exercise-cell"><strong>Dog Show -</strong> Use data validation to control the user inputs on a spreadsheet used for scoring at a dog show.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/dog_show.xlsx">dog_show.xlsx</a></div>
 <div class="exercise-cell"><a href="files/dog_show_key.xlsx">dog_show_key.xlsx</a></div>

@@ -116,19 +116,19 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Calculate the Reynolds' or Froude's number by inputing an IF equation into the appropriate cell.</div>
+<div class="exercise-cell"><strong>Reynolds and Froude -</strong> Calculate the Reynolds' or Froude's number by inputing an IF equation into the appropriate cell.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/reynolds_and_froude.xlsx">reynolds_and_froude.xlsx</a></div>
 <div class="exercise-cell"><a href="files/reynolds_and_froude_key.xlsx.xlsm">reynolds_and_froude_key.xlsx.xlsm</a></div>
-<div class="exercise-cell">Use an IF equation to determine the varying prices of different concrete projects.</div>
+<div class="exercise-cell"><strong>Concrete Price Estimator -</strong> Use an IF equation to determine the varying prices of different concrete projects.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/concrete_price_estimator.xlsx">concrete_price_estimator.xlsx</a></div>
 <div class="exercise-cell"><a href="files/concrete_price_estimator_key.xlsx">concrete_price_estimator_key.xlsx</a></div>
-<div class="exercise-cell">Determine which types and how many vehicles you can park along side a given curb.</div>
+<div class="exercise-cell"><strong>Parking -</strong> Determine which types and how many vehicles you can park along side a given curb.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/parking.xlsx">parking.xlsx</a></div>
 <div class="exercise-cell"><a href="files/parking_key.xlsx">parking_key.xlsx</a></div>
-<div class="exercise-cell">Use IF statements and user inputs/selections to determine how many years that the user has left to finish school.</div>
+<div class="exercise-cell"><strong>Years Left of School -</strong> Use IF statements and user inputs/selections to determine how many years that the user has left to finish school.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/years_left_of_school.xlsx">years_left_of_school.xlsx</a></div>
 <div class="exercise-cell"><a href="files/years_left_of_school_key.xlsx">years_left_of_school_key.xlsx</a></div>

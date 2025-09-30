@@ -108,15 +108,15 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Create a chart of the excess pore pressure vs distance from given test data.</div>
+<div class="exercise-cell"><strong>Excess Pore Pressure -</strong> Create a chart of the excess pore pressure vs distance from given test data.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/excess_pore_pressure.xlsx">excess_pore_pressure.xlsx</a></div>
 <div class="exercise-cell"><a href="files/excess_pore_pressure_key.xlsx">excess_pore_pressure_key.xlsx</a></div>
-<div class="exercise-cell">Create a chart of the prices for different engineering materials over a specified date range and identify a trend.</div>
+<div class="exercise-cell"><strong>Material Price Trends -</strong> Create a chart of the prices for different engineering materials over a specified date range and identify a trend.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/material_price_trends.xlsx">material_price_trends.xlsx</a></div>
 <div class="exercise-cell"><a href="files/material_price_trends_key.xlsx">material_price_trends_key.xlsx</a></div>
-<div class="exercise-cell">Plot the settlement vs distance of different points due to underground blasting. Analyze the crater formed.</div>
+<div class="exercise-cell"><strong>Crater Settlement -</strong> Plot the settlement vs distance of different points due to underground blasting. Analyze the crater formed.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/crater_settlement.xlsx">crater_settlement.xlsx</a></div>
 <div class="exercise-cell"><a href="files/crater_settlement_key.xlsx">crater_settlement_key.xlsx</a></div>

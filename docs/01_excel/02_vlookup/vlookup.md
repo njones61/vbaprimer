@@ -104,19 +104,19 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Use VLOOKUP to match the number of human years to the appropriate dog years shown in the table.</div>
+<div class="exercise-cell"><strong>Dog Years -</strong> Use VLOOKUP to match the number of human years to the appropriate dog years shown in the table.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/dog_years.xlsx">dog_years.xlsx</a></div>
 <div class="exercise-cell"><a href="files/dog_years_key.xlsx">dog_years_key.xlsx</a></div>
-<div class="exercise-cell">From a list of fencing materials, match the price using VLOOKUP and the table given. Thenx multiply by the amount of yards needed to obtain the total cost.</div>
+<div class="exercise-cell"><strong>Construction Fencing -</strong> From a list of fencing materials, match the price using VLOOKUP and the table given. Then multiply by the amount of yards needed to obtain the total cost.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/construction_fencing.xlsm">construction_fencing.xlsm</a></div>
 <div class="exercise-cell"><a href="files/construction_fencing_key.xlsm">construction_fencing_key.xlsm</a></div>
-<div class="exercise-cell">Use VLOOKUP to multiply the user input by the appropriate conversion factor desired.</div>
+<div class="exercise-cell"><strong>Conversion Factor -</strong> Use VLOOKUP to multiply the user input by the appropriate conversion factor desired.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/conversion_factor.xlsm">conversion_factor.xlsm</a></div>
 <div class="exercise-cell"><a href="files/conversion_factor_key.xlsm">conversion_factor_key.xlsm</a></div>
-<div class="exercise-cell">From a list of foods and servings, use VLOOKUP to calculate the number of calories and carbs.</div>
+<div class="exercise-cell"><strong>Diet Monitor -</strong> From a list of foods and servings, use VLOOKUP to calculate the number of calories and carbs.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/diet_monitor.xlsx">diet_monitor.xlsx</a></div>
 <div class="exercise-cell"><a href="files/diet_monitor_key.xlsx">diet_monitor_key.xlsx</a></div>

@@ -163,15 +163,15 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Create an annotated figure of drag force on a baseball and compute the drag force that the ball experiences.</div>
+<div class="exercise-cell"><strong>Drag Equation -</strong> Create an annotated figure of drag force on a baseball and compute the drag force that the ball experiences.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/drag_equation.xlsx">drag_equation.xlsx</a></div>
 <div class="exercise-cell"><a href="files/drag_equation_key.xlsx">drag_equation_key.xlsx</a></div>
-<div class="exercise-cell">Create an annotated soil profile and write an equation to compute the unit weight of the two soil layers.</div>
+<div class="exercise-cell"><strong>Unit Weight -</strong> Create an annotated soil profile and write an equation to compute the unit weight of the two soil layers.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/unit_weight.xlsx">unit_weight.xlsx</a></div>
 <div class="exercise-cell"><a href="files/unit_weight_key.xlsx">unit_weight_key.xlsx</a></div>
-<div class="exercise-cell">Annotate a figure of a pipe with the necessary equations to calculate headloss. Then calculate the headloss with the given values and equations.</div>
+<div class="exercise-cell"><strong>Headloss -</strong> Annotate a figure of a pipe with the necessary equations to calculate headloss. Then calculate the headloss with the given values and equations.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/headloss.xlsx">headloss.xlsx</a></div>
 <div class="exercise-cell"><a href="files/headloss_key.xlsx">headloss_key.xlsx</a></div>

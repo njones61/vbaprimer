@@ -137,23 +137,23 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Run through some basic ways to input formulas into cells.</div>
+<div class="exercise-cell"><strong>The Basics -</strong> Run through some basic ways to input formulas into cells.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/the_basics.xlsm">the_basics.xlsm</a></div>
 <div class="exercise-cell"><a href="files/the_basics_key.xlsm">the_basics_key.xlsm</a></div>
-<div class="exercise-cell">Calculate the buoyant force on different sized objects using formulas and cell references.</div>
+<div class="exercise-cell"><strong>Buoyancy -</strong> Calculate the buoyant force on different sized objects using formulas and cell references.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/buoyancy.xlsm">buoyancy.xlsm</a></div>
 <div class="exercise-cell"><a href="files/buoyancy_key.xlsm">buoyancy_key.xlsm</a></div>
-<div class="exercise-cell">Use a formula to count the number of names found inside a table range.</div>
+<div class="exercise-cell"><strong>Name Counter -</strong> Use a formula to count the number of names found inside a table range.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/name_counter.xlsx">name_counter.xlsx</a></div>
 <div class="exercise-cell"><a href="files/name_counter_key.xlsx">name_counter_key.xlsx</a></div>
-<div class="exercise-cell">Use trigonometric functions inside of formulas to find the missing angles and/or sides of a few triangles.</div>
+<div class="exercise-cell"><strong>Trigonometry -</strong> Use trigonometric functions inside of formulas to find the missing angles and/or sides of a few triangles.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/trigonometry.xlsm">trigonometry.xlsm</a></div>
 <div class="exercise-cell"><a href="files/trigonometry_key.xlsm">trigonometry_key.xlsm</a></div>
-<div class="exercise-cell">Use formulas to conduct statistics on an employee database.</div>
+<div class="exercise-cell"><strong>Employee Database -</strong> Use formulas to conduct statistics on an employee database.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/employee_database.xlsm">employee_database.xlsm</a></div>
 <div class="exercise-cell"><a href="files/employee_database_key.xlsm">employee_database_key.xlsm</a></div>

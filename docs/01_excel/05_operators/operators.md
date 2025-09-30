@@ -113,15 +113,15 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Use the order of operations to calculate the fluid headloss in a pipe.</div>
+<div class="exercise-cell"><strong>Headloss -</strong> Use the order of operations to calculate the fluid headloss in a pipe.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/headloss.xlsm">headloss.xlsm</a></div>
 <div class="exercise-cell"><a href="files/headloss_key.xlsm">headloss_key.xlsm</a></div>
-<div class="exercise-cell">Calculate the equations using formulas and taking into consideration the appropriate order of operations.</div>
+<div class="exercise-cell"><strong>Operators -</strong> Calculate the equations using formulas and taking into consideration the appropriate order of operations.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/operators.xlsm">operators.xlsm</a></div>
 <div class="exercise-cell"><a href="files/operators_key.xlsm">operators_key.xlsm</a></div>
-<div class="exercise-cell">Use the correct order of operations to calculate the friction factor.</div>
+<div class="exercise-cell"><strong>Friction Factor -</strong> Use the correct order of operations to calculate the friction factor.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/friction_factor.xlsm">friction_factor.xlsm</a></div>
 <div class="exercise-cell"><a href="files/friction_factor_key.xlsm">friction_factor_key.xlsm</a></div>

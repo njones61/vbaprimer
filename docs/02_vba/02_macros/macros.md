@@ -140,7 +140,7 @@ The first few lines of code are associated with entering the two values and the 
 
 Macros have a number of useful applications. For example, you can record a macro associated with some set of steps that you find yourself doing frequently. The macro then automates those steps. You can also use a macro to figure out how to write VB code to perform some action. For example, suppose I want to embed an execution of the [Goal Seek](../../01_excel/07_goalseek/goalseek.md) feature as part of my code, but I am not sure how to call Goal Seek from VB. I can simply record a macro that involves running the Goal Seek tool and then examine the code.
 
-In may applications, the VB code associated with our macro may not be as useful as we like because it only applies to a very specific case at a very specific location on our workbook. In these cases, we can often modify the macro code to make it more general purpose. For example, we can generalize the code and then put it in a loop to solve some kind of problem in an iterative fashion. In this sense, macros can be a very powerful way to quickly generate code.
+In many applications, the VB code associated with our macro may not be as useful as we like because it only applies to a very specific case at a very specific location on our workbook. In these cases, we can often modify the macro code to make it more general purpose. For example, we can generalize the code and then put it in a loop to solve some kind of problem in an iterative fashion. In this sense, macros can be a very powerful way to quickly generate code.
 
 ## Exercises
 

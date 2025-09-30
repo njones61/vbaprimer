@@ -75,15 +75,15 @@ You may wish to complete following exercises to gain practice with and reinforce
 <div class="exercise-header">Difficulty</div>
 <div class="exercise-header">Start</div>
 <div class="exercise-header">Solution</div>
-<div class="exercise-cell">Use cell naming to find the volume and weight of different objects.</div>
+<div class="exercise-cell"><strong>Names -</strong> Use cell naming to find the volume and weight of different objects.</div>
 <div class="exercise-cell">Easy</div>
 <div class="exercise-cell"><a href="files/names.xlsm">names.xlsm</a></div>
 <div class="exercise-cell"><a href="files/names_key.xlsm">names_key.xlsm</a></div>
-<div class="exercise-cell">Use names as inputs to a formula to calculate the moment arm on a lever at different lengths.</div>
+<div class="exercise-cell"><strong>Moment Arm -</strong> Use names as inputs to a formula to calculate the moment arm on a lever at different lengths.</div>
 <div class="exercise-cell">Medium</div>
 <div class="exercise-cell"><a href="files/moment_arm.xlsm">moment_arm.xlsm</a></div>
 <div class="exercise-cell"><a href="files/moment_arm_key.xlsm">moment_arm_key.xlsm</a></div>
-<div class="exercise-cell">Use names inside of formulas to determine the solution to the bernoulli equation.</div>
+<div class="exercise-cell"><strong>Bernoulli Problem -</strong> Use names inside of formulas to determine the solution to the bernoulli equation.</div>
 <div class="exercise-cell">Hard</div>
 <div class="exercise-cell"><a href="files/bernoulli_problem.xlsm">bernoulli_problem.xlsm</a></div>
 <div class="exercise-cell"><a href="files/bernoulli_problem_key.xlsm">bernoulli_problem_key.xlsm</a></div>
