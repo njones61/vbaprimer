@@ -53,30 +53,12 @@ You can also set a breakpoint by putting the cursor on a line and selecting the 
 
 Once you have halted execution using a breakpoint, you can then trace the execution of your code one line at a time using the Step options. In most cases, the easiest thing to do is press the **F8** key to execute the **Step Into** command. This executes the current line and then highlights the next line in yellow. However, if the current line contains a custom sub or function (i.e., one that you wrote as opposed to a built-in VB sub or function), then you need to be a little more careful. There are actually three different Step commands and each behaves a little differently based on how you want to trace your code.
 
-| Command | Shortcut | Result                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-|---------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Step Into** | F8 | Executes the current line of code and if the code contains a call to a custom sub or function, the code execution<br> jumps to the first line in the sub or function and then pauses. This gives you the chance to trace the<br> execution of the sub or function.                                                                                                                                                                                                                           |
-| **Step Over** | Shift+F8 | Executes the current line of code and if the code contains a call to a custom sub or function, the sub or function<br> is executed but that execution is not traced. After executing the line (including referenced subs and/or<br> functions) the next line of code in the current module is highlighted and the execution pauses. You<br> should use this option when you are confident that your subs or functions do<br> not contain errors and you don't need to trace their execution. |
-| **Step Out** | Ctrl+Shift+F8 | This command should be used when you are in the middle of tracing the execution of your code inside a custom<br> sub or function and you are satisfied that the sub or function does not contain the error you are looking<br> for. This completes the execution of the sub or function and returns you to the next line following the<br> line where the sub or function was called.                                                                                                        |
-| **Run to Cursor** | Ctrl+F8 | This command executes all code between the current yellow-highlighted line and the line containing the cursor.<br> The line containing the cursor is then highlighted and the execution pauses.                                                                                                                                                                                                                                                                                              |
-
-<div class="exercise-grid" data-columns="3">
-<div class="exercise-header">Command</div>
-<div class="exercise-header">Shortcut</div>
-<div class="exercise-header">Result</div>
-<div class="exercise-cell"><strong>Step Into</strong></div>
-<div class="exercise-cell">F8</div>
-<div class="exercise-cell">Executes the current line of code and if the code contains a call to a custom sub or function, the code execution jumps to the first line in the sub or function and then pauses. This gives you the chance to trace the execution of the sub or function.</div>
-<div class="exercise-cell"><strong>Step Over</strong></div>
-<div class="exercise-cell">Shift+F8</div>
-<div class="exercise-cell">Executes the current line of code and if the code contains a call to a custom sub or function, the sub or function is executed but that execution is not traced. After executing the line (including referenced subs and/or functions) the next line of code in the current module is highlighted and the execution pauses. You should use this option when you are confident that your subs or functions do not contain errors and you don't need to trace their execution.</div>
-<div class="exercise-cell"><strong>Step Out</strong></div>
-<div class="exercise-cell">Ctrl+Shift+F8</div>
-<div class="exercise-cell">This command should be used when you are in the middle of tracing the execution of your code inside a custom sub or function and you are satisfied that the sub or function does not contain the error you are looking for. This completes the execution of the sub or function and returns you to the next line following the line where the sub or function was called.</div>
-<div class="exercise-cell"><strong>Run to Cursor</strong></div>
-<div class="exercise-cell">Ctrl+F8</div>
-<div class="exercise-cell">This command executes all code between the current yellow-highlighted line and the line containing the cursor. The line containing the cursor is then highlighted and the execution pauses.</div>
-</div>
+| Command | Shortcut | Result                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|---------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Step Into** | F8 | Executes the current line of code and if the code contains a call to a custom sub or function, the code execution<br> jumps to the first line in the sub or function and then pauses. This gives you the chance to trace the execution<br> of the sub or function.                                                                                                                                                                                                                       |
+| **Step Over** | Shift+F8 | Executes the current line of code and if the code contains a call to a custom sub or function, the sub or function<br> is executed but that execution is not traced. After executing the line (including referenced subs and/or<br> functions) the next line of code in the current module is highlighted and the execution pauses. You should<br> use this option when you are confident that your subs or functions do not contain errors and you don't need to trace<br> their execution. |
+| **Step Out** | Ctrl+Shift+F8 | This command should be used when you are in the middle of tracing the execution of your code inside a custom<br> sub or function and you are satisfied that the sub or function does not contain the error you are looking for.<br> This completes the execution of the sub or function and returns you to the next line following the line where<br> the sub or function was called.                                                                                                    |
+| **Run to Cursor** | Ctrl+F8 | This command executes all code between the current yellow-highlighted line and the line containing the cursor.<br> The line containing the cursor is then highlighted and the execution pauses.                                                                                                                                                                                                                                                                                          |
 
 It is important to note that none of these four options "skips" code in the sense that portions of your code are not executed. All of the code is executed, but in some cases you may not see the step-by-step execution. If for some reason you want to actually skip one or more lines of code, you should set the cursor in the first line following the code you want to skip and then select the **Debug|Set Next Statement** command.
 
@@ -89,21 +71,6 @@ After stopping at a breakpoint and examining some code, you may wish to quickly 
 | **Run** | ![command_run.png](images/command_run.png) | Execute the code from the current position to the next breakpoint or until the code is completed.                                                                                                       |
 | **Pause** | ![command_pause.png](images/command_pause.png) | Pause the execution. This button can be used when your code appears to be stuck in an infinite loop.<br> It causes the code execution to pause and the next line of code to be executed is highlighted. |
 | **Stop** | ![command_stop.png](images/command_stop.png) | This command can be used either when the code is running or when it is paused. It causes the execution<br> to stop and everything is reset to the non-running state.                                    |
-
-<div class="exercise-grid" data-columns="3">
-<div class="exercise-header">Command</div>
-<div class="exercise-header">Symbol</div>
-<div class="exercise-header">Action</div>
-<div class="exercise-cell"><strong>Run</strong></div>
-<div class="exercise-cell"><img src="images/command_run.png" alt="command_run.png" /></div>
-<div class="exercise-cell">Execute the code from the current position to the next breakpoint or until the code is completed.</div>
-<div class="exercise-cell"><strong>Pause</strong></div>
-<div class="exercise-cell"><img src="images/command_pause.png" alt="command_pause.png" /></div>
-<div class="exercise-cell">Pause the execution. This button can be used when your code appears to be stuck in an infinite loop. It causes the code execution to pause and the next line of code to be executed is highlighted.</div>
-<div class="exercise-cell"><strong>Stop</strong></div>
-<div class="exercise-cell"><img src="images/command_stop.png" alt="command_stop.png" /></div>
-<div class="exercise-cell">This command can be used either when the code is running or when it is paused. It causes the execution to stop and everything is reset to the non-running state.</div>
-</div>
 
 The Run command can also be used as a shortcut to run a specific sub by putting the cursor in the sub and then selecting the Run button in the VB Editor. For example, this could be used to execute the code associated with a button without actually having to click the button.
 
