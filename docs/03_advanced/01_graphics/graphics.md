@@ -106,17 +106,9 @@ where *expression* is a Shapes collection, *Type* is the type of AutoShape, and 
 Shapes.AddShape msoShapeRectangle, 25, 50, 150, 200
 ```
 
-The msoShapeRectangle is a VB constant defining the AutoShape type. There are many AutoShape constants available including:
+The msoShapeRectangle is a VB constant defining the AutoShape type. The following are all legal AutoShape constants:
 
-- msoShapeRectangle
-- msoShapeOval
-- msoShapeDiamond
-- msoShapeTriangle
-- msoShapeStar
-- msoShapeFlowchartDecision
-- msoShapeFlowchartProcess
-- msoShapeFlowchartConnector
-- And many more...
+![autoshape_constants.png](images/autoshape_constants.png)
 
 ## Excel Coordinate System
 
